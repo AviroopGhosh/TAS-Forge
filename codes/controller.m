@@ -68,9 +68,9 @@ route_lengths = cellfun(@length, routes);
 % Re-arrange the original cell array based on sorted indices
 routes = routes(sorted_indices);
 
-%% List of network parameters
+%% List of network parameters (--- User-configurable network parameters ---)
 
-payload = 100; %Payload in bytes for frames 
+payload = 100; %Payload in bytes for frames ###
 data    = zeros; %Intialize the data in bytes
 for i = 1:length(payload)
     UDP_header      = 28;
@@ -106,7 +106,8 @@ for i = 1:numRoutes
     L(i) = trans_delay(i) + prop_delay + proc_delay;
 end
 
-%% Clock parameter values
+%% Clock parameter values (--- User-configurable synchronization parameters ---)
+
 p_range = -100:100;   %Clock drift range in ppm
 T_sync = 0.125; %Synchronization periodicity
 
@@ -134,10 +135,10 @@ writetable(T0, filename);
 
 fprintf('Node output file "node_data.csv" has been created\n');
 
-%% Macrotick
 mt = 0.01e-6; %Express that macrotick in us
 
-%% Time-period and hyper-period
+%% Time-period and hyper-period (--- User-configurable timing parameters ---)
+
 T_period    = [100, 150, 300]*1e-6; %Timeperiods to select from for each stream
 T_period_mt = T_period./mt; %Timeperiod in mts
 
