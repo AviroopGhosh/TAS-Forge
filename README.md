@@ -4,6 +4,7 @@ This repository offers a comprehensive framework for the automatic generation (f
 # Dependencies
 This version requires the following:
 
+- MATLAB (version 2021b)
 - CPLEX (version 22.1.1)
 - OMNeT++ (version 6.0.3)
 - INET (version 4.4)
