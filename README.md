@@ -1,9 +1,9 @@
 # TAS-Forge
-This repository offers a comprehensive framework for the automatic generation (forging) of Time-Aware Shaper (TAS) gate control list schedules, incorporating time synchronization considerations as part of the scheduling process.
-
-Developing TAS schedules using linear programming techniques is highly complex especially when scaling with multiple traffic time-sensitive streams and competiting constraints. Manually defining 
+This repository offers a comprehensive framework for the automatic generation (forging) of Time-Aware Shaper (TAS) IEEE 802.1Qbv Gate Control List (GCL) schedules, incorporating time synchronization (IEEE 802.1AS) considerations as part of the scheduling process.
 
 # Overview
+Creating TAS schedules using linear programming methods can be highly complex, especially when working with networks that have multiple time sensitive streams. Manually defining the scheduling constraints 
+
 
 # Navigation 
 
