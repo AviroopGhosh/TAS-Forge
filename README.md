@@ -6,6 +6,41 @@ Creating TAS schedules using linear programming methods can be highly complex, e
 
 TAS-Forge provides an automated framework that simplifies the design and validation of TAS schedules for TSN environments with time synchronization considerations. The tool combines MATLAB, CPLEX and OMNeT++ to generate, simulate, and analyze time sensitive traffic flows. 
 
+# Key Features
+User-Defined Input:
+•	Easily easy specification of the number of switches, sources and sinks to define the structure of the network.
+•	Inputs are provided via a simple dialog box, for quick and easy setup process. 
+
+Automatic Topology & Stream Generation: 
+•	Based on user specification, the tool generates a linear network topology. 
+•	Routes are automatically created to connect each source to a corresponding sink. 
+•	A single source can transmit to multiple sinks, and/or a single sink can receive traffic from multiple sources, allowing for flexible and realistic traffic scenarios.
+•	Each route is associated with a stream, and each stream is automatically assigned:
+o	Payload size of frames. 
+o	Transmission periodicity. 
+o	Deadline of stream. 
+
+IEEE 802.1AS Time Synchronization Modeling: 
+•	The framework models clock drift for each device in the network by assigning them random drift values. 
+•	Devices synchronize using a defined synchronization periodicity, simulating realistic timing behavior.
+•	This enables analyzing the impact of synchronization on TAS scheduling — a feature often overlooked in other TAS scheduling frameworks. 
+
+TAS Scheduling Frameworks:
+•	Users can choose from a suite of TAS scheduling frameworks to apply to schedule generation. 
+•	This makes it easy to test and compare different scheduling frameworks under identical network conditions. 
+
+OMNeT++ File Generation:
+•	The tool also automatically generates the required the .ned and .ini files based on:
+o	The generated topology
+o	The scheduling decisions 
+o	Time synchronization parameters
+•	These filed can be directed used for simulation in the network simulator tool OMNeT++. 
+
+Simulation Output & Analysis:
+•	After executing the files in OMNeT++, the results can be:
+o	Parsed and analyzed in MATLAB. 
+o	Exported in .csv structure for further inspection and analysis. 
+•	The simulator also provides insights into network performance, latency and schedule effectiveness. 
 
 # Dependencies
 This version requires the following:
