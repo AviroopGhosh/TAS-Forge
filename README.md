@@ -7,6 +7,8 @@ Creating TAS schedules using linear programming methods can be highly complex, e
 TAS-Forge provides an automated framework that simplifies the design and validation of TAS schedules for TSN environments with time synchronization considerations. The tool combines MATLAB, CPLEX and OMNeT++ to generate, simulate, and analyze time sensitive traffic flows. 
 
 # Key Features
+Key features of TAS-Forge have been described below. 
+
 ## User-Defined Input:
 -	Easily easy specification of the number of switches, sources and sinks to define the structure of the network.
 -	Inputs are provided via a simple dialog box, for quick and easy setup process. 
