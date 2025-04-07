@@ -16,31 +16,31 @@ Automatic Topology & Stream Generation:
 -	Routes are automatically created to connect each source to a corresponding sink. 
 -	A single source can transmit to multiple sinks, and/or a single sink can receive traffic from multiple sources, allowing for flexible and realistic traffic scenarios.
 -	Each route is associated with a stream, and each stream is automatically assigned:
-    -	Payload size of frames. 
-    -	Transmission periodicity. 
-    -	Deadline of stream. 
+  -	Payload size of frames. 
+  -	Transmission periodicity. 
+  -	Deadline of stream. 
 
 IEEE 802.1AS Time Synchronization Modeling: 
-•	The framework models clock drift for each device in the network by assigning them random drift values. 
-•	Devices synchronize using a defined synchronization periodicity, simulating realistic timing behavior.
-•	This enables analyzing the impact of synchronization on TAS scheduling — a feature often overlooked in other TAS scheduling frameworks. 
+-	The framework models clock drift for each device in the network by assigning them random drift values. 
+-	Devices synchronize using a defined synchronization periodicity, simulating realistic timing behavior.
+-	This enables analyzing the impact of synchronization on TAS scheduling — a feature often overlooked in other TAS scheduling frameworks. 
 
 TAS Scheduling Frameworks:
-•	Users can choose from a suite of TAS scheduling frameworks to apply to schedule generation. 
-•	This makes it easy to test and compare different scheduling frameworks under identical network conditions. 
+-	Users can choose from a suite of TAS scheduling frameworks to apply to schedule generation. 
+-	This makes it easy to test and compare different scheduling frameworks under identical network conditions. 
 
 OMNeT++ File Generation:
-•	The tool also automatically generates the required the .ned and .ini files based on:
-o	The generated topology
-o	The scheduling decisions 
-o	Time synchronization parameters
-•	These filed can be directed used for simulation in the network simulator tool OMNeT++. 
+-	The tool also automatically generates the required the .ned and .ini files based on:
+    -	The generated topology
+    -	The scheduling decisions 
+    -	Time synchronization parameters
+-	These filed can be directed used for simulation in the network simulator tool OMNeT++. 
 
 Simulation Output & Analysis:
-•	After executing the files in OMNeT++, the results can be:
-o	Parsed and analyzed in MATLAB. 
-o	Exported in .csv structure for further inspection and analysis. 
-•	The simulator also provides insights into network performance, latency and schedule effectiveness. 
+-	After executing the files in OMNeT++, the results can be:
+    -	Parsed and analyzed in MATLAB. 
+    -	Exported in .csv structure for further inspection and analysis. 
+-	The simulator also provides insights into network performance, latency and schedule effectiveness. 
 
 # Dependencies
 This version requires the following:
