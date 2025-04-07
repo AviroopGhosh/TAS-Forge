@@ -12,13 +12,13 @@ User-Defined Input:
 -	Inputs are provided via a simple dialog box, for quick and easy setup process. 
 
 Automatic Topology & Stream Generation: 
-•	Based on user specification, the tool generates a linear network topology. 
-•	Routes are automatically created to connect each source to a corresponding sink. 
-•	A single source can transmit to multiple sinks, and/or a single sink can receive traffic from multiple sources, allowing for flexible and realistic traffic scenarios.
-•	Each route is associated with a stream, and each stream is automatically assigned:
-o	Payload size of frames. 
-o	Transmission periodicity. 
-o	Deadline of stream. 
+-	Based on user specification, the tool generates a linear network topology. 
+-	Routes are automatically created to connect each source to a corresponding sink. 
+-	A single source can transmit to multiple sinks, and/or a single sink can receive traffic from multiple sources, allowing for flexible and realistic traffic scenarios.
+-	Each route is associated with a stream, and each stream is automatically assigned:
+ -	Payload size of frames. 
+ -	Transmission periodicity. 
+ -	Deadline of stream. 
 
 IEEE 802.1AS Time Synchronization Modeling: 
 •	The framework models clock drift for each device in the network by assigning them random drift values. 
