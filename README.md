@@ -8,8 +8,8 @@ TAS-Forge provides an automated framework that simplifies the design and validat
 
 # Key Features
 User-Defined Input:
-•	Easily easy specification of the number of switches, sources and sinks to define the structure of the network.
-•	Inputs are provided via a simple dialog box, for quick and easy setup process. 
+-	Easily easy specification of the number of switches, sources and sinks to define the structure of the network.
+-	Inputs are provided via a simple dialog box, for quick and easy setup process. 
 
 Automatic Topology & Stream Generation: 
 •	Based on user specification, the tool generates a linear network topology. 
