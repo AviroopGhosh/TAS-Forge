@@ -13,7 +13,7 @@ Key features of TAS-Forge have been described below.
 
 Below is a visual example of a network scenario handled by TAS-Forge. It illustrates how multiple streams can be scheduled across a linear topology using TAS scheduling strategies.
 
-![Multi-stream TSN example](images/example_topology_1.jpg)
+![Multi-stream TSN example](TAS-Forge/images/example_topology_1.jpg)
 
 ## User-Defined Input:
 -	Easily easy specification of the number of switches, sources and sinks to define the structure of the network.
