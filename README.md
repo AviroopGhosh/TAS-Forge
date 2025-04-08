@@ -9,12 +9,6 @@ TAS-Forge provides an automated framework that simplifies the design and validat
 # Key Features
 Key features of TAS-Forge have been described below. 
 
-## 🖼️ Example: Multi-Stream Scheduling
-
-Below is a visual example of a network scenario handled by TAS-Forge. It illustrates how multiple streams can be scheduled across a linear topology using TAS scheduling strategies.
-
-![Multi-stream TSN example](images/example_topology_1.png)
-
 ## User-Defined Input:
 -	Easily easy specification of the number of switches, sources and sinks to define the structure of the network.
 -	Inputs are provided via a simple dialog box, for quick and easy setup process. 
@@ -49,6 +43,11 @@ Below is a visual example of a network scenario handled by TAS-Forge. It illustr
     -	Parsed and analyzed in MATLAB. 
     -	Exported in .csv structure for further inspection and analysis. 
 -	The simulator also provides insights into network performance, latency and schedule effectiveness. 
+
+## Example: Multi-Stream Scheduling
+The diagram below shows an example network scenario supported by TAS-Forge. It demonstrates how multiple source-to-sink routes are formed into streams and scheduled across a linear topology using TAS scheduling techniques.
+
+![Multi-stream TSN example](images/example_topology_1.png)
 
 # Dependencies
 This version requires the following:
