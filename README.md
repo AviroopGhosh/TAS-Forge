@@ -47,7 +47,7 @@ Key features of TAS-Forge have been described below.
 ## Example: Multi-Stream Scheduling
 The diagram below shows an example network scenario supported by TAS-Forge. It demonstrates how multiple source-to-sink routes are formed into streams and scheduled across a linear topology using TAS scheduling techniques.
 
-![Multi-stream TSN example](images/example_topology_1.png)
+![Multi-stream TSN example](documentation/images/example_topology_1.png)
 
 # Dependencies
 This version requires the following:
