@@ -61,6 +61,6 @@ This version requires the following:
 # Documentation
 The following documentation covers key aspects of TAS-Forge, including how to use, system architecture, and known limitations:
 
-- ![User Guide](documentation/User_Guide.md)
+- [User Guide](documentation/User_Guide.md)
 - ![Technical Overview](documentation/Technical_Overview.md)
 - ![Known Issues and Limitations](documentation/Known Issues & Limitations.md)
