@@ -46,7 +46,7 @@ Key features of TAS-Forge have been described below.
 -	The simulator also provides insights into network performance, latency and schedule effectiveness. 
 
 ## Example: Multi-Stream Scheduling
-The diagram below illustrates an example network scenario supported by TAS-Forge. It shows how multiple source-to-sink routes (with sources labeled as src) are grouped into time-sensitive streams and scheduled across a linear topology using TAS scheduling techniques. The placement of a Grandmaster (GM) node within the topology highlights the tool’s consideration of time synchronization, as defined by IEEE 802.1AS.
+The diagram below illustrates an example network scenario supported by TAS-Forge. It shows how multiple source-to-sink routes (with sources of time-sensitive traffic, labeled as src) are grouped into time-sensitive streams and scheduled across a linear topology using TAS scheduling techniques. The placement of a Grandmaster (GM) node within the topology highlights the tool’s consideration of time synchronization, as defined by IEEE 802.1AS.
 
 ![Multi-stream TSN example](documentation/images/example_topology_1.png)
 
