@@ -25,7 +25,8 @@ Key features of TAS-Forge have been described below.
 ## IEEE 802.1AS Time Synchronization Modeling
 -	The framework simulates realistic clock behaviour by assigning each device a random clock drift within specific bounds. 
 -	Devices synchronize using a defined synchronization periodicity, simulating realistic timing behaviour.
--	The model enables analyzing the impact of synchronization on TAS scheduling, a critical aspect often overlooked in other TAS scheduling frameworks. 
+-	The model enables analyzing the impact of synchronization on TAS scheduling.
+-	These are critical aspects often overlooked in TAS scheduling frameworks. 
 
 ## TAS Scheduling Frameworks
 -	Users can choose from a suite of TAS scheduling frameworks to apply to schedule generation. 
