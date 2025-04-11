@@ -53,9 +53,9 @@ The diagram below illustrates an example network scenario supported by TAS-Forge
 # Dependencies
 This version requires the following:
 
-- MATLAB (version 2021b)
-- CPLEX (version 22.1.1)
-- OMNeT++ (version 6.0.3)
+- MATLAB (version 2021b or later)
+- CPLEX (version 22.1.1 or later)
+- OMNeT++ (version 6.0.3 or later)
 - INET (version 4.4)
 
 # Documentation
