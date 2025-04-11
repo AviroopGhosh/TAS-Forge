@@ -11,7 +11,15 @@ To review current limitations and known issues encoutered in the tool, refer to 
 For implementing TAS-Forge, it is vital that the following software tools are installed correct and configured:
 
 ### 1. MATLAB
-- Required for: Topology generation, CPLEX and OMNeT++ code generation, TAS schedule creation, CSV output analysis
-- Recommended Version: R2021b or later
+- Required for: Topology generation, CPLEX and OMNeT++ code generation, TAS schedule creation, and performance analysis from simulation outputs.
+- Recommended Version: R2021b or later.
 - Tip: Ensure MATLAB is added to your system’s environment PATH if you intend to run it from the terminal.
 
+### 2. IBM CPLEX
+- Required for: Solving TAS scheduling frameworks as Integer Linear Program.
+- Recommended Version: CPLEX Optimization Studio 22.1.1 or later.
+- Installation Steps:
+    - Download from the official [IBM CPLEX Download Page](https://www.ibm.com/support/pages/downloading-ibm-ilog-cplex-optimization-studio-2211)
+- Note:
+    - You may need to create an IBM account to access the download.
+    - CPLEX must be run via the IBM GUI, as MATLAB integration is not supported in newer versions (22.x and beyond).
