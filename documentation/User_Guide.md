@@ -10,4 +10,4 @@ To review current limitations and known issues encoutered in the tool, refer to 
 ## [Prerequisites](#prerequisites)
 For implementing TAS-Forge, it is vital that the following software tools are installed correct and configured:
 
-### MATLAB
+### 1. MATLAB
