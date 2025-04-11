@@ -11,3 +11,7 @@ To review current limitations and known issues encoutered in the tool, refer to 
 For implementing TAS-Forge, it is vital that the following software tools are installed correct and configured:
 
 ### 1. MATLAB
+- Required for: Topology generation, CPLEX and OMNeT++ code generation, TAS schedule creation, CSV output analysis
+- Recommended Version: R2021b or later
+- Tip: Ensure MATLAB is added to your system’s environment PATH if you intend to run it from the terminal.
+
