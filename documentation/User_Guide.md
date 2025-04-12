@@ -40,3 +40,7 @@ To get the project code:
 <pre> git clone https://github.com/AviroopGhosh/TAS-Forge.git </pre>
 
 Or you can download it as a ZIP file and extract it. 
+
+## Folder Structure
+
+
