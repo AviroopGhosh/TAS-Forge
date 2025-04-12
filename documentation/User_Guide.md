@@ -37,4 +37,6 @@ For implementing TAS-Forge, it is vital that the following software tools are in
 ### 4. TAS-Forge Repository
 To get the project code:
 
-```git clone```
+```git clone https://github.com/AviroopGhosh/TAS-Forge.git ```
+
+Or you can download it as a ZIP file and extract it. 
