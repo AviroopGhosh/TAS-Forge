@@ -19,7 +19,7 @@ For implementing TAS-Forge, it is vital that the following software tools are in
 - Required for: Solving TAS scheduling frameworks formulated as Integer Linear Programs (ILPs).
 - Recommended Version: CPLEX Optimization Studio 22.1.1 or later.
 - Installation Steps:
-    - Download from the official [IBM CPLEX Download Page](https://www.ibm.com/support/pages/downloading-ibm-ilog-cplex-optimization-studio-2211)
+    - Download from the official [IBM CPLEX Download Page](https://www.ibm.com/support/pages/downloading-ibm-ilog-cplex-optimization-studio-2211).
 - Note:
     - You may need to create an IBM account to access the download.
     - CPLEX must be run via the IBM GUI, as MATLAB integration is not supported in newer versions (22.x and beyond).
