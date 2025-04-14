@@ -45,13 +45,13 @@ Or you can download it as a ZIP file and extract it.
 
 <pre>
     TAS-Forge/
-    ├── function_generate_path_from_sources.m         % Function to generate pair of sources and sinks to form routes
-    ├── function_generate_topology_map_output.m       % Function used to generate the topology map incl. source and destination ports
-    ├── function_import_topology_data.m               % This funcition is used to import the topology data e.g., route connections, source port and destination port etc. 
-    ├── generate_CPLEX_code_NCA.m                     % Generate CPLEX input files based on Network-Derived Clock Drift Adustment (NCD) scheduling framework
-    ├── generate_CPLEX_code_NCD.m                     % Generate CPLEX input files based on Network-Derived Clock Drift Delay (NCD) scheduling framework
-    ├── generate_CPLEX_code_WCA.m                     % Generate CPLEX input files based on Worst-case Adjustment (WCA) scheduling framework
-    ├── generate_CPLEX_code_WCD.m                     % Generate CPLEX input files based on Worst-case Delay (WCD) scheduling framework
-    ├── generate_network_system.m                     % Starting script used to generate the network topology, routes and stream parameters
+    ├── function_generate_routes.m         % Function to generate pair of sources and sinks to form routes
+    ├── function_generate_topology.m       % Function used to generate the topology map incl. source and destination ports
+    ├── function_import_topology_data.m    % This funcition is used to import the topology-related data  
+    ├── generate_CPLEX_code_NCA.m          % Generate CPLEX input files based on Network-Derived Clock Drift Adustment (NCD) scheduling framework
+    ├── generate_CPLEX_code_NCD.m          % Generate CPLEX input files based on Network-Derived Clock Drift Delay (NCD) scheduling framework
+    ├── generate_CPLEX_code_WCA.m          % Generate CPLEX input files based on Worst-case Adjustment (WCA) scheduling framework
+    ├── generate_CPLEX_code_WCD.m          % Generate CPLEX input files based on Worst-case Delay (WCD) scheduling framework
+    ├── generate_network_system.m          % Starting script used to generate the network topology, routes and stream parameters
     
 </pre>
