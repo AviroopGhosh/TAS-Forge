@@ -43,4 +43,7 @@ Or you can download it as a ZIP file and extract it.
 
 ## Folder Structure
 
-
+<pre>
+    TAS-Forge/
+    |--a1_generate_network.m
+</pre>
