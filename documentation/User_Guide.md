@@ -45,5 +45,7 @@ Or you can download it as a ZIP file and extract it.
 
 <pre>
     TAS-Forge/
-    ├── a1_generate_network.m        %Starting script used to generate the network topology and parameters
+    ├── a1_generate_network.m            % Starting script used to generate the network topology and parameters
+    ├── b1_generate_CPLEX_code_WCD.m     % Generate text files for CPLEX code based on the WCD method
+    
 </pre>
