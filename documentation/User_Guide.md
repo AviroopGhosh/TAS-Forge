@@ -52,6 +52,6 @@ Or you can download it as a ZIP file and extract it.
     ├── generate_CPLEX_code_NCD.m                     % Generate CPLEX input files based on Network-Derived Clock Drift Delay (NCD) scheduling framework
     ├── generate_CPLEX_code_WCA.m                     % Generate CPLEX input files based on Worst-case Adjustment (WCA) scheduling framework
     ├── generate_CPLEX_code_WCD.m                     % Generate CPLEX input files based on Worst-case Delay (WCD) scheduling framework
-    ├── generate_network.m                            % Starting script used to generate the network topology, routes and stream parameters
+    ├── generate_network_system.m                     % Starting script used to generate the network topology, routes and stream parameters
     
 </pre>
