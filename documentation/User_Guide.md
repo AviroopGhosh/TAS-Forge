@@ -102,4 +102,4 @@ Once provided, the script will automatically create the following:
 For more details, see the [Known Issues and Limitations](documentation/Issues_and_Limitations.md) page. 
 
 The script exports the following files:
-- ```stream_data.csv
+- stream_data.csv - Traffic stream details for stream configuration
