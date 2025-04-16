@@ -82,7 +82,6 @@ This section provides a step-by-step guide for using TAS-Forge. Before beginning
 To being using TAS-Forge, run the following script in MATLAB:
 
 <pre>
-    MATLAB
     generate_network_system
 </pre>
 
@@ -91,6 +90,15 @@ The script will prompt the user to input:
 - Number of sinks
 - Number of switches
 
+Once provided, the script will automatically create the following:
+- A linear network topology consisting of the network devices with a visually representative figure
+- A set of routes connecting each source to at least one or more sink nodes
+- Set of streams per route with the following properties:
+    - Payload size
+    - Transmission Periodicity
+    - Deadline constraint
 
+**Note:** Each source must be connected to at least one sink. Isolated devices (sources or sinks with no valid route) are not supported. If this occurs, the script will prompt a re-run with adjusted device settings.
+For more details, see the [Known Issues and Limitations](documentation/Issues_and_Limitations.md) page. 
 
 
