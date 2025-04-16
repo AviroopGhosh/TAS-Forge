@@ -101,4 +101,5 @@ Once provided, the script will automatically create the following:
 **Note:** Each source must be connected to at least one sink. Isolated devices (sources or sinks with no valid route) are not supported. If this occurs, the script will prompt a re-run with adjusted device settings.
 For more details, see the [Known Issues and Limitations](documentation/Issues_and_Limitations.md) page. 
 
-
+The script exports the following files:
+- ```stream_data.csv
