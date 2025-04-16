@@ -82,7 +82,7 @@ This section provides a step-by-step guide for using TAS-Forge. Before beginning
 To being using TAS-Forge, run the following script in MATLAB:
 
 ```MATLAB
-generate_network_system
+generate_network_system```
 
 The script will prompt the user to input:
 - Number of sources
