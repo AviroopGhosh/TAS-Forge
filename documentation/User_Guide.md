@@ -76,6 +76,19 @@ Or you can download it as a ZIP file and extract it.
 ## Step-by-Step Guide: Using TAS-Forge
 This section provides a step-by-step guide for using TAS-Forge. Before beginning, ensure that all the required files are present in your MATLAB working directory. To understand how the files are organized, refer to the [Folder Structure](#folder_structure) section. 
 
-**Note:** Many files (e.g., CSV exports, CPLEX input, INET simulation files) are generated during execution. These files will not appear until their corresponding scripts have been run.
+**Note:** Many files (e.g., CSV exports, CPLEX input, OMNeT simulation files) are generated during execution. These files will not appear until their corresponding scripts have been run. This will be highlighted in the respective steps. 
+
+### Step 1: Generate Network Topology and Stream Parameters
+To being using TAS-Forge, run the following script in MATLAB:
+
+```MATLAB
+generate_network_system
+
+The script will prompt the user to input:
+- Number of sources
+- Number of sinks
+- Number of switches
+
+
 
 
