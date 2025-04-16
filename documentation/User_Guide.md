@@ -72,3 +72,13 @@ Or you can download it as a ZIP file and extract it.
         ├── generated_topology.ned         % Ned file generated
         ├── simulation_config_<>.ini       % Ini file generated based on scheduler type  
 </pre>
+
+### Step 2: Generate CPLEX Model Code
+
+Depending on the scheduler you want to use, run one of the following:
+
+```matlab
+generate_CPLEX_code_WCD   % Worst-case delay
+generate_CPLEX_code_NCD   % Network Clock Drift
+generate_CPLEX_code_WCA   % Worst-case adjustment
+generate_CPLEX_code_NCA   % Network Clock Adjustment
