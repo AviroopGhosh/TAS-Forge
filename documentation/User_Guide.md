@@ -81,8 +81,10 @@ This section provides a step-by-step guide for using TAS-Forge. Before beginning
 ### Step 1: Generate Network Topology and Stream Parameters
 To being using TAS-Forge, run the following script in MATLAB:
 
-```MATLAB
-generate_network_system```
+<pre>
+    MATLAB
+    generate_network_system
+</pre>
 
 The script will prompt the user to input:
 - Number of sources
