@@ -76,4 +76,6 @@ Or you can download it as a ZIP file and extract it.
 ## Step-by-Step Guide: Using TAS-Forge
 This section provides a step-by-step guide for using TAS-Forge. Before beginning, ensure that all the required files are present in your MATLAB working directory. To understand how the files are organized, refer to the [Folder Structure](#folder_structure) section. 
 
-Note: Some of the files are generated dynamically and will not appear until the respective scripts have been executed. 
+**Note:** Many files (e.g., CSV exports, CPLEX input, INET simulation files) are generated during execution. These files will not appear until their corresponding scripts have been run.
+
+
