@@ -41,7 +41,7 @@ To get the project code:
 
 Or you can download it as a ZIP file and extract it. 
 
-## Folder Structure
+## [Folder Structure][#folder structure]
 
 <pre>
     TAS-Forge/
@@ -73,12 +73,7 @@ Or you can download it as a ZIP file and extract it.
         ├── simulation_config_<>.ini       % Ini file generated based on scheduler type  
 </pre>
 
-### Step 2: Generate CPLEX Model Code
+## Step-by-Step Guide: Using TAS-Forge
+This section provides a step-by-step guide for using TAS-Forge. Before beginning, ensure that all the required files are present in your MATLAB working directory. To understand how the files are organized, refer to the [Folder Structure][#folder structure] section. 
 
-Depending on the scheduler you want to use, run one of the following:
-
-```matlab
-generate_CPLEX_code_WCD   % Worst-case delay
-generate_CPLEX_code_NCD   % Network Clock Drift
-generate_CPLEX_code_WCA   % Worst-case adjustment
-generate_CPLEX_code_NCA   % Network Clock Adjustment
+Note: Some of the files are generated dynamically and will not appear until the respective scripts have been executed. 
