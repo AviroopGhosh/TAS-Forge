@@ -105,4 +105,4 @@ The script exports the following files:
 - stream_data.csv - Contains configuration parameters for each time-sensitive stream, including payload, periodicity, and deadlines.
 - network_data.csv - Stores global network parameters such as hyperperiod, macroticks, synchronization periodicity etc. 
 - node_data.csv - Lists the clock drift values assigned to each network node.
-- port_connections.csv- Contains detailed information about each egress port in the network, including its connected neighboring device and the list of streams routed through that port
+- port_connections.csv- Contains information about each egress port in the network, including its connected neighboring device and the list of streams routed through that port.
