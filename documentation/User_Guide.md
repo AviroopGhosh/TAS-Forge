@@ -41,7 +41,7 @@ To get the project code:
 
 Or you can download it as a ZIP file and extract it. 
 
-## [Folder Structure][#folder structure]
+## [Folder_Structure][#folder_structure]
 
 <pre>
     TAS-Forge/
@@ -74,6 +74,6 @@ Or you can download it as a ZIP file and extract it.
 </pre>
 
 ## Step-by-Step Guide: Using TAS-Forge
-This section provides a step-by-step guide for using TAS-Forge. Before beginning, ensure that all the required files are present in your MATLAB working directory. To understand how the files are organized, refer to the [Folder Structure][#folder structure] section. 
+This section provides a step-by-step guide for using TAS-Forge. Before beginning, ensure that all the required files are present in your MATLAB working directory. To understand how the files are organized, refer to the [Folder_Structure][#folder_structure] section. 
 
 Note: Some of the files are generated dynamically and will not appear until the respective scripts have been executed. 
