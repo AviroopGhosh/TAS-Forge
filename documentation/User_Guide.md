@@ -113,8 +113,12 @@ The script also executes all the following scripts. Each script generates a CPLE
 - `generate_CPLEX_code_WCA.m` - Generates CPLEX input file based on the WCA scheduling method
 - `generate_CPLEX_code_WCD.m` - Generates CPLEX input file based on the WCD scheduling method
 
-Based on this the `generate_network_systems.m` script automatically creates a directory `CPLEX_Code_Output/`, and the corresponding CPLEX model text files are generated:
+The `generate_network_systems.m` script automatically creates a directory `CPLEX_Code_Output/`, and the corresponding CPLEX model text files are generated:
 - `output_CPLEX_code_NCA.txt`
 - `output_CPLEX_code_NCD.txt`
 - `output_CPLEX_code_WCA.txt`
-- `output_CPLEX_code_WCD.txt` 
+- `output_CPLEX_code_WCD.txt`
+
+Finally, a blank text file `input_cplex_solution.txt` is created. This file is used to manually paste the GCL offset values obtained after solving the CPLEX model. This is explained in Step 2.
+
+
