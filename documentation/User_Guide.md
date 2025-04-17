@@ -64,10 +64,10 @@ Or you can download it as a ZIP file and extract it.
     ├── port_connections.csv               % Port connection list of all devices to neighbouring nodes (created by running generate_network_systems.m)
     ├── stream_data.csv                    % Lists stream parameters incl. routes, periodicity, etc. (created by running generate_network_systems.m)
     ├── CPLEX_Code_Output/                 % Directory for all CPLEX model output files (created by running generate_network_systems.m)
-        ├── output_CPLEX_code_NCA.txt      % CPLEX input file for NCA scheduling method (created by running generate_CPLEX_code_NCA.m)          
-        ├── output_CPLEX_code_NCD.txt      % CPLEX input file for NCD scheduling method (created by running generate_CPLEX_code_NCD.m)  
-        ├── output_CPLEX_code_WCA.txt      % CPLEX input file for WCA scheduling method (created by running generate_CPLEX_code_WCA.m)  
-        ├── output_CPLEX_code_WCD.txt      % CPLEX input file for WCD scheduling method (created by running generate_CPLEX_code_WCD.m) 
+        ├── output_CPLEX_code_NCA.mod      % CPLEX input file for NCA scheduling method (created by running generate_CPLEX_code_NCA.m)          
+        ├── output_CPLEX_code_NCD.mod      % CPLEX input file for NCD scheduling method (created by running generate_CPLEX_code_NCD.m)  
+        ├── output_CPLEX_code_WCA.mod      % CPLEX input file for WCA scheduling method (created by running generate_CPLEX_code_WCA.m)  
+        ├── output_CPLEX_code_WCD.mod      % CPLEX input file for WCD scheduling method (created by running generate_CPLEX_code_WCD.m) 
     ├── OMNETpp_Code_Output/               % Directory containing the ini and ned files (created by running generate_omnetpp_files.m)
         ├── generated_topology.ned         % Ned file generated
         ├── simulation_config_<>.ini       % Ini file generated based on scheduler type  
@@ -113,12 +113,13 @@ The script also executes all the following scripts. Each script generates a CPLE
 - `generate_CPLEX_code_WCA.m` - Generates CPLEX input file based on the WCA scheduling method
 - `generate_CPLEX_code_WCD.m` - Generates CPLEX input file based on the WCD scheduling method
 
-The `generate_network_systems.m` script automatically creates a directory `CPLEX_Code_Output/`, and the corresponding CPLEX model text files are generated:
-- `output_CPLEX_code_NCA.txt`
-- `output_CPLEX_code_NCD.txt`
-- `output_CPLEX_code_WCA.txt`
-- `output_CPLEX_code_WCD.txt`
+The `generate_network_systems.m` script automatically creates a directory `CPLEX_Code_Output/`, and the corresponding CPLEX model (.mod) files are generated:
+- `output_CPLEX_code_NCA.mod`
+- `output_CPLEX_code_NCD.mod`
+- `output_CPLEX_code_WCA.mod`
+- `output_CPLEX_code_WCD.mod`
 
-Finally, a blank text file `input_cplex_solution.txt` is created. This file is used to manually paste the GCL offset values obtained after solving the CPLEX model. This is explained in Step 2.
+Finally, a blank text file `input_cplex_solution.txt` is created. This file is used to manually paste the GCL offset values (the decision variables) obtained after solving the CPLEX model. This is explained in Step 2.
 
-
+### Step 2: Execute CPLEX Code
+Given the text files generated from the previous step, select one of the scheduling framework and 
