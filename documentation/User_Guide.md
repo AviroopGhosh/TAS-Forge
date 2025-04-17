@@ -102,19 +102,19 @@ Once provided, the script will automatically create the following:
 For more details, see the [Known Issues and Limitations](documentation/Issues_and_Limitations.md) page. 
 
 The script exports the following files:
-- stream_data.csv - Contains configuration parameters for each time-sensitive stream, including payload, periodicity, and deadlines.
-- network_data.csv - Stores global network parameters such as hyperperiod, macroticks, synchronization periodicity etc. 
-- node_data.csv - Lists the clock drift values assigned to each network node, used for the time synchronization and TAS scheduling process. 
-- port_connections.csv- Contains information about each egress port in the network, including its connected neighboring device and the list of streams routed.
+- `stream_data.csv` - Contains configuration parameters for each time-sensitive stream, including payload, periodicity, and deadlines.
+- `network_data.csv` - Stores global network parameters such as hyperperiod, macroticks, synchronization periodicity etc. 
+- `node_data.csv` - Lists the clock drift values assigned to each network node, used for the time synchronization and TAS scheduling process. 
+- `port_connections.csv`- Contains information about each egress port in the network, including its connected neighboring device and the list of streams routed.
 
 The script also executes all the following scripts. Each script generates a CPLEX-compatible text file containing the integer linear programming formulation for TAS schedule computation:
-- generate_CPLEX_code_NCA.m - Generates CPLEX input file based on the NCA scheduling method 
-- generate_CPLEX_code_NCD.m - Generates CPLEX input file based on the NCD scheduling method
-- generate_CPLEX_code_WCA.m - Generates CPLEX input file based on the WCA scheduling method
-- generate_CPLEX_code_WCD.m - Generates CPLEX input file based on the WCD scheduling method
+- `generate_CPLEX_code_NCA.m` - Generates CPLEX input file based on the NCA scheduling method 
+- `generate_CPLEX_code_NCD.m` - Generates CPLEX input file based on the NCD scheduling method
+- `generate_CPLEX_code_WCA.m` - Generates CPLEX input file based on the WCA scheduling method
+- `generate_CPLEX_code_WCD.m` - Generates CPLEX input file based on the WCD scheduling method
 
-Based on this the script creates a directory and the corresponding text files are generated:
+Based on this the `generate_network_systems.m` script automatically creates a directory `CPLEX_Code_Output/`, and the corresponding CPLEX model text files are generated:
 - `output_CPLEX_code_NCA.txt`
-- output_CPLEX_code_NCD.txt
-- output_CPLEX_code_WCA.txt
-- output_CPLEX_code_WCD.txt 
+- `output_CPLEX_code_NCD.txt`
+- `output_CPLEX_code_WCA.txt`
+- `output_CPLEX_code_WCD.txt` 
