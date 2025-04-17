@@ -111,4 +111,10 @@ The script also executes all the following scripts. Each script generates a CPLE
 - generate_CPLEX_code_NCA.m - Generates CPLEX input file based on the NCA scheduling method 
 - generate_CPLEX_code_NCD.m - Generates CPLEX input file based on the NCD scheduling method
 - generate_CPLEX_code_WCA.m - Generates CPLEX input file based on the WCA scheduling method
-- generate_CPLEX_code_WCD.m - Generates CPLEX input file based on the WCD scheduling method  
+- generate_CPLEX_code_WCD.m - Generates CPLEX input file based on the WCD scheduling method
+
+Based on this the script creates a directory and the corresponding text files are generated:
+- output_CPLEX_code_NCA.txt
+- output_CPLEX_code_NCD.txt
+- output_CPLEX_code_WCA.txt
+- output_CPLEX_code_WCD.txt 
