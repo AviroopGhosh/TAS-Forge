@@ -138,11 +138,11 @@ Once the model is executed, check the **Problem Browser** tab in CPLEX studio.
 - If the decision variables display **"No Value"**, this indicates that the CPLEX model could not find a feasible solution.
 - Refer to the [Technical Overview](documentation/Technical_Overview.md) documentation for possible causes and rectifications.
 - If the model **sucessfully outputs** decision varables, proceed with the following steps:
-      1. Go 
+        1. Go 
 
 If the model does output decision variables, then:
 1. Go to the "Solution" tab in the output area at the bottom of CPLEX studio.
-2. You will see the decision variables (e.g., `OFF_1_source1`,`OFF_2_switch1`, etc.)
+2. You will see the decision variables (e.g., `OFF_1_source1`,`OFF_1_switch1`,`OFF_2_switch1`, etc.)
 3. Copy **all** the decision variables into the text file.
 4. Ensure that the decision variables are in a format `OFF_1_source1 = 10` or something. 
 
