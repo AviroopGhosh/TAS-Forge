@@ -138,7 +138,7 @@ Once the model is executed, check the **Problem Browser** tab in CPLEX studio.
 - If the decision variables display **"No Value"**, this indicates that the CPLEX model could not find a feasible solution.
 - Refer to the [Technical Overview](documentation/Technical_Overview.md) documentation for possible causes and rectifications.
 - If the model **sucessfully outputs** decision varables, proceed with the following steps:
-1. Go 
+-     1. Go 
 
 If the model does output decision variables, then:
 1. Go to the "Solution" tab in the output area at the bottom of CPLEX studio.
