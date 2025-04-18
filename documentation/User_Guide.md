@@ -106,7 +106,7 @@ For more details, see the [Known Issues and Limitations](documentation/Issues_an
 The script exports the following files:
 - `stream_data.csv` - Contains configuration parameters for each time-sensitive stream, including payload, periodicity, and deadlines.
 - `network_data.csv` - Stores global network parameters such as hyperperiod, macroticks, synchronization periodicity etc. 
-- `node_data.csv` - Lists the clock drift values assigned to each network node, used for the time synchronization and TAS scheduling process. 
+- `node_data.csv` - Contains randomly assigned clock drift values for each network node, used for the time synchronization and TAS scheduling process. 
 - `port_connections.csv`- Contains information about each egress port in the network, including its connected neighboring device and the list of streams routed.
 
 The script also executes all the following scripts. Each script generates a CPLEX-compatible text file containing the integer linear programming formulation for TAS schedule computation:
