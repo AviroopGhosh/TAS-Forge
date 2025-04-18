@@ -155,4 +155,5 @@ For sucessful GCL creation the following steps need to be followed:
    
     **Note:** If all the decision variables are missing or have not been copied correctly then the script will terminate with an error indicating which variable could not be found.
    In that case, you will need to verify and copy the missing decision variable before running the script again.
+5. gdag
 
