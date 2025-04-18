@@ -153,7 +153,10 @@ For sucessful GCL creation the following steps need to be followed:
 3. Enter the scheduler name **exactly as shown**, the input is **case-sensitive**, an incorrect entry will result in an error.
 4. The script will then read the CPLEX output file from the decision variables pasted in `input_cplex_solution.txt`.
    
-    **Note:** If all the decision variables are missing or have not been copied correctly then the script will terminate with an error indicating which variable could not be found.
-   In that case, you will need to verify and copy the missing decision variable before running the script again.
-5. gdag
+    **Note:** If any of the decision variables are missing or have not been copied correctly from the CPLEX output then the script will terminate with an error indicating which variable could not be found.
+   In that case, you will need to verify and copy the missing decision variable from the CPLEX output before running the script again.
+5. The script will generate an output file `Output_GCL_matrix.txt`, which constains the computed GCLs.
+6. A schedulability cost metric will also be output as part of the result, providing insight into the efficiency of the generated schedule.
+
+**Important:** If the script generates an error citing 'overlapping conditions' then refer to [Known Issues and Limitations](documentation/Issues_and_Limitations.md) page for guidance. 
 
