@@ -144,5 +144,14 @@ If the model **sucessfully outputs** decision varables, proceed with the followi
 3. Copy **all** the decision variables into the text `input_cplex_solution.txt` (generated from Step 1) file.
 4. Ensure that the decision variables are in a format, `VARIABLE_NAME = VALUE;`, for example: `OFF_1_source1 = 0;` or `OFF_1_switch1 = 10;`.
 
+### Step 3: Create Gate Control Lists (GCLs)
+This step processes the output from CPLEX to create the Gate Control Lists (GCLs) used for TAS scheduling.
 
+For sucessful GCL creation the following steps need to be followed:
+1. Run the script `generate_GCL_output.m` in MATLAB.
+2. The script will prompt to enter the type of scheduler type used in your CPLEX run, e.g. `WCA`,`WCD`,`NCA`,or `NCD`.
+3. Enter the scheduler name **exactly as shown**, the input is **case-sensitive**, an incorrect entry will result in an error.
+4. The script will then read the CPLEX output file from the decision variables pasted in `input_cplex_solution.txt`.
+   **Note:** If all the decision variables are missing or have not been copied correctly then the script will terminate with an error indicating which variable could not be found.
+   In that case, you will need to verify and copy the missing decision variable before running the script again.
 
