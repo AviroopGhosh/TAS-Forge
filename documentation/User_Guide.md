@@ -185,4 +185,4 @@ The script outputs the following:
 - A **network topology map** that visually represents the direction of flow of traffic defined in the generated `.ned` file.
 - The following output files are created in the `OMNETpp_Code_Output` directory:
       - `generated_topology.ned` representing the network structure in the OMNeT++ simulation.
-      - `simulation_config_[sched]` representing the corresponding simulation configuration file, where `[sched]` indicates the specific TAS scheduling method used such as, `WCD`,`WCA`,etc. 
+      - `simulation_config_[sched]` representing the corresponding simulation configuration file, where `[sched]` indicates the specific TAS scheduling method used such as, `WCD`,`WCA`, etc. 
