@@ -30,7 +30,8 @@ Key features of TAS-Forge have been described below.
 
 ## TAS Scheduling Frameworks
 -	Users can choose from a suite of TAS scheduling frameworks to apply to schedule generation. 
--	This makes it easy to test and compare different scheduling frameworks under identical network conditions. 
+-	This makes it easy to test and compare different scheduling frameworks under identical network conditions.
+-	Automated CPLEX scripts are provided to eliminate the need for manual configuration and parameter setting. 
 
 ## OMNeT++ File Generation
 -	The tool also automatically generates the required the .ned and .ini files based on:
