@@ -160,3 +160,8 @@ For sucessful GCL creation the following steps need to be followed:
 
 **Important:** If the script generates an error citing 'overlapping conditions' then refer to [Known Issues and Limitations](documentation/Issues_and_Limitations.md) page for guidance. 
 
+**Note:** The `Output_GCL_matrix.txt` file contains a list of generated GCLs. Each line corresponds to the GCL for a specifc switch egress port and is aligned with the respective row in the `port_connections.csv` file. In this context:
+- **Source** refers to the switch device.
+- **SourcePort** indicates the egress port on which the GCL is applied. 
+
+All GCL entries are expressed in microseconds. For an understanding on how to interpret the GCLs refer to the [Technical Overview](documentation/Technical_Overview.md) page. 
