@@ -166,4 +166,17 @@ For sucessful GCL creation the following steps need to be followed:
 
 All GCL entries are expressed in microseconds. 
 
-For an understanding on how to interpret the GCLs refer to the [Technical Overview](documentation/Technical_Overview.md) page. 
+For an understanding on how to interpret the GCLs refer to the [Technical Overview](documentation/Technical_Overview.md) page.
+
+### Step 4: Generate Simulation Configuration
+Following the previous step, this stage generates the required OMNeT++ simulation files, namely the `.ned` and `.ini` files. 
+
+Run the following script in MATLAB:
+<pre>
+    generate_omnetpp_files.m
+</pre>
+
+The script will first create a new directory `OMNETpp_Code_Output` if one does not already exist. 
+
+The script will then run the `generate_omnetpp_ned_file.m` and `generate_omnetpp_ini_file.m`. 
+
