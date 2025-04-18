@@ -70,7 +70,7 @@ Or you can download it as a ZIP file and extract it.
         ├── output_CPLEX_code_WCD.mod      % CPLEX input file for WCD scheduling method (created by running generate_CPLEX_code_WCD.m) 
     ├── OMNETpp_Code_Output/               % Directory containing the ini and ned files (created by running generate_omnetpp_files.m)
         ├── generated_topology.ned         % Ned file generated
-        ├── simulation_config_<sched>.ini  % Ini file generated based on scheduler type  
+        ├── simulation_config_[sched].ini  % Ini file generated based on scheduler type  
 </pre>
 
 ## Step-by-Step Guide: Using TAS-Forge
