@@ -152,6 +152,7 @@ For sucessful GCL creation the following steps need to be followed:
 2. The script will prompt to enter the type of scheduler type used in your CPLEX run, e.g. `WCA`,`WCD`,`NCA`,or `NCD`.
 3. Enter the scheduler name **exactly as shown**, the input is **case-sensitive**, an incorrect entry will result in an error.
 4. The script will then read the CPLEX output file from the decision variables pasted in `input_cplex_solution.txt`.
-   **Note:** If all the decision variables are missing or have not been copied correctly then the script will terminate with an error indicating which variable could not be found.
+   
+    **Note:** If all the decision variables are missing or have not been copied correctly then the script will terminate with an error indicating which variable could not be found.
    In that case, you will need to verify and copy the missing decision variable before running the script again.
 
