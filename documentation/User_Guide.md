@@ -44,7 +44,7 @@ Or you can download it as a ZIP file and extract it.
 ## [Folder Structure](#folder_structure)
 
 <pre>
-    TAS-Forge/
+    TAS-Forge/codes/
     ├── function_generate_routes.m         % Function to generate pair of sources and sinks to form routes
     ├── function_generate_topology_map.m   % Function used to generate the topology map incl. source and destination ports
     ├── function_import_topology_data.m    % This funcition is used to import the topology-related data  
@@ -70,7 +70,7 @@ Or you can download it as a ZIP file and extract it.
         ├── output_CPLEX_code_WCD.mod      % CPLEX input file for WCD scheduling method (created by running generate_CPLEX_code_WCD.m) 
     ├── OMNETpp_Code_Output/               % Directory containing the ini and ned files (created by running generate_omnetpp_files.m)
         ├── generated_topology.ned         % Ned file generated
-        ├── simulation_config_<>.ini       % Ini file generated based on scheduler type  
+        ├── simulation_config_<sched>.ini  % Ini file generated based on scheduler type  
 </pre>
 
 ## Step-by-Step Guide: Using TAS-Forge
@@ -173,10 +173,16 @@ Following the previous step, this stage generates the required OMNeT++ simulatio
 
 Run the following script in MATLAB:
 <pre>
-    generate_omnetpp_files.m
+    generate_omnetpp_files
 </pre>
 
-The script will first create a new directory `OMNETpp_Code_Output` if one does not already exist. 
+This script will:
+- Automatically create a new new directory `OMNETpp_Code_Output` if one doesn't already exist. 
+- Interally call the scripts `generate_omnetpp_ned_file.m` and `generate_omnetpp_ini_file.m` to generate the necessary simulation files.
+- The script will not proceed if the previous steps have not been completed.
 
-The script will then run the `generate_omnetpp_ned_file.m` and `generate_omnetpp_ini_file.m`. 
-
+The script outputs the following:
+- A **network topology map** that visually represents the direction of flow of traffic defined in the generated `.ned` file.
+- The following output files are created in the `OMNETpp_Code_Output` directory:
+      - `generated_topology.ned` representing the network structure in the OMNeT++ simulation.
+      - `simulation_config_<sched>` representing the corresponding simulation configuration file, where <sched> indicates the specific TAS scheduling method used such as, `WCD`,`WCA`,etc. 
