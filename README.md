@@ -64,4 +64,5 @@ The following documentation covers key aspects of TAS-Forge, including how to us
 
 - [User Guide](documentation/User_Guide.md) - Step-by-step instructions of how to use TAS-Forge. 
 - [Technical Overview](documentation/Technical_Overview.md) - In-depth explanation of TAS-Forge's design and system model. 
-- [Known Issues and Limitations](documentation/Issues_and_Limitations.md) - Current limitations and potential areas of improvement in the future. 
+- [Known Issues and Limitations](documentation/Issues_and_Limitations.md) - Current limitations and potential areas of improvement in the future.
+- [Modifications Required to INET](documentation/Modifications_INET.md) - Modifications required to INET to implement the OMNeT++ component of TAS-Forge.
