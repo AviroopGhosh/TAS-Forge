@@ -194,4 +194,9 @@ The files generated in the `OMNETpp_Code_Output` can be imported into an OMNET++
 **Important:** Ensure that you have completed the modifications required in INET from the [Modifications to INET](Modifications_INET) page first before proceeding to simulating in OMNeT++. 
 
 ### Step 5: Analyzing Simulation Results
+After loading the `.ned` and `.ini` files in OMNeT++, run the `.ini` file to start the simulation. 
+
+**Note:** By default, the simulation executes for a duration of 1 second. To modify the simulation duration, adjust the `sim-time-limit` parameter in the `.ini` file.
+
+
 
