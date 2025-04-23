@@ -23,6 +23,8 @@ Then make the following 🛠️ changes in the **source** file:
    delayer.out --> fcsChecker.in;
  </code></pre>
 
+Feel free to adjust the icon positioning in the **design** tab for better visual alignment. 
+
 🗒️ **Note:** Ensure correct indentation and alignment when modifying the `.ned` file to maintain INET compatibility.
 
 💡 **Important:** This modification ensures that Ethernet-layer packets experience the intended **processing delays** during simulation. Be sure to **save and rebuild** your INET project after making changes. 
