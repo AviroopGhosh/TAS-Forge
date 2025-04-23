@@ -205,5 +205,6 @@ After **successful** completion of the simulation:
 - Filter the results using 'meanBitLifeTimePerPacket:vector' in the results column.
 - These values represent the end-to-end latency of each frame, sorted by the stream as received at the sink.
 - Export the results and save the file as `results.csv`.
-
+- The `.csv` file should be visible in the *Results* section in Project Explorer in OMNeT++.
+- Move this file to your MATLAB directory containing the TAS-Forge files.
 
