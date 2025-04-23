@@ -208,3 +208,18 @@ After **successful** completion of the simulation:
 - The `.csv` file should be visible in the *Results* section in Project Explorer in OMNeT++.
 - Move this file to your MATLAB directory containing the TAS-Forge files.
 
+Following the steps above, run the `analyze_omnet_results.m` script. 
+
+The script execution will generate a `stream_data_output.csv` file.
+
+This file provides a detailed summary of the simulated results and performance of generated GCLs including:
+- The stream identifiers with the corresponding routes and intermediate devices.
+- Periodicity of each stream.
+- Payload size of the frames per stream.
+- Minimum end-to-end latency and analytical end-to-end latencies boundaries.
+- Measured end-to-end latency boundaries and jitter.
+- The number of hops in the network.
+
+**Note:** All the timing parameters are expressed in microseconds.
+
+For further technical details on interpreting the results refer to the [Technical Overview](documentation/Technical_Overview.md) page. 
