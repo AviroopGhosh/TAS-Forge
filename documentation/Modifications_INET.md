@@ -22,3 +22,8 @@ Then make the following 🛠️ changes in the **source** file:
    lowerLayerIn --> { @display("m=s"); } --> delayer.in;
    delayer.out --> fcsChecker.in;
  </code></pre>
+
+🗒️ **Note:** Ensure correct indentation and alignment when modifying the `.ned` file to maintain INET compatibility.
+
+💡 **Important:** This modification ensures that Ethernet-layer packets experience the intended **processing delays** during simulation. Be sure to **save and rebuild** your INET project after making changes. 
+🧰 *Note:* TAS-Forge only simulates processing delays in switches. 
