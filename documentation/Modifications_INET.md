@@ -10,11 +10,9 @@ Then make the following changes in the **source** file:
 
 1. In the `submodules:` section add the following commands:
 
-<pre>
-          delayer: <default("PacketDelayer")> like IPacketDelayer {
-            @display("p=600,407");
-        }
-</pre>
+<pre><code class="language-ned">
+ delayer: <default("PacketDelayer")> like IPacketDelayer { @display("p=600,407");}
+ </default></code></pre>
 
 2. Modify the following changes `connections:` section to include the delayer:
 
