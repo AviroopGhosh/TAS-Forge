@@ -7,7 +7,7 @@ For a deeper understanding of the tool's design, functionality, and scheduling m
 
 To review current limitations and known issues encoutered in the tool, refer to the [Known Issues and Limitations](Issues_and_Limitations.md) page.
 
-## [Prerequisites](#prerequisites)
+## 😛 [Prerequisites](#prerequisites)
 For implementing TAS-Forge, it is vital that the following software tools are installed correctly and configured:
 
 ### 1. MATLAB
