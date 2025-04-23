@@ -215,7 +215,7 @@ Following the steps above, run the `analyze_omnet_results.m` script.
 
 **Note:** If you would like to renamed the `results.csv` differently, then please ensure that it is aligned with the `inputfilename` specification in `analyze_omnet_results.m`.
 
-The script execution will generate a `stream_data_output.csv` file.
+The script execution will generate the `stream_data_output.csv` file.
 
 This file provides a detailed summary of the simulated results and performance of generated GCLs including:
 - The stream identifiers with the corresponding routes and intermediate devices.
