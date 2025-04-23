@@ -194,7 +194,7 @@ The script outputs the following:
 
 The files generated in the `OMNETpp_Code_Output` can be imported into an OMNET++ project for execution. 
 
-**Important:** Ensure that you have completed the modifications required in INET from the [Modifications to INET](Modifications_INET) page first before proceeding to simulating in OMNeT++. 
+**Important:** Ensure that you have completed the modifications required in INET from the [Modifications to INET](Modifications_INET.md) page first before proceeding to simulating in OMNeT++. 
 
 ### Step 5: Analyzing Simulation Results
 After loading the `.ned` and `.ini` files in OMNeT++, run the `.ini` file to start the simulation. 
