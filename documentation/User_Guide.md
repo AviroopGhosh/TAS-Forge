@@ -78,7 +78,7 @@ Or you can download it as a ZIP file and extract it.
         ├── simulation_config_[sched].ini  % Ini file generated based on scheduler type  
 </pre>
 
-## 🛤️ Step-by-Step Guide: Using TAS-Forge
+## 🪜 Step-by-Step Guide: Using TAS-Forge
 This section provides a step-by-step guide for using TAS-Forge. Before beginning, ensure that all the required files are present in your MATLAB working directory. To understand how the files are organized, refer to the [Folder Structure](#folder_structure) section. 
 
 **Note:** Many files (e.g., CSV exports, CPLEX input, OMNeT simulation files) are generated during execution. These files will not appear until their corresponding scripts have been run. This will be highlighted in the respective steps. 
