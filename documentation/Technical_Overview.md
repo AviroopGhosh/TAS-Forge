@@ -36,4 +36,4 @@ Key Features of Topology Generation:
 
 The example below illustrates a simple topology consisting of 4 sources and 3 sinks interconnected through 3 switches.
 
-![Simple Topology Example](images/technical_overview_simple_topology.png)
+![Simple Topology Example](images/techinical_overview_simple_topology.png)
