@@ -8,15 +8,18 @@ TAS-Forge operates across five sequential phases:
     - Users define the number of sources, sinks, and switches.
     - A linear topology is generated automatically.
     - Routes are created between source and sink pairs with corresponding time-sensitive traffic streams.
-    - Each stream are dynamically assigned a periodicity, deadline, and frame payload size.
-  
+    - Each stream are dynamically assigned key attributes including periodicity, deadline, and frame payload size.
 2. TAS Scheduling considering Time Synchronization (CPLEX)
     - The TAS scheduling frameworks are fomulated as ILP methods that account for time synchronization effects.
     - CPLEX-compatible `.mod` files are automatically generated.
     - These models can be executed using IBM CPLEX optmization studio.
     - Upon sucessful execution, TAS schedule offsets are computed as decision variable outputs. 
 3. GCL Formation (MATLAB)
-    - The CPLEX decision variable outputs are used to compute GCLs.
-    - Metrics related to the schedulability quality are calculated. 
-6. Network Simulation (OMNeT++)
-7. Performance Metrics (MATLAB) 
+    - The extracted CPLEX outputs are parsed to generate GCLs for each switch egress port.
+    - Additional metrics related to the schedule quality known as schedulability cost are compluted.
+4. Network Simulation (OMNeT++)
+    - OMNeT++ compatible simulation `.ned` and `.ini` files are generated to evaluate the TAS schedules.
+    - Simulations evaluate the TAS schedule performance, including the impact of synchronization behavior across devices.
+5. Performance Metrics (MATLAB)
+    - Simulation results are parsed and analyzed to evaluate end-to-end latency, jitter, and overall scheduling efficiency.
+    - Results are summarized in easy-to-read tables and can be exported to .csv for further post-processing.   
