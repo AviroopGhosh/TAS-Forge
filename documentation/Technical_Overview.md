@@ -24,6 +24,6 @@ TAS-Forge operates across five sequential phases:
     - Simulation results are parsed and analyzed to evaluate end-to-end latency, jitter, and overall scheduling efficiency.
     - Results are summarized in easy-to-read tables and can be exported to .csv for further post-processing.   
 
-📌 *For a detailed list and description of the files, generated files (e.g. `.csv','`.mod','.ini','.ned') and folder structure refer to the [User Guide](User_Guide.md).*
+📌 *For a detailed list and description of the files, generated files (e.g. `.csv`,`.mod`,`.ini`,`.ned`) and folder structure refer to the [User Guide](User_Guide.md).*
 
 ## ⛏️ Topology Generation
