@@ -15,6 +15,8 @@ TAS-Forge operates across five sequential phases:
     - CPLEX-compatible `.mod` files are automatically generated.
     - These models can be executed using IBM CPLEX optmization studio.
     - Upon sucessful execution, TAS schedule offsets are computed as decision variable outputs. 
-4. GCL Formation (MATLAB)
-5. Network Simulation (OMNeT++)
-6. Performance Metrics (MATLAB) 
+3. GCL Formation (MATLAB)
+    - The CPLEX decision variable outputs are used to compute GCLs.
+    - Metrics related to the schedulability quality are calculated. 
+6. Network Simulation (OMNeT++)
+7. Performance Metrics (MATLAB) 
