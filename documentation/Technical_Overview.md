@@ -37,3 +37,17 @@ Key Features of Topology Generation:
 The example below illustrates a simple topology consisting of 4 sources and 3 sinks interconnected through 3 switches.
 
 ![Simple Topology Example](images/techinical_overview_simple_topology.png)
+
+The MATLAB command window displays the following source and sink pairs:
+
+<pre>
+Source to Sink Pairs:
+source1 ---> sink1
+source4 ---> sink2
+source3 ---> sink3
+source2 ---> sink1    
+</pre>
+
+Note that the routes are dynamically generated — not all routes traverse all three switches; each stream follows a path based on its source-sink pairing.
+
+A ⏰ Grand Master (GM) is automatically generated and positioned within the topology. It serves as the primary source of periodic time synchronization messages and is later modeled in the network simulation phase.
