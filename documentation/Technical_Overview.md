@@ -3,3 +3,14 @@ TAS-Forge is a simulation and scheduling automation tool designed for Time-Sensi
 
 ## 🧩 System Architecture
 TAS-Forge operates across five sequential phases:
+
+1. Toplogy & Stream Generation (MATLAB)
+- Users define the number of sources, sinks, and switches.
+- A linear topology is generated automatically.
+- Routes are created between source and sink pairs with corresponding time-sensitive traffic streams.
+- Each stream are assigned periodicity, deadline, and payload size.
+  
+3. TAS Scheduling considering Time Synchronization (CPLEX)
+4. GCL Formation (MATLAB)
+5. Network Simulation (OMNeT++)
+6. Performance Metrics (MATLAB) 
