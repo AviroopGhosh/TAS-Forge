@@ -1,7 +1,7 @@
 # Technical Overview
 TAS-Forge is a simulation and scheduling automation tool designed for Time-Sensitive Networking (TSN). It focuses on IEEE 802.1Qbv, the Time-Aware Shaper (TAS), while also incorporating IEEE 802.1AS time synchronization into the scheduling process. The tool automatically generates linear network topologies in MATLAB, formulates Gate Control Lists (GCLs) using Integer Linear Programming (ILP) via IBM CPLEX, and evaluates scheduling performance through simulations in OMNeT++.
 
-🌟 **Important:** For an understanding of nomenclature used in this documentation such as `frames`,`streams`,`deadline`, etc. refer to [1]. 
+🌟 **Important:** For an understanding of nomenclature used in this documentation (such as `frames`,`streams`, etc.) and an understanding of the different TAS scheduling frameworks refer to [1]. 
 
 ## 🧩 System Architecture
 TAS-Forge operates across five sequential phases:
@@ -55,7 +55,14 @@ Note that the routes are dynamically generated — not all routes traverse all t
 
 A ⏲️ Grand Master (GM) is automatically generated and positioned within the topology. It serves as the primary source of periodic time synchronization messages and is later modeled in the network simulation phase.
 
-## 📡Stream & Network Parameters
+## 🏘️ List of Parameters
+To enable precise and realistic TAS scheduling, TAS-Forge requires a models of a set of timing, network-wide, and stream-level parameters. These parameters define the impact of time synchronization in the network, how traffic flow through the network, and how the devices are configured. Together, these form the foundation for generating valid schedules and assessing the performance of TSN deployments.
+
+### ⏰ Time Synchronization Parameters
+Time synchronization is a cornerstone of TSN, enabling coordinated communication across devices by aligning them to a common time reference. In TAS-Forge, synchronization-related parameters are explicitly modeled to reflect the impact of clock drift and periodic sync updates on schedule accuracy. Accurate TAS schedule generation requires careful consideration of these synchronization dynamics, making these parameters essential for realistic and robust simulation.
+
+### 📡 Network Parameters
+Network parameters define the operational context of the Time-Sensitive Network (TSN). These values influence how streams are scheduled and how delays propagate through the network.
 
 ### 📦 Stream Parameters
 Each route in the network is associated with a **stream**, which represents a unidirectional flow of time-sensitive data frames from a source to a sink. Each stream is characterized by specific parameters essential for TAS scheduling. These include:
@@ -69,7 +76,7 @@ Each route in the network is associated with a **stream**, which represents a un
 - **Transmission Delay:** The time required for a frame to be transmitted from the egress port of a network device. Since all network links are assumed to operate at the same speed, the transmission delay remains constant for a given stream across all links in the topology.
 - **L-Parameter:** The summation of propagation, processing and transmission delays between any two devices, also a constant parameter. 
 
-All stream-related parameters are stored in the `stream_data.csv` file, which is automatically generated after running the `generate_network_system.m` script.
+All stream-related parameters are stored in the `stream_data.csv` file, which is automatically generated after executing the `generate_network_system.m` script.
 
 💡 **Note:** Each stream operates independently, and all timing-related parameterd are defined relative to the macrotick unit used in the simulation.
 
