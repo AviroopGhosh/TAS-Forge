@@ -1,7 +1,7 @@
 # Technical Overview
 TAS-Forge is a simulation and scheduling automation tool designed for Time-Sensitive Networking (TSN). It focuses on IEEE 802.1Qbv, the Time-Aware Shaper (TAS), while also incorporating IEEE 802.1AS time synchronization into the scheduling process. The tool automatically generates linear network topologies in MATLAB, formulates Gate Control Lists (GCLs) using Integer Linear Programming (ILP) via IBM CPLEX, and evaluates scheduling performance through simulations in OMNeT++.
 
-🌟 **Important:** For an understanding of nomenclature used in this documentation such as `frames`,`streams`,`deadline`, etc. refer to [1] & [2]. 
+🌟 **Important:** For an understanding of nomenclature used in this documentation such as `frames`,`streams`,`deadline`, etc. refer to [1]. 
 
 ## 🧩 System Architecture
 TAS-Forge operates across five sequential phases:
@@ -64,10 +64,15 @@ Each route in the network is associated with a **stream**, which represents a un
 - **Periodicity**: The frequency at which frames are generated. Periodicities are randomly assigned from a predefined set in the `T_period` array within the `generate_network_system.m` script. You can customize the stream periodicities by modifying this array.
 - **Payload Size**: The size of each data frame (default: `100 Bytes`). This can be changed by editing the `payload` variable in `generate_network_system.m`. Note that the total frame size includes additional header overhead from the UDP and Ethernet layers.
 - **Minimum Possible e2e latency:** The E2E latency for each stream over the route caclulcated considering only propagation, processing and transmission delays but no queuing delays. 
-- **Deadline:** Each stream has a deadline constraint, set equal to the stream periodicity for simplicity. However, given the TAS simulated frameworks, the e2e latency is always equal to the minimum E2E latency or bounded based on analytical models. For further insights, refer to [1] and [2].
-- **Number of Hops:** The total number of links between the source and the sink. 
+- **Deadline:** Each stream has a deadline constraint, set equal to the stream periodicity for simplicity. However, given the TAS simulated frameworks, the e2e latency is always equal to the minimum E2E latency or bounded based on analytical models. For further insights into the scheduling framework and analytical latency boundaries, refer to [1] and [2] respectively. 
+- **Number of Hops:** The total number of links between the source and the sink.
+- **Transmission Delay:** The time required for a frame to be transmitted from the egress port of a network device. Since all network links are assumed to operate at the same speed, the transmission delay remains constant for a given stream across all links in the topology.
+- **L-Parameter:** The summation of propagation, processing and transmission delays between any two devices, also a constant parameter. 
 
-💡 **Note:** Each stream operates independently, and frame timing is defined relative to the macrotick unit used in the simulation.
+All stream-related parameters are stored in the `stream_data.csv` file, which is automatically generated after running the `generate_network_system.m` script.
+
+💡 **Note:** Each stream operates independently, and all timing-related parameterd are defined relative to the macrotick unit used in the simulation.
+
 
 ## References:
 [1] Aviroop Ghosh, Saleh Yousefi, and Thomas Kunz. 2025. Multi-Stream TSN Gate Control Scheduling in the Presence of Clock Synchronization. In Proceedings of the 26th International Conference on Distributed Computing and Networking (ICDCN '25). Association for Computing Machinery, New York, NY, USA, 11–20. https://doi-org.proxy.library.carleton.ca/10.1145/3700838.3700847
