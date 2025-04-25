@@ -61,6 +61,8 @@ Each route in the network is associated with a **stream**, which represents a un
 - **Route**: The complete path traversed by the stream, including the source, sink, and all intermediary switches.
 - **Periodicity**: The frequency at which frames are generated. Periodicities are randomly assigned from a predefined set in the `T_period` array within the `generate_network_system.m` script. You can customize the stream periodicities by modifying this array.
 - **Payload Size**: The size of each data frame (default: `100 Bytes`). This can be changed by editing the `payload` variable in `generate_network_system.m`. Note that the total frame size includes additional header overhead from the UDP and Ethernet layers.
+- **Minimum Possible E2E latency:** The E2E latency for each stream over the route caclulcated considering only propagation, processing and transmission delays but no queuing delays. 
+- **Deadline:** Each stream has a deadline constraint, set equal to the stream periodicity for simplicity. However, given the TAS simulated frameworks, the E2E latency is always equal to the minimum E2E latency or bounded based on analytical models. For further insights, refer to [1] and [2].
 
 💡 **Note:** Each stream operates independently, and frame timing is defined relative to the macrotick unit used in the simulation.
 
