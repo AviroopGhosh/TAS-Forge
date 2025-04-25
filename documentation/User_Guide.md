@@ -149,7 +149,7 @@ If the model **successfully generates** decision varables, proceed with the foll
 3. Copy **all** the decision variables into the text `input_cplex_solution.txt` (generated from Step 1) file.
 4. Ensure that the decision variables are in a format, `VARIABLE_NAME = VALUE;`, for example: `OFF_1_source1 = 0;` or `OFF_1_switch1 = 10;`.
 
-### Step 3: Create Gate Control Lists (GCLs)
+### 🗒️ Step 3: Create Gate Control Lists (GCLs)
 This step processes the output from CPLEX to create the Gate Control Lists (GCLs) used for TAS scheduling.
 
 For successful GCL creation the following steps need to be followed:
@@ -173,7 +173,7 @@ All GCL entries are expressed in **microseconds**.
 
 For an understanding on how to interpret the GCLs refer to the [Technical Overview](documentation/Technical_Overview.md) page.
 
-### Step 4: Generate Simulation Configuration
+### 🏭 Step 4: Generate Simulation Configuration
 Following the previous step, this stage generates the required OMNeT++ simulation files, namely the `.ned` and `.ini` files. 
 
 Run the following script in MATLAB:
@@ -196,7 +196,7 @@ The files generated in the `OMNETpp_Code_Output` can be imported into an OMNET++
 
 **Important:** Ensure that you have completed the modifications required in INET from the [Modifications to INET](Modifications_INET.md) page first before proceeding to simulating in OMNeT++. 
 
-### Step 5: Analyzing Simulation Results
+### 🔬 Step 5: Analyzing Simulation Results
 After loading the `.ned` and `.ini` files in OMNeT++, run the `.ini` file to start the simulation. 
 
 **Note:** By default, the simulation executes for a duration of 1 second. To modify the simulation duration, adjust the `sim-time-limit` parameter in the `.ini` file.
@@ -225,6 +225,6 @@ This file provides a detailed summary of the simulated results and performance o
 - Measured end-to-end latency boundaries and jitter.
 - The number of hops in the network.
 
-**Note:** All the timing parameters are expressed in microseconds.
+**Note:** All the timing parameters are expressed in microseconds. 
 
-For further technical details on interpreting the results refer to the [Technical Overview](documentation/Technical_Overview.md) page. 
+✅ TAS-Forge is now fully set up. You can experiment with topology sizes, or stream properties to evaluate custom scenarios. For detailed understanding of system design and implementation decisions, refer to the [Technical Overview](documentation/Technical_Overview.md) page.
