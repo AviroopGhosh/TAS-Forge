@@ -63,7 +63,8 @@ Time synchronization is a cornerstone of TSN, enabling coordinated communication
 - **Clock Drift:** Each network device is attached with a random constant clock drift value within a configurable *parts per million (ppm)* range. The default range is set between -10 ppm to +10 ppm. To update this change the `p_range` parameter in `generate_network_system.m`. 
 - **Synchroniation Periodicity:** This defines how frequently the GM sends synchronization messages across the network. By default, it is set to 125 ms, aligning with the recommended value in the IEEE 802.1AS standard [3].
   It is **strongly recommended** not to modify this setting. For more details, refer to the [Known Issues and Limitations](Issues_and_Limitations.md) page.
-- 
+- **Delta value:** Represents the maximum possible timing difference between any two devices in the network.
+
 ### 📡 Network Parameters
 Network parameters define the operational context of the Time-Sensitive Network (TSN). These values influence how streams are scheduled and how delays propagate through the network.
 
