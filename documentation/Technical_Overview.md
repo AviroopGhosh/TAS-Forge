@@ -65,6 +65,9 @@ Time synchronization is a cornerstone of TSN, enabling coordinated communication
   It is **strongly recommended** not to modify this setting. For more details, refer to the [Known Issues and Limitations](Issues_and_Limitations.md) page.
 - **Delta value:** Represents the maximum possible timing difference between any two devices in the network.
 
+All generated clock drift values for the devices in the network are stored in the `node_data.csv` file. 
+If you wish to modify the clock drift values manually and directly to the `.csv` (clock drift values are converted from ppm to seconds in the `.csv` file), these changes will need to made **before** proceeding the GCL schedule generation step. 
+
 ### 📡 Network Parameters
 Network parameters define the operational context of the Time-Sensitive Network (TSN). These values influence how streams are scheduled and how delays propagate through the network.
 
