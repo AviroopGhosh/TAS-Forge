@@ -66,6 +66,7 @@ Time synchronization is a cornerstone of TSN, enabling coordinated communication
 - **Delta value:** Represents the maximum possible timing difference between any two devices in the network.
 
 All generated clock drift values for the devices in the network are stored in the `node_data.csv` file. 
+
 If you wish to modify the clock drift values manually and directly to the `.csv` (clock drift values are converted from ppm to seconds in the `.csv` file), these changes will need to made **before** proceeding the GCL schedule generation step. 
 
 ### 📡 Network Parameters
