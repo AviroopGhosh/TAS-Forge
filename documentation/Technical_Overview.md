@@ -53,5 +53,14 @@ Note that the routes are dynamically generated — not all routes traverse all t
 
 A ⏲️ Grand Master (GM) is automatically generated and positioned within the topology. It serves as the primary source of periodic time synchronization messages and is later modeled in the network simulation phase.
 
-## 📡Network & Stream Parameters
+## 📡Stream & Network Parameters
+
+### 📦 Stream Parameters
+Each route in the network is associated with a **stream**, which represents a unidirectional flow of time-sensitive data frames from a source to a sink. Each stream is characterized by specific parameters essential for TAS scheduling. These include:
+- **Stream ID**: A unique identifier assigned to each stream.
+- **Route**: The complete path traversed by the stream, including the source, sink, and all intermediary switches.
+- **Periodicity**: The frequency at which frames are generated. Periodicities are randomly assigned from a predefined set in the `T_period` array within the `generate_network_system.m` script. You can customize the stream periodicities by modifying this array.
+- **Payload Size**: The size of each data frame (default: `100 Bytes`). This can be changed by editing the `payload` variable in `generate_network_system.m`. Note that the total frame size includes additional header overhead from the UDP and Ethernet layers.
+
+💡 **Note:** Each stream operates independently, and frame timing is defined relative to the macrotick unit used in the simulation.
 
