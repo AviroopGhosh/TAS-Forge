@@ -33,6 +33,7 @@ Key Features of Topology Generation:
 - **Linear Design:** The network topology is structured in a linear fashion, where traffic streams sequentially from source nodes to sink nodes through a chain of interconnected switches.
 - **Route Construction:** Based on the generated topology, TAS-Forge automatically establishes communication routes between each source and sink pair. These routes specify the exact sequence of network devices (including switches) that each stream will traverse.
 - **Flexible Source-Sink Mapping:** While each stream corresponds to a unique source-sink pair, the overall design allows for flexible mappings, i.e., a single source can transmit to multiple sinks, and a single sink can receive traffic from multiple sources.
+- **Visual Figure:** A visual figure is generated represnting the network topology. 
 
 The example below illustrates a simple topology consisting of 4 sources and 3 sinks interconnected through 3 switches.
 
