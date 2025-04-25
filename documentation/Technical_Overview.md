@@ -59,7 +59,7 @@ A ⏲️ Grand Master (GM) is automatically generated and positioned within the 
 To enable precise and realistic TAS scheduling, TAS-Forge requires a models of a set of timing, network-wide, and stream-level parameters. These parameters define the impact of time synchronization in the network, how traffic flow through the network, and how the devices are configured. Together, these form the foundation for generating valid schedules and assessing the performance of TSN deployments.
 
 ### ⏰ Time Synchronization Parameters
-Time synchronization is a cornerstone of TSN, enabling coordinated communication across devices by aligning them to a common time reference. In TAS-Forge, synchronization-related parameters are explicitly modeled to reflect the impact of clock drift and periodic sync updates on schedule accuracy. Accurate TAS schedule generation requires careful consideration of these synchronization dynamics, making these parameters essential for realistic and robust simulation.
+Time synchronization is a cornerstone of TSN, enabling coordinated communication across devices by aligning them to a common time reference. In TAS-Forge, synchronization-related parameters are explicitly modeled to reflect the impact of clock drift and periodic sync updates on schedule accuracy. Accurate TAS schedule generation requires careful consideration of these synchronization dynamics, making these parameters essential for realistic simulation.
 
 ### 📡 Network Parameters
 Network parameters define the operational context of the Time-Sensitive Network (TSN). These values influence how streams are scheduled and how delays propagate through the network.
