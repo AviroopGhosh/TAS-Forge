@@ -60,7 +60,10 @@ To enable precise and realistic TAS scheduling, TAS-Forge requires a models of a
 
 ### ⏰ Time Synchronization Parameters
 Time synchronization is a cornerstone of TSN, enabling coordinated communication across devices by aligning them to a common time reference. In TAS-Forge, synchronization-related parameters are explicitly modeled to reflect the impact of clock drift and periodic sync updates on schedule accuracy. Accurate TAS schedule generation requires careful consideration of these synchronization dynamics, making these parameters essential for realistic simulation.
-
+- **Clock Drift:** Each network device is attached with a random constant clock drift value within a configurable *parts per million (ppm)* range. The default range is set between -10 ppm to +10 ppm. To update this change the `p_range` parameter in `generate_network_system.m`. 
+- **Synchroniation Periodicity:** This defines how frequently the GM sends synchronization messages across the network. By default, it is set to 125 ms, aligning with the recommended value in the IEEE 802.1AS standard [3].
+  It is **strongly recommended** not to modify this setting. For more details, refer to the [Known Issues and Limitations](Issues_and_Limitations.md) page.
+- 
 ### 📡 Network Parameters
 Network parameters define the operational context of the Time-Sensitive Network (TSN). These values influence how streams are scheduled and how delays propagate through the network.
 
@@ -86,3 +89,4 @@ All stream-related parameters are stored in the `stream_data.csv` file, which is
 
 [2] A. Ghosh, S. Yousefi, and T. Kunz, "Latency Bounds for TSN Scheduling in the Presence of Clock Synchronization," *IEEE Networking Letters*, vol. 7, no. 1, pp. 41–45, March 2025. [DOI: 10.1109/LNET.2024.3507792](https://doi.org/10.1109/LNET.2024.3507792)
 
+[3] IEEE Std. 802.1AS-2020 (Revision of IEEE Std 802.1AS-2011), “IEEE Standard for Local and Metropolitan Area Networks–Timing and synchronization for time-sensitive applications,” 2020. ISBN: 9781504464307.
