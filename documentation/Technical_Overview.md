@@ -1,6 +1,8 @@
 # Technical Overview
 TAS-Forge is a simulation and scheduling automation tool designed for Time-Sensitive Networking (TSN). It focuses on IEEE 802.1Qbv, the Time-Aware Shaper (TAS), while also incorporating IEEE 802.1AS time synchronization into the scheduling process. The tool automatically generates linear network topologies in MATLAB, formulates Gate Control Lists (GCLs) using Integer Linear Programming (ILP) via IBM CPLEX, and evaluates scheduling performance through simulations in OMNeT++.
 
+🌟 **Important:** For an understanding of nomenclature used in this documentation such as `frames`,`streams`,`deadline`, etc. refer to [1] & [2]. 
+
 ## 🧩 System Architecture
 TAS-Forge operates across five sequential phases:
 
@@ -21,7 +23,7 @@ TAS-Forge operates across five sequential phases:
     - OMNeT++ compatible simulation `.ned` and `.ini` files are generated to evaluate the TAS schedules.
     - Simulations evaluate the TAS schedule performance, including the impact of synchronization behavior across devices.
 5. Performance Metrics (MATLAB)
-    - Simulation results are parsed and analyzed to evaluate end-to-end latency, jitter, and overall scheduling efficiency.
+    - Simulation results are parsed and analyzed to evaluate end-to-end (e2e) latency, jitter, and overall scheduling efficiency.
     - Results are summarized in easy-to-read tables and can be exported to .csv for further post-processing.   
 
 📌 *For a detailed list and description of the files, generated files (e.g. `.csv`,`.mod`,`.ini`,`.ned`) and folder structure refer to the [User Guide](User_Guide.md).*
@@ -61,8 +63,13 @@ Each route in the network is associated with a **stream**, which represents a un
 - **Route**: The complete path traversed by the stream, including the source, sink, and all intermediary switches.
 - **Periodicity**: The frequency at which frames are generated. Periodicities are randomly assigned from a predefined set in the `T_period` array within the `generate_network_system.m` script. You can customize the stream periodicities by modifying this array.
 - **Payload Size**: The size of each data frame (default: `100 Bytes`). This can be changed by editing the `payload` variable in `generate_network_system.m`. Note that the total frame size includes additional header overhead from the UDP and Ethernet layers.
-- **Minimum Possible E2E latency:** The E2E latency for each stream over the route caclulcated considering only propagation, processing and transmission delays but no queuing delays. 
-- **Deadline:** Each stream has a deadline constraint, set equal to the stream periodicity for simplicity. However, given the TAS simulated frameworks, the E2E latency is always equal to the minimum E2E latency or bounded based on analytical models. For further insights, refer to [1] and [2].
+- **Minimum Possible e2e latency:** The E2E latency for each stream over the route caclulcated considering only propagation, processing and transmission delays but no queuing delays. 
+- **Deadline:** Each stream has a deadline constraint, set equal to the stream periodicity for simplicity. However, given the TAS simulated frameworks, the e2e latency is always equal to the minimum E2E latency or bounded based on analytical models. For further insights, refer to [1] and [2].
+- **Number of Hops:** The total number of links between the source and the sink. 
 
 💡 **Note:** Each stream operates independently, and frame timing is defined relative to the macrotick unit used in the simulation.
+
+## References:
+[1] Aviroop Ghosh, Saleh Yousefi, and Thomas Kunz. 2025. Multi-Stream TSN Gate Control Scheduling in the Presence of Clock Synchronization. In Proceedings of the 26th International Conference on Distributed Computing and Networking (ICDCN '25). Association for Computing Machinery, New York, NY, USA, 11–20. https://doi-org.proxy.library.carleton.ca/10.1145/3700838.3700847
+[2] A. Ghosh, S. Yousefi, and T. Kunz, "Latency Bounds for TSN Scheduling in the Presence of Clock Synchronization," *IEEE Networking Letters*, vol. 7, no. 1, pp. 41–45, March 2025. [DOI: 10.1109/LNET.2024.3507792](https://doi.org/10.1109/LNET.2024.3507792)
 
