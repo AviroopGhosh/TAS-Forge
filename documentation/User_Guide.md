@@ -83,7 +83,7 @@ This section provides a step-by-step guide for using TAS-Forge. Before beginning
 
 **Note:** Many files (e.g., CSV exports, CPLEX input, OMNeT simulation files) are generated during execution. These files will not appear until their corresponding scripts have been run. This will be highlighted in the respective steps. 
 
-### Step 1: Generate Network Topology and Stream Parameters
+### 💻 Step 1: Generate Network Topology and Stream Parameters
 To being using TAS-Forge, run the following script in MATLAB:
 
 <pre>
@@ -126,7 +126,7 @@ The `generate_network_systems.m` script automatically creates a directory `CPLEX
 
 Finally, a blank text file `input_cplex_solution.txt` is created. This file is used to manually paste the GCL offset values (the decision variables) obtained after solving the CPLEX model. This is explained in Step 2.
 
-### Step 2: Execute CPLEX Code
+### 🏗️ Step 2: Solve TAS Schedule using IBM CPLEX
 This step is a manual process, as MATLAB does not currently support integration with the required version of IBM CPLEX. 
 
 Using the CPLEX model files generated in the previous step, select one of the scheduling frameworks (e.g., NCA, NCD, WCA and WCD) and run it using IBM CPLEX Optimization Studio. 
@@ -143,7 +143,7 @@ Once the model is executed, check the **Problem Browser** tab in CPLEX studio.
 - If the decision variables display **"No Value"**, this indicates that the CPLEX model could not find a feasible solution.
 - Refer to the [Technical Overview](documentation/Technical_Overview.md) documentation for possible causes and rectifications.
 
-If the model **sucessfully outputs** decision varables, proceed with the following steps:
+If the model **successfully generates** decision varables, proceed with the following steps:
 1. Go to the "Solution" tab in the output area at the bottom of CPLEX studio.
 2. You will see all the decision variables (e.g., `OFF_1_source1`,`OFF_1_switch1`,`OFF_2_switch1`, etc.).
 3. Copy **all** the decision variables into the text `input_cplex_solution.txt` (generated from Step 1) file.
@@ -152,7 +152,7 @@ If the model **sucessfully outputs** decision varables, proceed with the followi
 ### Step 3: Create Gate Control Lists (GCLs)
 This step processes the output from CPLEX to create the Gate Control Lists (GCLs) used for TAS scheduling.
 
-For sucessful GCL creation the following steps need to be followed:
+For successful GCL creation the following steps need to be followed:
 1. Run the script `generate_GCL_output.m` in MATLAB.
 2. The script will prompt to enter the type of scheduler type used in your CPLEX run, e.g. `WCA`,`WCD`,`NCA`,or `NCD`.
 3. Enter the scheduler name **exactly as shown**, the input is **case-sensitive**, an incorrect entry will result in an error.
@@ -160,7 +160,7 @@ For sucessful GCL creation the following steps need to be followed:
    
     **Note:** If any of the decision variables are missing or have not been copied correctly from the CPLEX output then the script will terminate with an error indicating which variable could not be found.
    In that case, you will need to verify and copy the missing decision variable from the CPLEX output before running the script again.
-5. The script will generate an output file `Output_GCL_matrix.txt`, which constains the computed GCLs.
+5. The script will generate an output file `Output_GCL_matrix.txt`, which contains the computed GCLs.
 6. A schedulability cost metric will also be output as part of the result, providing insight into the efficiency of the generated schedule.
 
 **Important:** If the script generates an error citing 'overlapping conditions' then refer to [Known Issues and Limitations](documentation/Issues_and_Limitations.md) page for guidance. 
