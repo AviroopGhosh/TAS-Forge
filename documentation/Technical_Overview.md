@@ -35,7 +35,7 @@ Key Features of Topology Generation:
 - **Flexible Source-Sink Mapping:** While each stream corresponds to a unique source-sink pair, the overall design allows for flexible mappings, i.e., a single source can transmit to multiple sinks, and a single sink can receive traffic from multiple sources.
 - **Visual Figure:** A visual figure is generated represnting the network topology. 
 
-The example below illustrates a simple topology consisting of 4 sources and 3 sinks interconnected through 3 switches.
+The example below illustrates a simple topology consisting of 4 sources 🔺 and 3 sinks 🟢 interconnected through 3 switches 🟦.
 
 ![Simple Topology Example](images/techinical_overview_simple_topology.png)
 
@@ -51,4 +51,7 @@ source2 ---> sink1
 
 Note that the routes are dynamically generated — not all routes traverse all three switches; each stream follows a path based on its source-sink pairing.
 
-A ⏰ Grand Master (GM) is automatically generated and positioned within the topology. It serves as the primary source of periodic time synchronization messages and is later modeled in the network simulation phase.
+A ⏲️ Grand Master (GM) is automatically generated and positioned within the topology. It serves as the primary source of periodic time synchronization messages and is later modeled in the network simulation phase.
+
+## 📡Network & Stream Parameters
+
