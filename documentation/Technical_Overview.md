@@ -71,6 +71,10 @@ If you wish to modify the clock drift values manually and directly to the `.csv`
 
 ### 📡 Network Parameters
 Network parameters define the operational context of the Time-Sensitive Network (TSN). These values influence how streams are scheduled and how delays propagate through the network.
+- **Link Speed:** All network links are configured with a bitrate of `1 Gigabit per second (Gbps)`. 
+- **Propagation Delay:** Represents the time taken by frames to travel between two network devices. Set to a default value of `50 nanoseconds (ns)` considering a linkspeed of 1 Gbps.
+- **Processing Delay:** A constant internal delay incurred within switches to process frames, set by default to `1550 ns`.
+- **Guard Band:** A reserved time interval to prevent non-time-sensitive frames from interfering with scheduled transmissions, currently set to `0 seconds` by default.. 
 
 ### 📦 Stream Parameters
 Each route in the network is associated with a **stream**, which represents a unidirectional flow of time-sensitive data frames from a source to a sink. Each stream is characterized by specific parameters essential for TAS scheduling. These include:
