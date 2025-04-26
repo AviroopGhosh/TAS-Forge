@@ -75,7 +75,8 @@ Network parameters define the operational context of the Time-Sensitive Network 
 - **Propagation Delay:** Represents the time taken by frames to travel between two network devices. Set to a default value of `50 nanoseconds (ns)` considering a linkspeed of 1 Gbps.
 - **Processing Delay:** A constant internal delay incurred within switches to process frames, set by default to `1550 ns`.
 - **Guard Band:** A reserved time interval to prevent non-time-sensitive frames from interfering with scheduled transmissions, currently set to `0 seconds` by default.. 
-
+- **Macrotick:** A base time unit to set all devices to a common time-unit. Default value of **0.01 microseconds (&micro;s)  parameter used to  
+- **Hyperperiod:** 
 ### 📦 Stream Parameters
 Each route in the network is associated with a **stream**, which represents a unidirectional flow of time-sensitive data frames from a source to a sink. Each stream is characterized by specific parameters essential for TAS scheduling. These include:
 - **Stream ID**: A unique identifier assigned to each stream.
