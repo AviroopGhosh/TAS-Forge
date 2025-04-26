@@ -60,12 +60,12 @@ To enable precise and realistic TAS scheduling, TAS-Forge requires a models of a
 
 ### ⏰ Time Synchronization Parameters
 Time synchronization is a cornerstone of TSN, enabling coordinated communication across devices by aligning them to a common time reference. In TAS-Forge, synchronization-related parameters are explicitly modeled to reflect the impact of clock drift and periodic sync updates on schedule accuracy. Accurate TAS schedule generation requires careful consideration of these synchronization dynamics, making these parameters essential for realistic simulation.
-- **Clock Drift:** Each network device is attached with a random constant clock drift value within a configurable *parts per million (ppm)* range. The default range is set between -10 ppm to +10 ppm. To update this change the `p_range` parameter in `generate_network_system.m`. 
-- **Synchroniation Periodicity:** This defines how frequently the GM sends synchronization messages across the network. By default, it is set to 125 ms, aligning with the recommended value in the IEEE 802.1AS standard [3].
+- **Clock Drift:** Each network device is attached with a random constant clock drift value within a configurable *parts per million (ppm)* range. The default range is set between `-10 ppm` to `+10 ppm`. To update this change the `p_range` parameter in `generate_network_system.m`. 
+- **Synchronization Periodicity:** This defines how frequently the GM sends synchronization messages across the network. By default, it is set to `125 ms`, aligning with the recommended value in the IEEE 802.1AS standard [3].
   It is **strongly recommended** not to modify this setting. For more details, refer to the [Known Issues and Limitations](Issues_and_Limitations.md) page.
 - **Delta value:** Represents the maximum possible timing difference between any two devices in the network.
 
-All generated clock drift values for the devices in the network are stored in the `node_data.csv` file. 
+All generated clock drift values for the devices in the network are stored in the `node_data.csv` file, which is automatically generated after executing the `generate_network_system.m` script. 
 
 If you wish to modify the clock drift values manually and directly to the `.csv` (clock drift values are converted from ppm to seconds in the `.csv` file), these changes will need to made **before** proceeding the GCL schedule generation step. 
 
@@ -75,11 +75,14 @@ Network parameters define the operational context of the Time-Sensitive Network 
 - **Propagation Delay:** Represents the time taken by frames to travel between two network devices. Set to a default value of `50 nanoseconds (ns)` considering a linkspeed of 1 Gbps.
 - **Processing Delay:** A constant internal delay incurred within switches to process frames, set by default to `1550 ns`.
 - **Guard Band:** A reserved time interval to prevent non-time-sensitive frames from interfering with scheduled transmissions, currently set to `0 seconds` by default.. 
-- **Macrotick:** A base time unit to set all devices to a common time-unit. Default value of **0.01 microseconds (&micro;s)** parameter is used. However, other **recommended** values are **0.1 &micro;s** or **1 &micro;s**.  
+- **Macrotick:** A base time unit to set all devices to a common time-unit. Default value of `0.01 microseconds (&micro;s)` parameter is used. However, other **recommended** values are `0.1 &micro;s` or `1 &micro;s`.  
 - **Hyperperiod:** Hyperperiod is defined as the least common multiple of time-sensitive stream periodicities in the network *(see below)*.
 
+The relevant network parameters are stored in the `network_data.csv` file, which is automatically generated after executing the `generate_network_system.m` script.
+
 💡**Note:** Relevant changes to the network parameters can be changed from the `generate_network_system.m` script. 
-  
+
+
 ### 📦 Stream Parameters
 Each route in the network is associated with a **stream**, which represents a unidirectional flow of time-sensitive data frames from a source to a sink. Each stream is characterized by specific parameters essential for TAS scheduling. These include:
 - **Stream ID**: A unique identifier assigned to each stream.
