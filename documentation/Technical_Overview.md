@@ -145,7 +145,7 @@ Each GCL specifies:
 - Gate **open/close states** that control frame transmission at each switch egress port over a repetitive scheduling cycle (the hyperperiod).
 
 The GCLs are generated based on:
-- The optimized **transmission offsets** computed by solving the Integer Linear Programming (ILP) formulations (WCA, WCD, NCA, NCD).
+- The optimized **transmission offsets** computed by solving the ILP formulations (WCA, WCD, NCA, NCD).
 - Considerations of clock drift, synchronization inaccuracies, and scheduling deadlines for each stream.
 
 Each entry in the GCL describes:
