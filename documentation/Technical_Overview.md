@@ -135,10 +135,10 @@ A summary of the scheduling frameworks is provided below:
 - **Network-Derived Clock Drift Delay (NCD) Method:** Improves upon WCD by incorporating clock drift estimates derived from network-based time synchronization, leading to tighter bounds.
 - **Network-Derived Clock Drift Adjustment (NCA) Method:** Refines WCA by dynamically adjusting scheduling using measured clock drift information obtained through synchronization.
 
-## 🚦Gate Control List (GCL)
-GCLs are a fundamental output that governs the precise scheduling of frame transmissions at each switch egress port within the network. Setting precise GCLs at each egress port of switches is essential to ensure time-sensitive streams are deterministic. 
+## 🚦Gate Control Lists (GCLs)
+GCLs are a fundamental output of TAS-Forge, governing the precise scheduling of frame transmissions at each switch egress port within the network. Setting precise GCLs at each egress port of switches is essential to ensure time-sensitive streams maintain their deterministic aspects. 
 
-In TAS-Forge, these are automatically generated given the scheduling frameworks selected. 
+In TAS-Forge, these are **automatically generated** given the scheduling frameworks selected. 
 
 Each GCL specifies:
 - **Scheduling durations** that specify when transmission is permitted for different traffic classes (e.g., time-sensitive vs. non-time-sensitive traffic).
@@ -146,11 +146,11 @@ Each GCL specifies:
 
 The GCLs are generated based on:
 - The optimized **transmission offsets** computed by solving the ILP formulations (WCA, WCD, NCA, NCD).
-- Considerations of clock drift, synchronization inaccuracies, and scheduling deadlines for each stream.
-
+- Considerations of **clock drift**, ** synchronization periodicity**, and **stream deadlines** are considered.
+  
 Each entry in the GCL describes:
 - A duration (expressed in µs) during which the transmission gate remains in a specified state (open/closed) for a particular traffic class.
-- These durations repeat cyclically over the network hyperperiod.
+- These durations repeat periodically according to the computed hyperperiod to maintain determinism for the streams. 
 
 TAS-Forge outputs the computed GCLs in the file output_GCL_matrix.txt, where:
 
