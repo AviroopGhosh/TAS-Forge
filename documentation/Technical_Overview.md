@@ -122,8 +122,51 @@ All stream-related parameters are stored in the `stream_data.csv` file, which is
 
 💡 **Note:** Each stream operates independently, and all timing-related parameterd are defined relative to the macrotick unit used in the simulation.
 
-## 🚦Gate Control List (GCL)
+## 🪧 Scheduling Frameworks
+TAS-Forge supports four different scheduling frameworks for generating Gate Control Lists (GCLs) by solving Integer Linear Programming (ILP) formulations.
 
+Each framework accounts for clock drift, synchronization periodicity, scheduling deadlines, and specific optimization objectives.
+
+*Note:* A worst-case clock drift estimation (δ) and the synchronization periodicity are used to calculate the maximum time difference between any two network devices.
+
+A summary of the scheduling frameworks is provided below:
+- **Worst-Case Delay (WCD) Method:** Introduces additional delay into the scheduling window to compensate for potential clock offsets, using the δ-parameter.
+- **Worst-Case Adjustment (WCA) Method:** Adjusts scheduling durations directly based on the worst-case clock drift estimation to ensure reliable frame dispatch to compensate for clock drift.
+- **Network-Derived Clock Drift Delay (NCD) Method:** Improves upon WCD by incorporating clock drift estimates derived from network-based time synchronization, leading to tighter bounds.
+- **Network-Derived Clock Drift Adjustment (NCA) Method:** Refines WCA by dynamically adjusting scheduling using measured clock drift information obtained through synchronization.
+
+## 🚦Gate Control List (GCL)
+GCLs are a fundamental output that governs the precise scheduling of frame transmissions at each switch egress port within the network. Setting precise GCLs at each egress port of switches is essential to ensure time-sensitive streams are deterministic. 
+
+In TAS-Forge, these are automatically generated given the scheduling frameworks selected. 
+
+Each GCL specifies:
+- **Scheduling durations** that specify when transmission is permitted for different traffic classes (e.g., time-sensitive vs. non-time-sensitive traffic).
+- Gate **open/close states** that control frame transmission at each switch egress port over a repetitive scheduling cycle (the hyperperiod).
+
+The GCLs are generated based on:
+- The optimized **transmission offsets** computed by solving the Integer Linear Programming (ILP) formulations (WCA, WCD, NCA, NCD).
+- Considerations of clock drift, synchronization inaccuracies, and scheduling deadlines for each stream.
+
+Each entry in the GCL describes:
+
+A duration (expressed in microseconds, µs) during which the transmission gate remains in a specified state (open/closed).
+
+These durations repeat cyclically over the network hyperperiod.
+
+TAS-Forge outputs the computed GCLs in the file output_GCL_matrix.txt, where:
+
+Each line corresponds to the GCL of a specific switch and egress port.
+
+The order of GCL entries matches the row order in port_connections.csv, where the Source identifies the switch and the SourcePort identifies the corresponding egress port.
+
+Notes:
+
+GCL durations are cumulative, defining the behavior of the gate throughout the hyperperiod.
+
+TAS-Forge only generates GCLs for switches (not for sources or sinks).
+
+These GCLs are embedded into the OMNeT++ simulation .ini files for validation.
 
 
 ## References:
