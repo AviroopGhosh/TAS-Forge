@@ -149,10 +149,8 @@ The GCLs are generated based on:
 - Considerations of clock drift, synchronization inaccuracies, and scheduling deadlines for each stream.
 
 Each entry in the GCL describes:
-
-A duration (expressed in microseconds, µs) during which the transmission gate remains in a specified state (open/closed).
-
-These durations repeat cyclically over the network hyperperiod.
+- A duration (expressed in µs) during which the transmission gate remains in a specified state (open/closed) for a particular traffic class.
+- These durations repeat cyclically over the network hyperperiod.
 
 TAS-Forge outputs the computed GCLs in the file output_GCL_matrix.txt, where:
 
