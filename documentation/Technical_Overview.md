@@ -51,6 +51,10 @@ source3 ---> sink3
 source2 ---> sink1    
 </pre>
 
+Note that the routes are dynamically generated — not all routes traverse all three switches; each stream follows a path based on its source-sink pairing.
+
+A ⏲️ Grand Master (GM) is automatically generated and positioned within the topology. It serves as the primary source of periodic time synchronization messages and is later modeled in the network simulation phase.
+
 As part of the topology generation process, TAS-Forge creates a `.csv` file titled `port_connections.csv`.
 
 This file records the connections between source and destination network devices, specifying:
@@ -73,10 +77,6 @@ source3   0              switch1        3                   [2]
 source4   0              switch1        4                   [4]
 GM1       0              switch3        2                   [0]    
 </pre>
-
-Note that the routes are dynamically generated — not all routes traverse all three switches; each stream follows a path based on its source-sink pairing.
-
-A ⏲️ Grand Master (GM) is automatically generated and positioned within the topology. It serves as the primary source of periodic time synchronization messages and is later modeled in the network simulation phase.
 
 ## 🏘️ List of Parameters
 To enable precise and realistic TAS scheduling, TAS-Forge requires a models of a set of timing, network-wide, and stream-level parameters. These parameters define the impact of time synchronization in the network, how traffic flow through the network, and how the devices are configured. Together, these form the foundation for generating valid schedules and assessing the performance of TSN deployments.
