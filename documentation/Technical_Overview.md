@@ -146,11 +146,14 @@ Each GCL specifies:
 
 The GCLs are generated based on:
 - The optimized **transmission offsets** computed by solving the ILP formulations (WCA, WCD, NCA, NCD).
-- Considerations of **clock drift**, ** synchronization periodicity**, and **stream deadlines** are considered.
+- Considerations of **clock drift**, **synchronization periodicity**, and **stream deadlines** are considered.
   
 Each entry in the GCL describes:
-- A duration (expressed in µs) during which the transmission gate remains in a specified state (open/closed) for a particular traffic class.
-- These durations repeat periodically according to the computed hyperperiod to maintain determinism for the streams. 
+- A duration (expressed in µs) during which the **transmission gate** remains in a specified state (open/closed) for a particular traffic class.
+- These durations are derived by the transmission offsets obtained by the IBM CPLEX solver.  
+- These durations **repeat periodically** according to the computed hyperperiod to maintain determinism for the streams. 
+
+
 
 TAS-Forge outputs the computed GCLs in the file output_GCL_matrix.txt, where:
 
