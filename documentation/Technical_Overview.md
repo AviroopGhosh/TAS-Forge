@@ -127,7 +127,7 @@ TAS-Forge supports four different scheduling frameworks for generating Gate Cont
 
 Each framework accounts for clock drift, synchronization periodicity, scheduling deadlines, and specific optimization objectives.
 
-*Note:* A worst-case clock drift estimation (δ) and the synchronization periodicity are used to calculate the maximum time difference between any two network devices.
+💡 **Note:** A worst-case clock drift estimation (δ) and the synchronization periodicity are used to calculate the maximum time difference between any two network devices.
 
 A summary of the scheduling frameworks is provided below:
 - **Worst-Case Delay (WCD) Method:** Introduces additional delay into the scheduling window to compensate for potential clock offsets, using the δ-parameter.
