@@ -52,7 +52,7 @@ source2 ---> sink1
 </pre>
 
 ![image](https://github.com/user-attachments/assets/78ebad47-6fde-4edb-8d8d-4dace2a2cb9b)
-
+<pre>
 Source | Source Port | Destination | Destination Port | Routes Included
 switch1 | 0 | switch2 | 0 | [1, 2, 3, 4]
 switch2 | 1 | switch3 | 0 | [4]
@@ -64,7 +64,8 @@ source2 | 0 | switch1 | 2 | [3]
 source3 | 0 | switch1 | 3 | [2]
 source4 | 0 | switch1 | 4 | [4]
 GM1 | 0 | switch3 | 2 | [0]
-    
+</pre>
+
 Note that the routes are dynamically generated — not all routes traverse all three switches; each stream follows a path based on its source-sink pairing.
 
 A ⏲️ Grand Master (GM) is automatically generated and positioned within the topology. It serves as the primary source of periodic time synchronization messages and is later modeled in the network simulation phase.
