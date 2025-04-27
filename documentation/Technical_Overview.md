@@ -135,6 +135,8 @@ A summary of the scheduling frameworks is provided below:
 - **Network-Derived Clock Drift Delay (NCD) Method:** Improves upon WCD by incorporating clock drift estimates derived from network-based time synchronization, leading to tighter bounds.
 - **Network-Derived Clock Drift Adjustment (NCA) Method:** Refines WCA by dynamically adjusting scheduling using measured clock drift information obtained through synchronization.
 
+Overall the **delay-based** scheduling methods induce additional queuing delays but are bandwidth efficient, while, the **adjustment-based** scheduling methods provide the minimum possible e2e latency for all the frames in a stream (i.e., no jitter) but are not as bandwidth efficient. 
+
 ## 🚦Gate Control Lists (GCLs)
 GCLs are a fundamental output of TAS-Forge, governing the precise scheduling of frame transmissions at each switch egress port within the network. Setting precise GCLs at each egress port of switches is essential to ensure time-sensitive streams maintain their deterministic aspects. 
 
