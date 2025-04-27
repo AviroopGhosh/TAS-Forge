@@ -150,7 +150,7 @@ The GCLs are generated based on:
   
 Each entry in the GCL describes:
 - A duration (expressed in µs) during which the **transmission gate** remains in a specified state (open/closed) for a particular traffic class.
-- These durations are derived by the transmission offsets obtained by the IBM CPLEX solver.  
+- These durations are derived by the **transmission offsets** obtained by the IBM CPLEX solver.  
 - These durations **repeat periodically** according to the computed hyperperiod to maintain determinism for the streams. 
 
 
