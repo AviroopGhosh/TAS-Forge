@@ -53,19 +53,17 @@ source2 ---> sink1
 
 ![image](https://github.com/user-attachments/assets/78ebad47-6fde-4edb-8d8d-4dace2a2cb9b)
 
-<pre>
-Source	SourcePort	Destination	DestinationPort	RoutesIncluded
-switch1	    0	    switch2	        0	        1, 2, 3, 4
-switch2	    1	    switch3	        0	        4
-switch2	    2	    sink1	        0	        1, 3
-switch2	    3	    sink3	        0	        2
-switch3	    1	    sink2	        0	        4
-source1	    0	    switch1	        1	        1
-source2	    0	    switch1	        2	        3
-source3	    0	    switch1	        3	        2
-source4	    0	    switch1	        4	        4
-GM1	        0	    switch3	        2	        0
-</pre>
+Source | SourcePort | Destination | DestinationPort | RoutesIncluded
+switch1 | 0 | switch2 | 0 | 1, 2, 3, 4
+switch2 | 1 | switch3 | 0 | 4
+switch2 | 2 | sink1 | 0 | 1, 3
+switch2 | 3 | sink3 | 0 | 2
+switch3 | 1 | sink2 | 0 | 4
+source1 | 0 | switch1 | 1 | 1
+source2 | 0 | switch1 | 2 | 3
+source3 | 0 | switch1 | 3 | 2
+source4 | 0 | switch1 | 4 | 4
+GM1 | 0 | switch3 | 2 | 0
     
 Note that the routes are dynamically generated — not all routes traverse all three switches; each stream follows a path based on its source-sink pairing.
 
