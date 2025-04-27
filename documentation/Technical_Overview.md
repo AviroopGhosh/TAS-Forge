@@ -53,19 +53,14 @@ source2 ---> sink1
 
 ![image](https://github.com/user-attachments/assets/78ebad47-6fde-4edb-8d8d-4dace2a2cb9b)
 
-<pre>
-Source     SourcePort    Destination    DestinationPort    RoutesIncluded
-switch1    0             switch2         0                 1, 2, 3, 4
-switch2    1             switch3         0                 4
-switch2    2             sink1           0                 1, 3
-switch2    3             sink3           0                 2
-switch3    1             sink2           0                 4
-source1    0             switch1         1                 1
-source2    0             switch1         2                 3
-source3    0             switch1         3                 2
-source4    0             switch1         4                 4
-GM1        0             switch3         2                 0
-</pre>
+As part of the topology generation process, TAS-Forge creates a `.csv` file titled `port_connections.csv`.
+
+This file records the connections between source and destination network devices, specifying:
+- The egress port on the source device.
+- The ingress port on the destination device.
+- The set of routes with route identifiers traversing through that connection (listed in the Routes Included column).
+
+An example based on the generated topology is shown below:
 
 <pre>
 Source    Source Port    Destination    Destination Port    Routes Included
