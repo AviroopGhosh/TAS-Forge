@@ -62,19 +62,8 @@ This file records the connections between source and destination network devices
 
 An example based on the generated topology is shown below:
 
-<pre>
-Source    Source Port    Destination    Destination Port    Routes Included
-switch1   0              switch2        0                   [1, 2, 3, 4]
-switch2   1              switch3        0                   [4]
-switch2   2              switch3        0                   [1, 3]
-switch2   3              sink1          0                   [2]
-switch3   1              sink2          0                   [4]
-source1   0              switch1        1                   [1]
-source2   0              switch1        2                   [3]
-source3   0              switch1        3                   [2]
-source4   0              switch1        4                   [4]
-GM1       0              switch3        2                   [0]    
-</pre>
+
+
 Note that the routes are dynamically generated — not all routes traverse all three switches; each stream follows a path based on its source-sink pairing.
 
 A ⏲️ Grand Master (GM) is automatically generated and positioned within the topology. It serves as the primary source of periodic time synchronization messages and is later modeled in the network simulation phase.
