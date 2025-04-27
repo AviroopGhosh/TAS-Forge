@@ -149,7 +149,7 @@ The GCLs are generated based on:
 - Each **transmission offset** defines the start time of the scheduling window for a specific stream at a particular egress port responsible for forwarding time-sensitive frames.
 - Considerations of **clock drift**, **synchronization periodicity**, and **stream deadlines** are considered.
 
-An example output of CPLEX is shown for the WCA scheduling framework. 
+An example output of IBM CPLEX solver is shown for the WCA scheduling framework continuing from the above topology. 
 
 <pre>
 OFF_1_source1 = 5626;
@@ -168,8 +168,8 @@ OFF_4_switch3 = 22477;
 </pre>
   
 Each entry in the GCL describes:
-- A duration (expressed in µs) during which the **transmission gate** remains in a specified state (open/closed) for a particular traffic class.
-- These durations are derived by the **transmission offsets** obtained by the IBM CPLEX solver.  
+- Once these durations are derived by the **transmission offsets**, the **scheduling durations** are calculated.  
+- A scheduling duration (expressed in µs) indicates which the **transmission gate** remains in a specified state (open/closed) for a particular traffic class.
 - These durations **repeat periodically** according to the computed hyperperiod to maintain determinism for the streams. 
 
 
