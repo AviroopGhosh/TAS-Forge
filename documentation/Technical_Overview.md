@@ -152,19 +152,19 @@ The GCLs are generated based on:
 An example output of IBM CPLEX solver is shown for the WCA scheduling framework continuing from the above topology. 
 
 <pre>
-OFF_1_source1 = 5626;
-OFF_1_switch1 = 5659;
-OFF_1_switch2 = 5942;
+OFF_1_source1 = 5625;
+OFF_1_switch1 = 5658;
+OFF_1_switch2 = 5941;
 OFF_2_source3 = 0;
 OFF_2_switch1 = 33;
 OFF_2_switch2 = 316;
-OFF_3_source2 = 21252;
-OFF_3_switch1 = 21285;
-OFF_3_switch2 = 21568;
-OFF_4_source4 = 21878;
-OFF_4_switch1 = 21911;
-OFF_4_switch2 = 22194;
-OFF_4_switch3 = 22477;    
+OFF_3_source2 = 21250;
+OFF_3_switch1 = 21283;
+OFF_3_switch2 = 21566;
+OFF_4_source4 = 21875;
+OFF_4_switch1 = 21908;
+OFF_4_switch2 = 22191;
+OFF_4_switch3 = 22474;
 </pre>
   
 Each entry in the GCL describes:
@@ -172,13 +172,10 @@ Each entry in the GCL describes:
 - A scheduling duration (expressed in µs) indicates which the **transmission gate** remains in a specified state (open/closed) for a particular traffic class.
 - These durations **repeat periodically** according to the computed hyperperiod to maintain determinism for the streams. 
 
-
-
-TAS-Forge outputs the computed GCLs in the file output_GCL_matrix.txt, where:
-
-Each line corresponds to the GCL of a specific switch and egress port.
-
-The order of GCL entries matches the row order in port_connections.csv, where the Source identifies the switch and the SourcePort identifies the corresponding egress port.
+TAS-Forge outputs the computed GCLs in the file `output_GCL_matrix.txt`, where:
+- Each line corresponds to the GCL of a specific switch and egress port.
+- The order of GCL entries matches the row order in `port_connections.csv` for the corresponding **switches** in the **Source** columns.
+- The **Source** identifies the switch and the **SourcePort** identifies the corresponding egress port.
 
 Notes:
 
