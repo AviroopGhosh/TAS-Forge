@@ -1,16 +1,4 @@
-<pre>
-Source    Source Port    Destination    Destination Port    Routes Included
-switch1   0              switch2        0                   [1, 2, 3, 4]
-switch2   1              switch3        0                   [4]
-switch2   2              switch3        0                   [1, 3]
-switch2   3              sink1          0                   [2]
-switch3   1              sink2          0                   [4]
-source1   0              switch1        1                   [1]
-source2   0              switch1        2                   [3]
-source3   0              switch1        3                   [2]
-source4   0              switch1        4                   [4]
-GM1       0              switch3        2                   [0]    
-</pre># Technical Overview
+# Technical Overview
 TAS-Forge is a simulation and scheduling automation tool designed for Time-Sensitive Networking (TSN). It focuses on IEEE 802.1Qbv, the Time-Aware Shaper (TAS), while also incorporating IEEE 802.1AS time synchronization into the scheduling process. The tool automatically generates linear network topologies in MATLAB, formulates Gate Control Lists (GCLs) using Integer Linear Programming (ILP) via IBM CPLEX, and evaluates scheduling performance through simulations in OMNeT++.
 
 🌟 **Important:** For an understanding of nomenclature used in this documentation (such as `frames`,`streams`, etc.) and an understanding of the different TAS scheduling frameworks refer to [1]. 
