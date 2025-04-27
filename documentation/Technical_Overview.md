@@ -146,7 +146,26 @@ Each GCL specifies:
 
 The GCLs are generated based on:
 - The optimized **transmission offsets** computed by solving the ILP formulations (WCA, WCD, NCA, NCD).
+- Each **transmission offset** defines the start time of the scheduling window for a specific stream at a particular egress port responsible for forwarding time-sensitive frames.
 - Considerations of **clock drift**, **synchronization periodicity**, and **stream deadlines** are considered.
+
+An example output of CPLEX is shown for the WCA scheduling framework. 
+
+<pre>
+OFF_1_source1 = 5626;
+OFF_1_switch1 = 5659;
+OFF_1_switch2 = 5942;
+OFF_2_source3 = 0;
+OFF_2_switch1 = 33;
+OFF_2_switch2 = 316;
+OFF_3_source2 = 21252;
+OFF_3_switch1 = 21285;
+OFF_3_switch2 = 21568;
+OFF_4_source4 = 21878;
+OFF_4_switch1 = 21911;
+OFF_4_switch2 = 22194;
+OFF_4_switch3 = 22477;    
+</pre>
   
 Each entry in the GCL describes:
 - A duration (expressed in µs) during which the **transmission gate** remains in a specified state (open/closed) for a particular traffic class.
