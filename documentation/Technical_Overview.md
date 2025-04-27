@@ -131,7 +131,7 @@ Each framework accounts for clock drift, synchronization periodicity, scheduling
 
 A summary of the scheduling frameworks is provided below:
 - **Worst-Case Delay (WCD) Method:** Introduces additional delay into the scheduling window to compensate for potential clock offsets, using the δ-parameter.
-- **Worst-Case Adjustment (WCA) Method:** Adjusts scheduling durations directly based on the worst-case clock drift estimation to ensure reliable frame dispatch to compensate for clock drift.
+- **Worst-Case Adjustment (WCA) Method:** Adjusts scheduling durations directly based on the δ-parameter to ensure reliable frame dispatch to compensate for clock drift between devices.
 - **Network-Derived Clock Drift Delay (NCD) Method:** Improves upon WCD by incorporating clock drift estimates derived from network-based time synchronization, leading to tighter bounds.
 - **Network-Derived Clock Drift Adjustment (NCA) Method:** Refines WCA by dynamically adjusting scheduling using measured clock drift information obtained through synchronization.
 
