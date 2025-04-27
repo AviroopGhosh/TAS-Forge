@@ -177,14 +177,21 @@ TAS-Forge outputs the computed GCLs in the file `output_GCL_matrix.txt`, where:
 - The order of GCL entries matches the row order in `port_connections.csv` for the corresponding **switches** in the **Source** columns.
 - The **Source** identifies the switch and the **SourcePort** identifies the corresponding egress port.
 
-Notes:
+The corresponding GCL offsets for the above example is generated in the output_GCL_matrix.txt file are shown below (note: us represents µs).
 
-GCL durations are cumulative, defining the behavior of the gate throughout the hyperperiod.
+<pre>
+[0.33us,6.25us,50us,6.25us,37.5us,6.25us,93.75us,25us,74.67us,0us]
+[221.91us,6.25us,71.84us,0us]
+[59.41us,6.25us,143.75us,12.5us,78.09us,0us]
+[3.16us,6.25us,93.75us,6.25us,93.75us,6.25us,90.59us,0us]
+[224.74us,6.25us,69.01us,0us]
+</pre>
 
-TAS-Forge only generates GCLs for switches (not for sources or sinks).
-
-These GCLs are embedded into the OMNeT++ simulation .ini files for validation.
-
+💡 **Notes:**
+- Each GCL duration adds up to the hyperperiod.
+- TAS-Forge only generates GCLs for switches (not for sources or sinks).
+- The computed offsets are applied to sources to schedule frame transmissions.
+- The generated GCLs are embedded into the OMNeT++ `.ini` files for simulation.
 
 ## References:
 [1] Aviroop Ghosh, Saleh Yousefi, and Thomas Kunz. 2025. Multi-Stream TSN Gate Control Scheduling in the Presence of Clock Synchronization. In Proceedings of the 26th International Conference on Distributed Computing and Networking (ICDCN '25). Association for Computing Machinery, New York, NY, USA, 11–20. https://doi-org.proxy.library.carleton.ca/10.1145/3700838.3700847
