@@ -193,6 +193,9 @@ The corresponding GCL offsets for the above example is generated in the output_G
 - The computed offsets are applied to sources to schedule frame transmissions.
 - The generated GCLs are embedded into the OMNeT++ `.ini` files for simulation.
 
+## 📈 Performance Metrics
+
+
 ## References:
 [1] Aviroop Ghosh, Saleh Yousefi, and Thomas Kunz. 2025. Multi-Stream TSN Gate Control Scheduling in the Presence of Clock Synchronization. In Proceedings of the 26th International Conference on Distributed Computing and Networking (ICDCN '25). Association for Computing Machinery, New York, NY, USA, 11–20. https://doi-org.proxy.library.carleton.ca/10.1145/3700838.3700847
 
