@@ -69,7 +69,11 @@ GM1        0             switch3         2                 0
 
 <pre>
 Source    Source Port    Destination    Destination Port    Routes Included
-switch1   0              switch2        0                   1, 2, 3, 4    
+switch1   0              switch2        0                   [1, 2, 3, 4]
+switch2   1              switch3        0                   [4]
+switch2   2              switch3        0                   [1, 3]
+switch2   3              sink1          0                   [2]
+switch3    1             sink2           0                 4    
 </pre>
 Note that the routes are dynamically generated — not all routes traverse all three switches; each stream follows a path based on its source-sink pairing.
 
