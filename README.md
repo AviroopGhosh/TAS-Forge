@@ -73,7 +73,16 @@ This version requires the following software versions:
 | OMNeT++     | 6.0.3 or later     |
 | INET        | 4.4               |
 
+# 😎 Why Use TAS-Forge? 
+- Effortless generation of network topologies.
+- Rapid, reproducible TAS schedule creation in CPLEX — no tedious manual constraint setup.
+- Easily test and compare multiple TAS scheduling frameworks.
+- Built-in modeling of time synchronization impacts (IEEE 802.1AS).
+- Seamless export and analysis of simulation results from OMNeT++ to MATLAB.
+- Complete end-to-end setup, scheduling, simulation, and analysis within minutes.
 
+Designed to simplify and accelerate Time-Sensitive Networking (TSN) research and development.
+- 
 # 📚 Documentation
 The following documentation covers key aspects of TAS-Forge, including how to use, system architecture, and known limitations:
 
