@@ -25,3 +25,6 @@ This showcase follows the step-by-step walkthrough as detailed in the [User Guid
   
 ![Input Prompt](images/input_prompt.png)
 
+- The network tolopogy is generated as an image shown below:
+
+![Network Topology](images/network_topology.png)
