@@ -98,7 +98,7 @@ OFF_5_switch3 = 1605;
 OFF_5_switch4 = 2140;
 OFF_5_switch5 = 2675;  
 </pre>
-- Select the **offset** decision variables (those starting with `OFF_`) and paste them in the `input_cplex_solutions.txt` file.
+- Select the **offset** decision variables (those in the format `OFF_<streamID>_<deviceName>`) and paste them in the `input_cplex_solutions.txt` file.
 - 🔥 **Important**:
     - The `lambda` variables (e.g., lambda_1, lambda_2, etc.) are not required by TAS-Forge, but may be left without issues.
     - Ensure that **all** offset variables are copied in the format shown above: `OFF_<streamID>_<deviceName> = <value>;` Otherwise, the next step will fail due to missing inputs.
