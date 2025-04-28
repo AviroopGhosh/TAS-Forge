@@ -196,7 +196,9 @@ The corresponding GCL offsets for the above example is generated in the output_G
 - The generated GCLs are embedded into the OMNeT++ `.ini` files for simulation.
 
 ## 📈 Performance Metrics
-Following the creation of the GCLs, a **schedulability cost** metric is computed. This value, ranging between 0 and 1, quantifies the bandwidth efficiency of the generated schedule. The schedulability cost is automatically output alongside the GCL generation process.
+Following the creation of the GCLs, a **schedulability cost** metric is computed. This value, ranging between 0 and 1, quantifies the bandwidth efficiency of the generated schedule. 
+- A **lower schedulability cost value** represents that the schedule is more efficient.
+- The schedulability cost is automatically output alongside the GCL generation process.
 
 Based on the OMNeT++ simulation results, TAS-Forge outputs per-stream metrics concering the end-to-end latencies:
 - **Measured upper and lower bounds:** These represent the end-to-end latencies observed during the OMNeT++ simulation.
