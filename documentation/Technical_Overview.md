@@ -195,10 +195,14 @@ The corresponding GCL offsets for the above example is generated in the output_G
 - The computed offsets are applied to sources to schedule frame transmissions.
 - The generated GCLs are embedded into the OMNeT++ `.ini` files for simulation.
 
+## 📈 Performance Metrics
 Following the creation of the GCLs, a **schedulability cost** metric is computed. This value, ranging between 0 and 1, quantifies the bandwidth efficiency of the generated schedule. The schedulability cost is automatically output alongside the GCL generation process.
 
-## 📈 Performance Metrics
+Based on the OMNeT++ simulation results, TAS-Forge outputs per-stream metrics concering the end-to-end latencies:
+- **Measured upper and lower bounds:** These represent the end-to-end latencies observed during the OMNeT++ simulation.
+- **Analytical upper and lower bounds:** Represent the theoretically calculated end-to-end latency limits. The measured latencies should ideally fall within these analytical bounds.
 
+For further details on the end-to-end latencies see [2].
 
 ## References:
 [1] Aviroop Ghosh, Saleh Yousefi, and Thomas Kunz. 2025. Multi-Stream TSN Gate Control Scheduling in the Presence of Clock Synchronization. In Proceedings of the 26th International Conference on Distributed Computing and Networking (ICDCN '25). Association for Computing Machinery, New York, NY, USA, 11–20. https://doi-org.proxy.library.carleton.ca/10.1145/3700838.3700847
