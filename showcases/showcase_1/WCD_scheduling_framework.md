@@ -21,5 +21,7 @@ This showcase follows the step-by-step walkthrough as detailed in the [User Guid
   <pre>
   generate_network_system  
   </pre>
-- Enter the number of 🟥 **sources**, 🟢 **sinks** & 🟦 **switches** in the text box as shown below:
+- Enter the number of 🟥 **sources**, 🟢 **sinks** & 🟦 **switches** in the input text box as shown below:
   
+![Input Prompt](images/input_prompt.pmg)
+
