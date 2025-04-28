@@ -144,7 +144,7 @@ Once the model is executed, check the **Problem Browser** tab in CPLEX studio.
 - Refer to the [Technical Overview](Technical_Overview.md) documentation for possible causes and rectifications.
 
 If the model **successfully generates** decision varables, proceed with the following steps:
-1. Go to the "Solution" tab in the output area at the bottom of CPLEX studio.
+1. Go to the **Solutions** tab in the output area at the bottom of CPLEX studio.
 2. You will see all the decision variables (e.g., `OFF_1_source1`,`OFF_1_switch1`,`OFF_2_switch1`, etc.).
 3. Copy **all** the decision variables into the text `input_cplex_solution.txt` (generated from Step 1) file.
 4. Ensure that the decision variables are in a format, `VARIABLE_NAME = VALUE;`, for example: `OFF_1_source1 = 0;` or `OFF_1_switch1 = 10;`.
