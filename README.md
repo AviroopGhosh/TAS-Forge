@@ -2,7 +2,11 @@
 This repository provides a framework for automatically generating Time-Aware Shaper (TAS) schedules (IEEE 802.1Qbv) for Time-Sensitive Networks (TSN), with built-in support for time synchronization based on IEEE 802.1AS. The tool ensures that generated Gate Control Lists (GCLs) align with both traffic requirements and network-wide time synchronization considerations.
 
 # 🎯 Motivation and Overview
-Creating TAS schedules using linear programming methods can be highly complex, especially when working with networks that have multiple time sensitive streams. Manually defining the scheduling constraints is not only time-consuming but also difficult to scale and prone to human errors. Even small incremental changes to the network, like adding a new stream or switch, can significantly increase the number of constraints, making the process harder to manage. Moreover, TAS schedules are tightly linked to network time synchronization. Since time sensitive streams require strict determinism, GCL development requires factoring synchronization considerations while generating valid schedules adds another layer of complexity.  
+Creating TAS schedules using linear programming methods can be highly complex, especially when working with networks that have multiple time sensitive streams. 
+
+Manually defining the scheduling constraints is not only time-consuming but also difficult to scale and prone to human errors. Even small incremental changes to the network, like adding a new stream or switch, can significantly increase the number of constraints, making the process harder to manage. 
+
+Moreover, TAS schedules are tightly linked to network time synchronization. Since time sensitive streams require strict determinism, GCL development requires factoring synchronization considerations while generating valid schedules adds another layer of complexity.  
 
 TAS-Forge provides an automated framework that:
 - Simplifies the design and validation of TAS schedules.
@@ -12,42 +16,47 @@ TAS-Forge provides an automated framework that:
 # 🌠 Key Features
 Key features of TAS-Forge have been described below. 
 
-## User-Defined Input
+## ⭐ User-Defined Input
 -	Easy specification of the number of switches, sources and sinks to define the structure of the network.
 -	Inputs are provided via a simple dialog box, for quick and easy setup process. 
 
-## Automatic Topology & Stream Generation 
--	Based on user specification, the tool generates a linear network topology. 
+## ⭐ Automatic Topology & Stream Generation 
+-	Automatic linear network topology generation based on user specification. 
 -	Routes are automatically created to connect each source to a corresponding sink. 
 -	A single source can transmit to multiple sinks, and/or a single sink can receive traffic from multiple sources, allowing for flexible and realistic traffic scenarios.
--	Each route is associated with a stream, and each stream is automatically assigned:
+-	Each route is associated with a stream. 
+-   Streams are automatically assigned:
     -	Payload size of frames. 
     -	Transmission periodicity. 
     -	Deadline for streams. 
 
-## IEEE 802.1AS Time Synchronization Modeling
--	The framework simulates realistic clock behaviour by assigning each device a random clock drift within specific bounds. 
+## ⭐ IEEE 802.1AS Time Synchronization Modeling
+-	Modeling of realistic clock behaviour by assignment of clock drift values to network devices.
 -	Devices synchronize using a defined synchronization periodicity, simulating realistic timing behaviour.
--	The model enables analyzing the impact of synchronization on TAS scheduling.
--	These are critical aspects often overlooked in TAS scheduling frameworks. 
+-	Model enables analyzing the impact of synchronization on TAS scheduling.
+-	Critical aspects often overlooked in TAS scheduling frameworks are considered. 
 
-## TAS Scheduling Frameworks
--	Users can choose from a suite of TAS scheduling frameworks to apply to schedule generation. 
+## ⭐ TAS Scheduling Frameworks
+-	Choose from a suite of TAS scheduling frameworks to apply to schedule generation:
+    - Worst-Case Delay (WCD)
+    - Worst-Case Adjustment (WCA)
+    - Network-Derived Clock Drift Delay (NCD)
+    - Network-Derived Clock Drift Adjustment (NCA)	
 -	This makes it easy to test and compare different scheduling frameworks under identical network conditions.
--	Automated CPLEX scripts are provided to eliminate the need for manual configuration and parameter setting. 
+-	Automated generated CPLEX scripts eliminate the need for manual configuration and parameter setting. 
 
-## OMNeT++ File Generation
--	The tool also automatically generates the required the .ned and .ini files based on:
-    -	The generated topology
-    -	The scheduling decisions 
+## ⭐ OMNeT++ File Generation
+-	Automatically generates the required the .ned and .ini files based on:
+    -	Generated network topology
+    -	Scheduling decisions 
     -	Time synchronization parameters
--	These filed can be directed used for simulation in the network simulator tool OMNeT++. 
+-	Ready for direct use in network simulator OMNeT++. 
 
-## Simulation Output & Analysis
+## ⭐ Simulation Output & Analysis
 -	After executing the files in OMNeT++, the results can be:
     -	Parsed and analyzed in MATLAB. 
     -	Exported in .csv structure for further inspection and analysis. 
--	The simulator also provides insights into network performance, latency and schedule effectiveness. 
+-	TAS-Forge provides insights into network performance, latency and schedule effectiveness. 
 
 ## 🪄 Example: Multi-Stream Scheduling
 The diagram below illustrates an example network scenario supported by TAS-Forge. It shows how multiple source-to-sink routes (with sources of time-sensitive traffic, labeled as src) are grouped into time-sensitive streams and scheduled across a linear topology using TAS scheduling techniques. The placement of a Grandmaster (GM) node within the topology highlights the tool’s consideration of time synchronization, as defined by IEEE 802.1AS.
