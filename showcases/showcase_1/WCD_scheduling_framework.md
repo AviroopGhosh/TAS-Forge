@@ -10,6 +10,6 @@ The showcase highlights each major phase:
 - Simulation preparation
 - Analysis of simulation results
 
-The overall objective is to demonstrate how TAS-Forge automates the scheduling process efficiently and systematically. 
+The overall objective is to demonstrate how TAS-Forge automates the scheduling process **efficiently** and **systematically**. 
 
 
