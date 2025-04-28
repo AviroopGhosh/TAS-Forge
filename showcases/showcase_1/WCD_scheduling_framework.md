@@ -12,5 +12,8 @@ The showcase highlights each major phase:
 
 This example highlights how TAS-Forge simplifies TAS schedule creation, allowing users to generate, validate, and analyze time-sensitive network schedules efficiently.
 
-# 🚀 Step-by-Step Showcase: Creating TAS Schedules with TAS-Forge using the WCD Method
+# 🏠 Step-by-Step Showcase: Creating TAS Schedules with TAS-Forge
+This showcase follows the step-by-step [User Guide](TAS-Forge/documentation/User_Guide.md)
+
+## 🏗️ Step 1: Configure the Network Topology
 
