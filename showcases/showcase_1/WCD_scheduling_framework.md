@@ -1,15 +1,14 @@
 # ⚽ Goal
-This showcase provides a practical walkthrough of TAS-Forge’s capabilities.
+This showcase provides a complete walkthrough of TAS-Forge’s workflow through a hands-on example. It demonstrates the end-to-end process of generating Time-Aware Shaper (TAS) schedules using the Worst-Case Delay (WCD) scheduling framework.
 
 It demonstrates the complete process of generating TAS schedules using the **Worst-Case Delay (WCD)** scheduling framework on a network topology consisting of **5 switches**, **5 sources**, and **4 sinks**.
 
 The showcase highlights each major phase: 
-- Topology creation and stream generation
-- Solve the TAS schedule using IBM CPLEX
-- Creation of GCLs based on CPLEX outputs
-- Simulation preparation
-- Analysis of simulation results
+- Automatic generation of the network topology and time-sensitive streams
+- Formulation of TAS scheduling constraints considering time synchronization
+- Solving the scheduling problem using CPLEX
+- Generation of Gate Control Lists (GCLs)
+- Preparation of simulation files for OMNeT++
 
-The overall objective is to demonstrate how TAS-Forge automates the scheduling process **efficiently** and **systematically**. 
-
+This example highlights how TAS-Forge simplifies TAS schedule creation, allowing users to generate, validate, and analyze time-sensitive network schedules efficiently.
 
