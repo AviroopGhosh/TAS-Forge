@@ -25,6 +25,36 @@ This showcase follows the step-by-step walkthrough as detailed in the [User Guid
   
 ![Input Prompt](images/input_prompt.png)
 
-- The network tolopogy is generated as an image shown below:
+- A network topology will be automatically generated and displayed as shown below:
 
 ![Network Topology](images/network_topology.png)
+
+- The script also generates a set of **source-to-sink** routes:
+<pre>
+Source to Sink Pairs:
+source5 ---> sink1
+source4 ---> sink2
+source1 ---> sink3
+source2 ---> sink4
+source3 ---> sink3  
+</pre>
+
+- The `generate_network_system.m` script also generates `.csv` files containing information relevant to:
+    - Network parameters
+    - Node clock drift information
+    - Stream definition and properties
+- The creation of '.csv' files will be prompted in the MATLAB command window.
+<pre>
+Node output file "node_data.csv" has been created.
+Network output file "network_data.csv" has been created.
+Stream output file "stream_data.csv" has been created.
+Port connections output file "port_connections.csv" has been created.  
+</pre> 
+- The script also creates the `CPLEX_Code_Output` folder containing the `.mod` files for all scheduling frameworks.
+<pre>
+Directory created for storing CPLEX codes.
+Output file "output_CPLEX_code_generator_WCD.mod" has been generated in the CPLEX_Code_Output folder.
+Output file "output_CPLEX_code_generator_NCD.mod" has been generated in the CPLEX_Code_Output folder.
+Output file "output_CPLEX_code_generator_WCA.mod" has been generated in the CPLEX_Code_Output folder.
+Output file "output_CPLEX_code_generator_NCA.mod" has been generated in the CPLEX_Code_Output folder.  
+</pre>
