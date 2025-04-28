@@ -57,11 +57,13 @@ The diagram below illustrates an example network scenario supported by TAS-Forge
 # ❗Dependencies
 This version requires the following software versions:
 
-Tool | Version
-MATLAB | R2021b or later
-IBM CPLEX | 22.1.1 or later
-OMNeT++ | 6.0.3 or later
-INET | 4.4
+| Tool        | Version           |
+|-------------|-------------------|
+| MATLAB      | R2021b or later    |
+| IBM CPLEX   | 22.1.1 or later    |
+| OMNeT++     | 6.0.3 or later     |
+| INET        | 4.4               |
+
 
 # 📚 Documentation
 The following documentation covers key aspects of TAS-Forge, including how to use, system architecture, and known limitations:
