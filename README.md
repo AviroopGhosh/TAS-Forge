@@ -80,9 +80,8 @@ This version requires the following software versions:
 - Built-in modeling of time synchronization impacts (IEEE 802.1AS).
 - Seamless export and analysis of simulation results from OMNeT++ to MATLAB.
 - Complete end-to-end setup, scheduling, simulation, and analysis within minutes.
+- Designed to simplify and accelerate Time-Sensitive Networking (TSN) research and development.
 
-Designed to simplify and accelerate Time-Sensitive Networking (TSN) research and development.
-- 
 # 📚 Documentation
 The following documentation covers key aspects of TAS-Forge, including how to use, system architecture, and known limitations:
 
