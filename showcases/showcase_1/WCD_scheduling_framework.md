@@ -13,7 +13,13 @@ The showcase highlights each major phase:
 This example highlights how TAS-Forge simplifies TAS schedule creation, allowing users to generate, validate, and analyze time-sensitive network schedules efficiently.
 
 # 🏠 Step-by-Step Showcase: Creating TAS Schedules with TAS-Forge
-This showcase follows the step-by-step [User Guide](../../documentation/User_Guide.md)
+This showcase follows the step-by-step walkthrough as detailed in the [User Guide](../../documentation/User_Guide.md). 
 
 ## 🏗️ Step 1: Configure the Network Topology
-
+- Open MATLAB and navigate to the TAS-Forge project folder.
+- Run the following script:
+  <pre>
+  generate_network_system  
+  </pre>
+- Enter the number of 🟥 **sources**, 🟢 **sinks** & 🟦 **switches** in the text box as shown below:
+  
