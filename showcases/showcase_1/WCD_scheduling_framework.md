@@ -107,8 +107,9 @@ OFF_7_switch4 = 9028;
 </pre>
 - Select the **offset** decision variables (those in the format `OFF_<streamID>_<deviceName>`) and paste them in the `input_cplex_solutions.txt` file.
 - 🔥 **Important**:
-    - The `lambda` variables (e.g., lambda_1, lambda_2, etc.) are not required by TAS-Forge, but may be left without issues.
+    - The `lambda` variables (e.g., lambda_1, lambda_2, etc.) are not required by TAS-Forge, but can be copied and left without issues.
     - Ensure that **all** offset variables are copied in the format shown above: `OFF_<streamID>_<deviceName> = <value>;` Otherwise, the next step will fail due to missing inputs.
+    - **Do not** paste the CPLEX standard solution log (which summarizes the quality of solution found) in the text file. 
       
 ## 🗒️ Step 3: Create Gate Control Lists (GCLs)
 - Following the updating of the 
