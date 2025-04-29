@@ -130,3 +130,12 @@ The schedulability cost is 0.025
 </pre>
 
 ## 🏭 Step 4: Generate Simulation Configuration
+- To generate the `.ned` and `.ini` files, run the following script:
+<pre>
+generate_omnetpp_files  
+</pre>
+- The script will create `OMNETpp_Code_Output` directory for storing the generated files.
+- The `.ned` will be generated, aalong with a figure denoting all network devices and the traffic flow directions based on the topology (shown below).
+- If the `output_GCL_matrix.txt` file is read sucessfully, the script will also generate the corresponding `.ini` file containing the simulation configuration.
+- Both files are necessary to run the TAS-Forge simulation inside OMNeT++.
+
