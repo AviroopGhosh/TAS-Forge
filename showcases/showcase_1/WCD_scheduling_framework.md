@@ -155,5 +155,5 @@ INI file simulation_config_WCD.ini generated successfully in directory OMNETpp_C
 - Run the simulation for a default period of 1 second. 
 - After the simulation completes, navigate to generated `.vec` result file.
 - Filter the results based on selecting entries labeled `meanBitLifeTimePerPacket:vector`, which represents the end-to-end latency for each frame (shown below).
+![Mean-bit-lifetime](images/omnetpp_min_e2e_latency.png)
 
-- Export 
