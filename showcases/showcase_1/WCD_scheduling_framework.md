@@ -171,4 +171,13 @@ Results saved to stream_data_output.csv
 Results updated to stream_data_output.csv  
 </pre>
 - The output `.csv` file should provide a summary of the streams including the analytical and meaured end-to-end latencies, jitter, routes, etc.
+- The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
 - For further details on interpreting the results refer to [User Guide](../../documentation/User_Guide.md). 
+
+# ✅ Summary
+This showcase demonstrated the use of TAS-Forge workflow using the WCD method:
+- Topology and stream generation.
+- Scheduling using CPLEX.
+- GCL creation.
+- OMNeT++ simulation.
+- Result analysis for the WCD method.
