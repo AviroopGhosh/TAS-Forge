@@ -119,7 +119,7 @@ generate_GCL_output
 - Select the scheduler type when prompted. For this showcase, *WCD* is entered.
 - The script will:
     - Create corresponding GCLs in the `output_GCL_matrix.txt`.
-    - The **schedulability cost** metric will also be displayed.
+    - The **schedulability cost** metric is also displayed in the MATLAB command window.
 <pre>
 generate_GCL_output
 What scheduler did you select (WCA/WCD/NCA/NCD)?:  WCD
