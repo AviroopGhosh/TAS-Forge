@@ -149,3 +149,5 @@ NED file generated_topology.ned generated successfully in directory OMNETpp_Code
 File "output_GCL_matrix.txt" read successfully
 INI file simulation_config_WCD.ini generated successfully in directory OMNETpp_Code_Output.
 </pre>
+
+## 🔬 Step 5: Analyzing Simulation Results
