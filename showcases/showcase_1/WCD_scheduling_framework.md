@@ -113,7 +113,7 @@ OFF_7_switch4 = 9028;
       
 ## 🗒️ Step 3: Create Gate Control Lists (GCLs)
 - To generate GCLs, run the following script to generate GCLs:
-<pre><code class="cplex">
+<pre><code class="language-cplex">
 generate_GCL_output  
 </code></pre>
 
