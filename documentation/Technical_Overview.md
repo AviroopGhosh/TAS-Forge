@@ -201,13 +201,13 @@ In some cases, CPLEX may fail to generate feasible GCLs. This means that, under 
 This typically occurs when the network is over-constrained due to clock drift, tight deadlines, or dense traffic patterns.
 
 If this happens, consider the following remedies:
-- 🕰️ Time Synchronization:
+- 🕰️ **Time Synchronization:**
     - Reduce the range of clock drift values assigned to devices.
     - Decrease the synchronization periodicity (i.e., send sync messages less frequently).
-- 🛤️ Topology Adjustments:
+- 🛤️ **Topology Adjustments:**
     - Decrease the number of active routes between sources and sinks.
     - Simplify or slightly modify the network topology to reduce congestion.
-- ⏳ Network Timing Parameters:
+- ⏳ **Network Timing Parameters:**
     - Adjust the macrotick size (e.g., use a larger macrotick to allow more scheduling flexibility).
     - Reduce the payload sizes of the frames.
   
