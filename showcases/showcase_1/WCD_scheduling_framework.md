@@ -52,7 +52,7 @@ Network output file "network_data.csv" has been created.
 Stream output file "stream_data.csv" has been created.
 Port connections output file "port_connections.csv" has been created.  
 </pre> 
-- The script also creates the `CPLEX_Code_Output` folder containing the `.mod` files for all supported scheduling frameworks. The MATLAB will display: 
+- The script also creates the `CPLEX_Code_Output` folder containing the `.mod` files for all supported scheduling frameworks. The MATLAB command window will display: 
 <pre>
 Directory created for storing CPLEX codes.
 Output file "output_CPLEX_code_generator_WCD.mod" has been generated in the CPLEX_Code_Output folder.
