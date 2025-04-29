@@ -165,4 +165,10 @@ INI file simulation_config_WCD.ini generated successfully in directory OMNETpp_C
 <pre>
  analyze_omnet_results 
 </pre> 
-- 
+- This should create a `stream_data_output.csv` file and the following prompt will be displayed:
+<pre>
+Results saved to stream_data_output.csv
+Results updated to stream_data_output.csv  
+</pre>
+- The output `.csv` file should provide a summary of the streams including the analytical and meaured end-to-end latencies, jitter, routes, etc.
+- For further details on interpreting the results refer to [User Guide](../../documentation/User_Guide.md). 
