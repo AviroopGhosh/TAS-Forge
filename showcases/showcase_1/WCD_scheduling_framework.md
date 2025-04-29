@@ -115,15 +115,16 @@ OFF_7_switch4 = 9028;
 - To generate GCLs, run the following script to generate GCLs:
 <pre>
 generate_GCL_output  
-</pre>
+</pre><code class="language-matlab">
 - Select the scheduler type when prompted. For this showcase, *WCD* is entered.
 - The script will:
     - Create corresponding GCLs in the `output_GCL_matrix.txt`.
     - The **schedulability cost** metric is also displayed in the MATLAB command window.
-<pre>
+</code><pre>
 generate_GCL_output
 What scheduler did you select (WCA/WCD/NCA/NCD)?:  WCD
 File "output_GCL_matrix.txt" has been created.
 
 The schedulability cost is 0.025  
 </pre>
+
