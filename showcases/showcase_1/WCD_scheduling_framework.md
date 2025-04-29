@@ -112,4 +112,19 @@ OFF_7_switch4 = 9028;
     - **Do not** paste the CPLEX standard solution log (which summarizes the quality of solution found) in the text file. 
       
 ## 🗒️ Step 3: Create Gate Control Lists (GCLs)
-- Following the updating of the 
+- To generate GCLs, run the following script to generate GCLs:
+<pre>
+generate_GCL_output  
+</pre>
+- Select the scheduler type when prompted. For this showcase, *WCD* is entered.
+- The script will:
+    - Create corresponding GCLs in the `output_GCL_matrix.txt`.
+    - The **schedulability cost** metric will also be displayed.
+    -  
+<pre>
+generate_GCL_output
+What scheduler did you select (WCA/WCD/NCA/NCD)?:  WCD
+File "output_GCL_matrix.txt" has been created.
+
+The schedulability cost is 0.025  
+</pre>
