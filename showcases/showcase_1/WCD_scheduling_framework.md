@@ -141,7 +141,7 @@ generate_omnetpp_files
 
 ![Network Topology NED](images/network_topology_ned.png)
 
-MATLAB command window output is shown below:
+MATLAB command window output is shown below, displaying `.ned` and `.ini` file generation:
 <pre>
 generate_omnetpp_files
 OMNETpp_Code_Output directory has been created.
