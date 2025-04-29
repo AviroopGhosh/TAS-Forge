@@ -113,9 +113,9 @@ OFF_7_switch4 = 9028;
       
 ## 🗒️ Step 3: Create Gate Control Lists (GCLs)
 - To generate GCLs, run the following script to generate GCLs:
-<pre><code class="language-cplex">
+<pre>
 generate_GCL_output  
-</code></pre>
+</pre>
 
 - Select the scheduler type when prompted. For this showcase, *WCD* is entered.
 - The script will:
@@ -129,5 +129,4 @@ File "output_GCL_matrix.txt" has been created.
 The schedulability cost is 0.025  
 </pre>
 
-```matlab
-hi
+
