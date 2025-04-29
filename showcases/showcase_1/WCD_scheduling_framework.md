@@ -120,7 +120,6 @@ generate_GCL_output
 - The script will:
     - Create corresponding GCLs in the `output_GCL_matrix.txt`.
     - The **schedulability cost** metric will also be displayed.
-    -  
 <pre>
 generate_GCL_output
 What scheduler did you select (WCA/WCD/NCA/NCD)?:  WCD
