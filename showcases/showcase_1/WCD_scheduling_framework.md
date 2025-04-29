@@ -151,3 +151,9 @@ INI file simulation_config_WCD.ini generated successfully in directory OMNETpp_C
 </pre>
 
 ## 🔬 Step 5: Analyzing Simulation Results
+- Import the `.ned` and `.ini` generated from Step 4 should be loaded in OMNeT++.
+- Run the simulation for a default period of 1 second. 
+- After the simulation completes, navigate to generated `.vec` result file.
+- Filter the results based on selecting entries labeled `meanBitLifeTimePerPacket:vector`, which represents the end-to-end latency for each frame (shown below).
+
+- Export 
