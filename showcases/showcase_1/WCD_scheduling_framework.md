@@ -139,3 +139,13 @@ generate_omnetpp_files
 - If the `output_GCL_matrix.txt` file is read sucessfully, the script will also generate the corresponding `.ini` file containing the simulation configuration.
 - Both files are necessary to run the TAS-Forge simulation inside OMNeT++.
 
+![Network Topology INI](images/network_topology_ini.png)
+
+MATLAB command window output is shown below:
+<pre>
+generate_omnetpp_files
+OMNETpp_Code_Output directory has been created.
+NED file generated_topology.ned generated successfully in directory OMNETpp_Code_Output.
+File "output_GCL_matrix.txt" read successfully
+INI file simulation_config_WCD.ini generated successfully in directory OMNETpp_Code_Output.
+</pre>
