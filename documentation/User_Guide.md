@@ -227,4 +227,4 @@ This file provides a detailed summary of the simulated results and performance o
 
 **Note:** All the timing parameters are expressed in microseconds. 
 
-✅ TAS-Forge is now fully set up. You can experiment with topology sizes, or stream properties to evaluate custom scenarios. For detailed understanding of system design and implementation decisions, refer to the [Technical Overview](documentation/Technical_Overview.md) page.
+✅ TAS-Forge is now fully set up. You can experiment with topology sizes, or stream properties to evaluate custom scenarios. For detailed understanding of system design and implementation decisions, refer to the [Technical Overview](Technical_Overview.md) page.
