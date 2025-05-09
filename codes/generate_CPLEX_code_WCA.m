@@ -371,9 +371,9 @@ for i = 1:length(routes)
     % Associate the stream ID with each switch in the route
     for j = 1:length(switches)
         if eq(j,1)
-            ft_constraint = sprintf('OFF_%d_%s >= OFF_%d_%s + ceil(L[%d] - 1*delta) - 1;',i,switches{j},i,sources{1},i);
+            ft_constraint = sprintf('OFF_%d_%s >= OFF_%d_%s + floor(L[%d] - 1*delta);',i,switches{j},i,sources{1},i);
         else
-            ft_constraint = sprintf('OFF_%d_%s >= OFF_%d_%s + ceil(L[%d] - 0*delta) - 1;',i,switches{j},i,switches{j-1},i);
+            ft_constraint = sprintf('OFF_%d_%s >= OFF_%d_%s + floor(L[%d] - 0*delta);',i,switches{j},i,switches{j-1},i);
         end
     % Write the constraint to the file
     fprintf(outputFile, '\n%s', ft_constraint);
