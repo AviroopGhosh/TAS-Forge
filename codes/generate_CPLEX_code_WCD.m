@@ -497,8 +497,36 @@ for i = 1:length(routes)
     fprintf(outputFile, '\n%s', e2e_constraint_2);
 end
 
-%% Closing 
+% Close the loop 
 fprintf(outputFile, '\n}');
+
+%% Print decision variables
+
+% Print the decision variables and output as a text file
+
+fprintf(outputFile, '\n\n%s\n', '// Print the decision variables and output as txt file');
+fprintf(outputFile, 'execute {\n');
+
+fprintf(outputFile, 'var solFile = new IloOplOutputFile("output_CPLEX_solution_WCD.txt");\n\n');
+
+% Repeat over each decision variable
+for i = 1:length(routes)
+    % Split the route into individual devices
+    devices = strsplit(routes{i}, ',');
+  
+    % Generate the output string for each device in the route
+    for j = 1:length(devices) - 1 %Source to last switch
+        deviceName = strtrim(devices{j});  % Remove any leading/trailing spaces
+        outputLine = sprintf('solFile.writeln("OFF_%d_%s = " + OFF_%d_%s + ";");\n', i, deviceName, i, deviceName);
+        % Write the output line to the file
+        fprintf(outputFile, '%s', outputLine);
+    end
+end
+
+fprintf(outputFile,'\nsolFile.close();');
+fprintf(outputFile,'\n}');
+
+%% Closing 
 
 % Close the file
 fclose(outputFile);
@@ -518,4 +546,3 @@ function prevDevice = findPreviousDevice(route, currentSwitch)
         prevDevice = error('!!! Previous device does not exist, incorrect implementation !!!'); 
     end
 end
-
