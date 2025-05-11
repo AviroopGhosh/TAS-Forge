@@ -146,13 +146,10 @@ Once the model is executed, check the **Problem Browser** tab in CPLEX studio.
 If the model **successfully generates** decision varables, proceed with the following steps:
 1. Go to the **Solutions** tab in the output area at the bottom of CPLEX studio.
 2. You will see all the decision variables (e.g., `OFF_1_source1`,`OFF_1_switch1`,`OFF_2_switch1`, etc.).
-3. **All** the relevant decision variables will be automatiocally generated in your CPLEX OPL Projects space as a text file named:
-<pre>
-    output_CPLEX_solution_[sched].txt
-</pre>
-where `[sched]` is the type of scheduler used (such as, `NCA`, `WCA`, `NCD` or `WCD`).
-4. Move this file into your MATLAB workspace directory where TAS-Forge is located.  
-5. The decision variables will be in the format, `VARIABLE_NAME = VALUE;`, for example: `OFF_1_source1 = 0;` or `OFF_1_switch1 = 10;`.
+3. **All** the relevant decision variables will be automatiocally generated in your CPLEX OPL Projects space as a text file named: `output_CPLEX_solution_[sched].txt`
+4. Note: `[sched]` is the type of scheduler used (such as, `NCA`, `WCA`, `NCD` or `WCD`).
+5. Move this file into your MATLAB workspace directory where TAS-Forge is located.  
+6. The decision variables will be in the format, `VARIABLE_NAME = VALUE;`, for example: `OFF_1_source1 = 0;` or `OFF_1_switch1 = 10;`.
 
 ### 🗒️ Step 3: Create Gate Control Lists (GCLs)
 This step processes the output from CPLEX to create the Gate Control Lists (GCLs) used for TAS scheduling.
