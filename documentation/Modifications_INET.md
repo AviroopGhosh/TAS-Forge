@@ -18,6 +18,13 @@ delayer: &lt;default("PacketDelayer")&gt; like IPacketDelayer {
 
 2. Make the following changes in the `connections:` section, to allow for the `lowerLayerIn` to pass through the `delayer` module:
 
+🔧 **Replace** the original connections:
+ <pre><code class="language-ned">
+    lowerLayerIn --> { @display("m=s"); } --> fcsChecker.in;
+ </code></pre>
+
+🍎 **With the updated connections:**
+
  <pre><code class="language-ned">
    lowerLayerIn --> { @display("m=s"); } --> delayer.in;
    delayer.out --> fcsChecker.in;
