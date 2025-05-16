@@ -142,7 +142,7 @@ writetable(T0, filename);
 
 fprintf('Node output file "node_data.csv" has been created.\n');
 
-mt = 0.01e-6; %Macrotick value
+mt = 0.1e-6; %Macrotick value
 
 %% Time-period and hyper-period (--- User-configurable timing parameters ---)
 
