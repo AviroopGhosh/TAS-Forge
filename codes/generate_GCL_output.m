@@ -330,7 +330,7 @@ for m = 1:stream_no
     for n = 1:hp
         if le(mod((n - sw_offsets(m) - 1),(T_stream(index))) , ceil(ceil(trans_delay(index)) ...
                 - min(min(min(0, (p_switch - p_src)), (p_GM - p_src)), (p_switch - p_GM))*T_sync ...
-                + max(max(max(0, (p_switch - p_src)), (p_GM - p_src)), (p_switch - p_GM))*T_sync + 1))
+                + max(max(max(0, (p_switch - p_src)), (p_GM - p_src)), (p_switch - p_GM))*T_sync + 2))
             A_matrix(m,n) = 1;
         end
     end
@@ -388,7 +388,6 @@ SW_initial_state = GCL_initial_state;
 
 % Return the initial state of the switch and GCL 
 GCL_schedule = [SW_initial_state, round((GCL_queue_state),2)];
-
 
 end
 
