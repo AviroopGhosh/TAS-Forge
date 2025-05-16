@@ -85,7 +85,7 @@ To ensure smooth implementation of TAS-Forge, it is **strongly recommended** tha
 
 TAS-Forge relies on the file paths for reading and writing, including but not limited to:
 - Reading the `.csv` and `.txt` files used to generate CPLEX and OMNeT++ scripts.
-- Reading outputs from the CPLEX and OMNeTpp files (such as, the `input_CPLEX_solution_[sched].txt` and `results.csv`) for furhter analysis. 
+- Reading outputs from the CPLEX and OMNeTpp files (such as, the `input_CPLEX_solution_[sched].txt` and `results.csv`) for further analysis. 
 
 Keeping **all TAS-Forge scripts and related files in a single working directory** helps avoid file-not-found errors and ensures proper linking between generation, scheduling, simulation and analysis steps.
 
