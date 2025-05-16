@@ -15,7 +15,7 @@ if ~strcmp(scheduler_input,'WCA') && ~strcmp(scheduler_input,'WCD')...
 end
 
 %% Read and Evaluate the CPLEX input Text File
-filename = ['output_cplex_solution_' scheduler_input '.txt'];
+filename = ['output_CPLEX_solution_' scheduler_input '.txt'];
 fileID = fopen(filename, 'r');
 if fileID == -1
     error('Cannot open the file.');
