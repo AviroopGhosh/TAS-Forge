@@ -80,6 +80,22 @@ Or you can download it as a ZIP file and extract it.
         ├── simulation_config_[sched].ini  % Ini file generated based on scheduler type  
 </pre>
 
+## 🧭 Working Directory Recommendations
+To ensure smooth implementation of TAS-Forge, it is **strongly recommended** that you start MATLAB in the **TAS-Forge root directory** (or the directory where all input and output files are expected to be located). 
+
+TAS-Forge relies on the file paths for reading and writing, including but not limited to:
+- Reading the `.csv` and `.txt` files used to generate CPLEX and OMNeT++ scripts.
+- Reading outputs from the CPLEX and OMNeTpp files (such as, the `input_CPLEX_solution_[sched].txt` and `results.csv`) for furhter analysis. 
+
+Keeping **all TAS-Forge scripts and related files in a single working directory** helps avoid file-not-found errors and ensures proper linking between generation, scheduling, simulation and analysis steps.
+
+To verify or change your current working directory in MATLAB, use the following commands:
+
+<pre>
+pwd                             % Check current directory
+cd 'your/path/to/TAS-Forge'     % Naviate to the TAS-Forge directory    
+</pre>   
+
 ## 🪜 Step-by-Step Guide: Using TAS-Forge
 This section provides a step-by-step guide for using TAS-Forge. Before beginning, ensure that all the required files are present in your MATLAB working directory. To understand how the files are organized, refer to the [Folder Structure](#folder_structure) section. 
 
