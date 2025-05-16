@@ -98,7 +98,7 @@ Network parameters define the operational context of the Time-Sensitive Network 
 - **Propagation Delay:** Represents the time taken by frames to travel between two network devices. Set to a default value of `50 nanoseconds (ns)` considering a linkspeed of 1 Gbps.
 - **Processing Delay:** A constant internal delay incurred within switches to process frames, set by default to `1550 ns`.
 - **Guard Band:** A reserved time interval to prevent non-time-sensitive frames from interfering with scheduled transmissions, currently set to `0 seconds` by default.. 
-- **Macrotick:** A base time unit to set all devices to a common time-unit. Default value of `0.01 microseconds (µs)` parameter is used. However, other **recommended** values are `0.1 µs` or `1 µs`.  
+- **Macrotick:** A base time unit to set all devices to a common time-unit. Default value of `0.1 microseconds (µs)` parameter is used. However, other **recommended** values are `0.01 µs` or `1 µs`.  
 - **Hyperperiod:** Hyperperiod is defined as the least common multiple of time-sensitive stream periodicities in the network *(see below)*.
 
 The relevant network parameters are stored in the `network_data.csv` file, which is automatically generated after executing the `generate_network_system.m` script.
