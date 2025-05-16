@@ -93,7 +93,7 @@ To verify or change your current working directory in MATLAB, use the following 
 
 <pre>
 pwd                             % Check current directory
-cd 'your/path/to/TAS-Forge'     % Naviate to the TAS-Forge directory    
+cd 'your/path/to/TAS-Forge'     % Navigate to the TAS-Forge directory    
 </pre>   
 
 ## 🪜 Step-by-Step Guide: Using TAS-Forge
