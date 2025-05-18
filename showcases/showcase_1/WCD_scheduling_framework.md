@@ -120,7 +120,7 @@ generate_GCL_output
 What scheduler did you select (WCA/WCD/NCA/NCD)?:  WCD
 File "output_GCL_matrix.txt" has been created.
 
-The schedulability cost is 0.025  
+The schedulability cost is 0.0245
 </pre>
 
 ## 🏭 Step 4: Generate Simulation Configuration
