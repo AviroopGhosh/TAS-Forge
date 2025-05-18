@@ -176,4 +176,5 @@ Results updated to stream_data_output.csv
 - Since the schedule gurantees no queuing delays along the route, the minimum and maximum end-to-end latencies will be equal, resulting in zero jitter.
 - Rename the `stream_data_output.csv` to `stream_data_output_NCA.csv` for clarity. 
 
-## 🦹
+## 🙇‍♀️Step 3: Workflow for WCA Scheduling Framework
+
