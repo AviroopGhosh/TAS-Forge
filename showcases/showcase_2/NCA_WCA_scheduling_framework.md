@@ -21,7 +21,7 @@ This showcase follows the step-by-step walkthrough as detailed in the [User Guid
 
 For an understanding of the different scheduling frameworks, read the [Technical Overview](../../documentation/Technical_Overview.md). 
 
-##  🚥 Step 1: Configure the Network Topology 
+## 🚥 Step 1: Configure the Network Topology 
 - Open MATLAB and navigate to the TAS-Forge project folder.
 - Run the following script:
   <pre>
@@ -288,3 +288,12 @@ Results updated to stream_data_output.csv
 - The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
 - Because the WCA schedule eliminates queuing delays, the minimum and maximum end-to-end latencies will be identical, resulting in zero jitter.
 - Rename the `stream_data_output.csv` to `stream_data_output_WCA.csv` for clarity. 
+
+## 🏁 Step 4: Comparative Analysis
+- To perform a comparative analysis between the NCA and WCA methods, examine the 'stream_data_output_NCA.csv' and 'stream_data_output_WCA.csv' files.
+- Given the deterministic nature of both scheduling frameworks, the end-to-end latency and jitter values across all streams should be identical.
+- However, a meaningful comparison can be made by analyzing the **schedulability cost**. This metric reflects the overall bandwidth efficiency of GCLs for each scheduling method.
+- According to the MATLAB output, the schedulability cost is:
+  - **0.0679333** for the NCA framework
+  - **0.136533** for the WCA framework
+- These values indicate that the NCA method is approximately **50% more bandwidth efficient** than the WCA method.
