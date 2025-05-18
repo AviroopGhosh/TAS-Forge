@@ -67,7 +67,7 @@ After generating the network topology, the workflows for each scheduling framewo
 ### 🧍‍♂Step 2A: Solve NCA TAS Schedules using IBM CPLEX
 - From the `CPLEX_Code_Output` folder select the `output_CPLEX_code_generator_NCA.mod` file. 
 - Launch CPLEX Optimization Study, and after creating an OLP project, run the `.mod` file.
-- Once executed, the **decison variables** (similar as shown) outputs are generated in the **Solutions** tab in CPLEX studio.
+- Once executed, the **decison variables** (as shown) outputs are generated in the **Solutions** tab in CPLEX studio.
 <pre>
 lambda_1 = 96.57;
 lambda_2 = 124.57;
