@@ -14,6 +14,8 @@ This example highlights how TAS-Forge simplifies TAS schedule creation, allowing
 
 This guide demonstrates how to replicate the showcased example using TAS-Forge.
 
+🚨 **Do not** close MATLAB until all steps are completed. If you need to pause midway, use the save workspace command to preserve your progress, and resume later.
+
 # 🪜 Step-by-Step Showcase: Creating TAS Schedules with TAS-Forge
 This showcase follows the step-by-step walkthrough as detailed in the [User Guide](../../documentation/User_Guide.md). 
 
