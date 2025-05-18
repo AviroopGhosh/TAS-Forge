@@ -60,3 +60,5 @@ Output file "output_CPLEX_code_generator_NCA.mod" has been generated in the CPLE
 </pre>
 
 ## 🦸 Step 2: Workflow for NCA Scheduling Framework 
+
+## 🦹
