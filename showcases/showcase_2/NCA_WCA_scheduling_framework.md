@@ -234,7 +234,7 @@ OFF_6_switch6 = 1435;
 generate_GCL_output  
 </pre>
 
-- Note that will over-write the previously generated GCLs for the NCA scheduling method. 
+- **Note:** That will over-write the previously generated GCLs for the NCA scheduling method. 
 - Select the scheduler type when prompted. In this case, *WCA* needs to be entered.
 - The script will:
     - Create corresponding GCLs in the `output_GCL_matrix.txt`.
@@ -266,23 +266,25 @@ File "output_GCL_matrix.txt" read successfully
 INI file simulation_config_WCA.ini generated successfully in directory OMNETpp_Code_Output.
 </pre>
 
-### 🤸‍♀️Step 2D: Analyzing Simulation Results
-- Import the `.ned` and `.ini` generated from Step 2C and load into OMNeT++.
+### 🤸‍♀️Step 3D: Analyzing Simulation Results
+- Import the `.ini` generated from Step 3C and load into OMNeT++.
 - Run the simulation for a default period of 1 second. 
 - After the simulation completes, navigate to generated `.vec` result file.
 - Filter the results based on selecting entries labeled `meanBitLifeTimePerPacket:vector`, representing the end-to-end latency.
 - Export the results as a `.csv` file and name it `results.csv`.
 - Transfer the `.csv` file to your MATLAB workspace with TAS-Forge.
+- **Note:** This will overwrite any previous instances of `results.csv`. 
 - Run the following command in your MATLAB command window:
 <pre>
  analyze_omnet_results 
 </pre> 
-- This should create a `stream_data_output.csv` file and the following prompt will be displayed:
+- This should create a `stream_data_output.csv` file (overwriting any existing one), and you will see following prompt will be displayed:
 <pre>
 Results saved to stream_data_output.csv
 Results updated to stream_data_output.csv  
 </pre>
+- This will overwrite the `stream_data_output.csv` 
 - The output `.csv` file summaries the stream metrics including the analytical and meaured end-to-end latencies, jitter, routes, etc.
 - The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
-- Since the schedule gurantees no queuing delays along the route, the minimum and maximum end-to-end latencies will be equal, resulting in zero jitter.
-- Rename the `stream_data_output.csv` to `stream_data_output_NCA.csv` for clarity. 
+- Because the WCA schedule eliminates queuing delays, the minimum and maximum end-to-end latencies will be identical, resulting in zero jitter.
+- Rename the `stream_data_output.csv` to `stream_data_output_WCA.csv` for clarity. 
