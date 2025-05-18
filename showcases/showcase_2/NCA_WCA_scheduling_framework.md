@@ -11,3 +11,5 @@ The showcase highlights each major phase including:
 - Generation of GCLs for the WCA method.
 - Preparation and execution of simulation files for OMNeT++ for the WCA scheduling method.
 - Analysis of the results from both scheduling frameworks.  
+
+This guide demonstrates how to replicate the showcased example using TAS-Forge. 
