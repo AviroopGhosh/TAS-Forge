@@ -21,7 +21,7 @@ This showcase follows the step-by-step walkthrough as detailed in the [User Guid
 
 For an understanding of the different scheduling frameworks, read the [Technical Overview](../../documentation/Technical_Overview.md). 
 
-## 🚧 Step 1: Configure the Network Topology 
+## : Step 1: Configure the Network Topology 
 - Open MATLAB and navigate to the TAS-Forge project folder.
 - Run the following script:
   <pre>
