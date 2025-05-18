@@ -153,4 +153,26 @@ File "output_GCL_matrix.txt" read successfully
 INI file simulation_config_NCA.ini generated successfully in directory OMNETpp_Code_Output.
 </pre>
 
+### 🤸 Step 2D: Analyzing Simulation Results
+- Import the `.ned` and `.ini` generated from Step 2C and load into OMNeT++.
+- Run the simulation for a default period of 1 second. 
+- After the simulation completes, navigate to generated `.vec` result file.
+- Filter the results based on selecting entries labeled `meanBitLifeTimePerPacket:vector`, representing the end-to-end latency.
+- Export the results as a `.csv` file and name it `results.csv`.
+- Transfer the `.csv` file to your MATLAB workspace with TAS-Forge.
+- Run the following command in your MATLAB command window:
+<pre>
+ analyze_omnet_results 
+</pre> 
+- This should create a `stream_data_output.csv` file and the following prompt will be displayed:
+<pre>
+Results saved to stream_data_output.csv
+Results updated to stream_data_output.csv  
+</pre>
+- The output `.csv` file summaries the stream metrics including the analytical and meaured end-to-end latencies, jitter, routes, etc.
+- The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
+- Since the schedule gurantees no queuing delays along the route, the minimum and maximum end-to-end latencies will be equal, resulting in zero jitter.
+- Rename the `stream_data_output.csv` to `stream_data_output_NCA.csv` for clarity. 
+- For further details on interpreting the results refer to the [Technical Overview](../../documentation/Technical_Overview.md) page. 
+
 ## 🦹
