@@ -24,7 +24,6 @@ This showcase follows the step-by-step walkthrough as detailed in the [User Guid
   generate_network_system  
   </pre>
 - Enter the number of 🔺 **5 sources**, 🟢 **5 sinks** & 🟦 **6 switches** in the input text box.
-- 
 - A network topology will be automatically generated, similar to the one displayed as shown below:
 
 ![Network Topology](images/showcase_2_network_topology.png)
