@@ -179,7 +179,7 @@ Results updated to stream_data_output.csv
 ## 🙇‍♀️Step 3: Workflow for WCA Scheduling Framework
 This step outlines the complete workflow for the WCA scheduling framework—from schedule generation and GCL creation to OMNeT++ simulation and result analysis.
 
-### 🧍‍♂Step 3A: Solve WCA TAS Schedules using IBM CPLEX
+### 🧍‍♀️Step 3A: Solve WCA TAS Schedules using IBM CPLEX
 - From the `CPLEX_Code_Output` folder select the `output_CPLEX_code_generator_WCA.mod` file. 
 - Launch CPLEX Optimization Study, and after creating an OLP project, run the `.mod` file.
 - Once executed, the **decison variables** (as shown) outputs are generated in the **Solutions** tab in CPLEX studio.
@@ -228,7 +228,7 @@ OFF_6_switch6 = 1435;
 - The CPLEX directory should generate the `output_CPLEX_solution_WCA.txt` file containing all the relevant decision variables required to be created for GCL generation. 
 - Move the `output_CPLEX_solution_WCA.txt` file to the MATLAB directory where TAS-Forge is being executed.
 
-### 🚶Step 3B: Create the GCLs
+### 🚶‍♀️Step 3B: Create the GCLs
 - To generate GCLs for the WCA scheduling method, run the following script to generate GCLs:
 <pre>
 generate_GCL_output  
@@ -247,7 +247,7 @@ File "output_GCL_matrix.txt" has been created.
 The schedulability cost is 0.136533
 </pre>
 
-### 🏃 Step 3C: Generate Simulation Configuration
+### 🏃‍♀️Step 3C: Generate Simulation Configuration
 - To generate `.ini` file for the WCA scheduling method, run the following script:
 <pre>
 generate_omnetpp_files  
@@ -266,7 +266,7 @@ File "output_GCL_matrix.txt" read successfully
 INI file simulation_config_WCA.ini generated successfully in directory OMNETpp_Code_Output.
 </pre>
 
-### 🤸 Step 2D: Analyzing Simulation Results
+### 🤸‍♀️Step 2D: Analyzing Simulation Results
 - Import the `.ned` and `.ini` generated from Step 2C and load into OMNeT++.
 - Run the simulation for a default period of 1 second. 
 - After the simulation completes, navigate to generated `.vec` result file.
