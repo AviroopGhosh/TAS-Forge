@@ -137,7 +137,7 @@ A summary of the scheduling frameworks is provided below:
 
 Overall the **delay-based** scheduling methods induce additional queuing delays but are bandwidth efficient, while, the **adjustment-based** scheduling methods provide the minimum possible e2e latency for all the frames in a stream (i.e., no jitter) but are not as bandwidth efficient. 
 
-🚨 **Important:** Due to the preciseness of using clock drift estimates, it is best to use a macrotick value of 0.1 µs or higher when using the NCA scheduling method. 
+🚨 **Important:** Due to the preciseness of using clock drift estimates, it is best to use a macrotick value of **0.1 µs or higher** when using the NCA scheduling method. 
 
 ## 🚦Gate Control Lists (GCLs)
 GCLs are a fundamental output of TAS-Forge, governing the precise scheduling of frame transmissions at each switch egress port within the network. Setting precise GCLs at each egress port of switches is essential to ensure time-sensitive streams maintain their deterministic aspects. 
