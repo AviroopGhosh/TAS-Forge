@@ -294,6 +294,19 @@ Results updated to stream_data_output.csv
 - Given the deterministic nature of both scheduling frameworks, the end-to-end latency and jitter values across all streams should be identical.
 - However, a meaningful comparison can be made by analyzing the **schedulability cost**. This metric reflects the overall bandwidth efficiency of GCLs for each scheduling method.
 - According to the MATLAB output, the schedulability cost is:
-  - **0.0679333** for the NCA framework
-  - **0.136533** for the WCA framework
+  - **0.0679333** for the NCA framework.
+  - **0.136533** for the WCA framework.
 - These values indicate that the NCA method is approximately **50% more bandwidth efficient** than the WCA method.
+
+## ✔️ Summary
+This showcase demonstrated the complete TAS-Forge workflow for both the NCA and WCA scheduling methods using a common network topology. The process included:
+- Generating the network topology and time-sensitive streams
+- Scheduling creation using CPLEX for the NCA and WCA methods.
+- GCL generation for both the scheduling methods.
+- Running simulations in OMNeT++ and analyzing the results.
+
+The outcomes of the WCA and NCA methods were compared using the output `.csv` files: `stream_data_output_NCA.csv` and `stream_data_output_WCA.csv`. 
+
+While latency and jitter were identical due to the deterministic nature of the schedules, a meaningful distinction emerged through the **schedulability cost** metric. This metric captured the relative bandwidth efficiency of the overall network schedule, revealing that the NCA method is significantly more bandwidth-efficient than the WCA approach.
+
+Similar workflows can be constructed to compare other scheduling frameworks such as NCD and WCD using the same network topology.
