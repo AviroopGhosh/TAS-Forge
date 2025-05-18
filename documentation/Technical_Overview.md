@@ -135,7 +135,7 @@ A summary of the scheduling frameworks is provided below:
 - **Network-Derived Clock Drift Delay (NCD) Method:** Improves upon WCD by incorporating clock drift estimates derived from network-based time synchronization, leading to tighter bounds.
 - **Network-Derived Clock Drift Adjustment (NCA) Method:** Refines WCA by dynamically adjusting scheduling using measured clock drift information obtained through synchronization.
 
-Overall the **delay-based** scheduling methods induce additional queuing delays but are bandwidth efficient, while, the **adjustment-based** scheduling methods provide the minimum possible e2e latency for all the frames in a stream (i.e., no jitter) but are not as bandwidth efficient. 
+Overall the **delay-based** scheduling methods induce additional queuing delays but are bandwidth efficient, while, the **adjustment-based** scheduling methods provide the minimum possible e2e latency for all the frames in a stream (i.e., no queuing delays along the route, thereby no jitter) but are not as bandwidth efficient. 
 
 🚨 **Important:** Due to the preciseness of using clock drift estimates, it is best to use a macrotick value of **0.1 µs or higher** when using the NCA scheduling method. 
 
