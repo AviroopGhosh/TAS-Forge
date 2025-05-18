@@ -66,7 +66,7 @@ Output file "output_CPLEX_code_generator_NCA.mod" has been generated in the CPLE
 ## 🙇 Step 2: Workflow for NCA Scheduling Framework 
 After generating the network topology, the workflows for each scheduling framework should be separated. This step outlines the complete process for the NCA scheduling framework—from schedule generation and GCL creation to OMNeT++ simulation and result analysis.
 
-### 🧍‍♂Step 2A: Solve NCA TAS Schedules using IBM CPLEX
+### 🧍Step 2A: Solve NCA TAS Schedules using IBM CPLEX
 - From the `CPLEX_Code_Output` folder select the `output_CPLEX_code_generator_NCA.mod` file. 
 - Launch CPLEX Optimization Study, and after creating an OLP project, run the `.mod` file.
 - Once executed, the **decison variables** (as shown) outputs are generated in the **Solutions** tab in CPLEX studio.
