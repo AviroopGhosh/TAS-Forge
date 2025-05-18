@@ -1,0 +1,6 @@
+Stream ID,Route,Periodicity,Repetitions,Deadlines,Min e2e latency,Transmission delay,L value,Payload Bytes,Number of hops
+1,"source5,switch2,switch3,sink1",1500,2,1500,69.46,12.32,28.32,100,3
+2,"source2,switch1,switch2,switch3,sink4",1500,2,1500,97.78,12.32,28.32,100,4
+3,"source4,switch1,switch2,switch3,switch4,sink2",1000,3,1000,126.1,12.32,28.32,100,5
+4,"source1,switch1,switch2,switch3,switch4,switch5,sink3",3000,1,3000,154.42,12.32,28.32,100,6
+5,"source3,switch1,switch2,switch3,switch4,switch5,sink3",1000,3,1000,154.42,12.32,28.32,100,6
