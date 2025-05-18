@@ -15,7 +15,8 @@ The showcase highlights each major phase including:
 This guide demonstrates how to replicate the showcased example using TAS-Forge. 
 
 # 🪜Step-by-Step Guide: Generating Schedules with NCA and WCA Methods Using TAS-Forge
-This showcase follows the step-by-step walkthrough as detailed in the [User Guide](../../documentation/User_Guide.md). 
+This showcase follows the step-by-step walkthrough as detailed in the [User Guide](../../documentation/User_Guide.md).
+
 For an understanding of the different scheduling frameworks, read the [Technical Overview](../../documentation/Technical_Overview.md). 
 
 ## 🚧 Step 1: Configure the Network Topology 
