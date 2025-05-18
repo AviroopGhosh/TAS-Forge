@@ -150,7 +150,7 @@ INI file simulation_config_WCD.ini generated successfully in directory OMNETpp_C
 - Run the simulation for a default period of 1 second. 
 - After the simulation completes, navigate to generated `.vec` result file.
 - Filter the results based on selecting entries labeled `meanBitLifeTimePerPacket:vector`, which represents the end-to-end latency for each frame (as shown below).
-![Mean-bit-lifetime](images/showcase_1_network_topology.png)
+![Mean-bit-lifetime](images/showcase_1_omnet_results.png)
 - Export the results as a `.csv` file and name it `results.csv`.
 - Transfer the `.csv` file to your MATLAB workspace with TAS-Forge.
 - Run the following command in your MATLAB command window:
