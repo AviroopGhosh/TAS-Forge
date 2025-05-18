@@ -127,7 +127,7 @@ generate_GCL_output
     - Create corresponding GCLs in the `output_GCL_matrix.txt`.
     - The **schedulability cost** metric is also displayed in the MATLAB command window.
 <pre>
->> generate_GCL_output
+generate_GCL_output
 What scheduler did you select (WCA/WCD/NCA/NCD)?:  NCA
 File "output_GCL_matrix.txt" has been created.
 
@@ -240,32 +240,30 @@ generate_GCL_output
     - Create corresponding GCLs in the `output_GCL_matrix.txt`.
     - The **schedulability cost** metric is also displayed in the MATLAB command window.
 <pre>
->> generate_GCL_output
+generate_GCL_output
 What scheduler did you select (WCA/WCD/NCA/NCD)?:  WCA
 File "output_GCL_matrix.txt" has been created.
 
 The schedulability cost is 0.136533
 </pre>
 
-### 🏃 Step 2C: Generate Simulation Configuration
-- To generate the `.ned` and `.ini` files, run the following script:
+### 🏃 Step 3C: Generate Simulation Configuration
+- To generate `.ini` file for the WCA scheduling method, run the following script:
 <pre>
 generate_omnetpp_files  
 </pre>
-- The script will create `OMNETpp_Code_Output` directory for storing the generated files.
-- The `.ned` will be generated, along with a figure denoting all network devices and the traffic flow directions based on the topology (similar to the one shown below).
-- If the `output_GCL_matrix.txt` file is read sucessfully, the script will also generate the corresponding `.ini` file containing the simulation configuration.
-- Both files are necessary to run the TAS-Forge simulation inside OMNeT++.
-
-![Network Topology NED](images/showcase_2_ned.png)
+- Since the `OMNETPP_Code_Output` directory was already created in Step 2C, it will not be recreated.
+- The `.ned` will be re-generated, along with a topology diagram denoting all network devices and the traffic flow directions based on the topology.
+- Given that this is the same `.ned` file generated from Step 2C, there is no need to copy it again into OMNeT++.
+- The script will also generate the corresponding `.ini` file for the WCA scheduling method containing the simulation configuration.
+- Load the `.ini` file in OMNeT++ to run the WCA configuration. 
 
 MATLAB command window output is shown below, displaying successful `.ned` and `.ini` file generation:
 <pre>
 generate_omnetpp_files
-OMNETpp_Code_Output directory has been created.
 NED file generated_topology.ned generated successfully in directory OMNETpp_Code_Output.
 File "output_GCL_matrix.txt" read successfully
-INI file simulation_config_NCA.ini generated successfully in directory OMNETpp_Code_Output.
+INI file simulation_config_WCA.ini generated successfully in directory OMNETpp_Code_Output.
 </pre>
 
 ### 🤸 Step 2D: Analyzing Simulation Results
