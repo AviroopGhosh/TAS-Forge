@@ -1,4 +1,4 @@
-%% generate_CPLEX_code_WCA.m
+% generate_CPLEX_code_WCA.m
 % Description: The script is used for generating the output file to be 
 % executed on CPLEX for the WCA method
 % Dependencies: Run generate_network_system.m
@@ -169,7 +169,7 @@ end
 % added buffer
 fprintf(outputFile, '\n\n%s', '// Set the ceil of the transmission delay');
 trans_delay = streamData.('Transmission delay');
-fprintf(outputFile, '\n// int trans_delay_var[N_streams] = [');
+fprintf(outputFile, '\n int trans_delay_var[N_streams] = [');
 % Loop over each periodicity and format it
 for i = 1:NumStreams
     % Write the periodicity value
