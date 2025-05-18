@@ -65,6 +65,51 @@ Output file "output_CPLEX_code_generator_NCA.mod" has been generated in the CPLE
 After generating the network topology, the workflows for each scheduling framework should be separated. This step outlines the complete process for the NCA scheduling framework—from schedule generation and GCL creation to OMNeT++ simulation and result analysis.
 
 ### 🧍‍♂Step 2A: Solve NCA TAS Schedules using IBM CPLEX
-
+- From the `CPLEX_Code_Output` folder select the `output_CPLEX_code_generator_NCA.mod` file. 
+- Launch CPLEX Optimization Study, and after creating an OLP project, run the `.mod` file.
+- Once executed, the **decison variables** (similar as shown) outputs are generated in the **Solutions** tab in CPLEX studio.
+<pre>
+lambda_1 = 96.57;
+lambda_2 = 124.57;
+lambda_3 = 152.07;
+lambda_4 = 151.32;
+lambda_5 = 152.32;
+lambda_6 = 180.32;
+OFF_1_source5 = 66;
+OFF_1_switch2 = 88;
+OFF_1_switch3 = 112;
+OFF_1_switch4 = 141;
+OFF_2_source2 = 74;
+OFF_2_switch1 = 81;
+OFF_2_switch2 = 114;
+OFF_2_switch3 = 138;
+OFF_2_switch4 = 167;
+OFF_3_source1 = 0;
+OFF_3_switch1 = 17;
+OFF_3_switch2 = 50;
+OFF_3_switch3 = 74;
+OFF_3_switch4 = 103;
+OFF_3_switch5 = 133;
+OFF_4_source3 = 114;
+OFF_4_switch1 = 119;
+OFF_4_switch2 = 152;
+OFF_4_switch3 = 176;
+OFF_4_switch4 = 205;
+OFF_4_switch5 = 235;
+OFF_5_source4 = 0;
+OFF_5_switch2 = 22;
+OFF_5_switch3 = 46;
+OFF_5_switch4 = 75;
+OFF_5_switch5 = 105;
+OFF_5_switch6 = 137;
+OFF_6_source1 = 1141;
+OFF_6_switch1 = 1158;
+OFF_6_switch2 = 1191;
+OFF_6_switch3 = 1215;
+OFF_6_switch4 = 1244;
+OFF_6_switch5 = 1274;
+OFF_6_switch6 = 1306;
+</pre>
+- The CPLEX directory should generate the `output_CPLEX_solution_NCA.txt` file containing all the relevant decision variables. 
 
 ## 🦹
