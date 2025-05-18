@@ -127,7 +127,7 @@ generate_GCL_output
     - Create corresponding GCLs in the `output_GCL_matrix.txt`.
     - The **schedulability cost** metric is also displayed in the MATLAB command window.
 <pre>
-generate_GCL_output
+>> generate_GCL_output
 What scheduler did you select (WCA/WCD/NCA/NCD)?:  NCA
 File "output_GCL_matrix.txt" has been created.
 
@@ -177,4 +177,114 @@ Results updated to stream_data_output.csv
 - Rename the `stream_data_output.csv` to `stream_data_output_NCA.csv` for clarity. 
 
 ## 🙇‍♀️Step 3: Workflow for WCA Scheduling Framework
+This step outlines the complete workflow for the WCA scheduling framework—from schedule generation and GCL creation to OMNeT++ simulation and result analysis.
 
+### 🧍‍♂Step 3A: Solve WCA TAS Schedules using IBM CPLEX
+- From the `CPLEX_Code_Output` folder select the `output_CPLEX_code_generator_WCA.mod` file. 
+- Launch CPLEX Optimization Study, and after creating an OLP project, run the `.mod` file.
+- Once executed, the **decison variables** (as shown) outputs are generated in the **Solutions** tab in CPLEX studio.
+<pre>
+lambda_1 = 96.82;
+lambda_2 = 124.82;
+lambda_3 = 152.82;
+lambda_4 = 152.82;
+lambda_5 = 152.82;
+lambda_6 = 180.82;
+OFF_1_source5 = 0;
+OFF_1_switch2 = 3;
+OFF_1_switch3 = 31;
+OFF_1_switch4 = 59;
+OFF_2_source2 = 228;
+OFF_2_switch1 = 231;
+OFF_2_switch2 = 259;
+OFF_2_switch3 = 287;
+OFF_2_switch4 = 315;
+OFF_3_source1 = 100;
+OFF_3_switch1 = 103;
+OFF_3_switch2 = 131;
+OFF_3_switch3 = 159;
+OFF_3_switch4 = 187;
+OFF_3_switch5 = 215;
+OFF_4_source3 = 164;
+OFF_4_switch1 = 167;
+OFF_4_switch2 = 195;
+OFF_4_switch3 = 223;
+OFF_4_switch4 = 251;
+OFF_4_switch5 = 279;
+OFF_5_source4 = 64;
+OFF_5_switch2 = 67;
+OFF_5_switch3 = 95;
+OFF_5_switch4 = 123;
+OFF_5_switch5 = 151;
+OFF_5_switch6 = 179;
+OFF_6_source1 = 1292;
+OFF_6_switch1 = 1295;
+OFF_6_switch2 = 1323;
+OFF_6_switch3 = 1351;
+OFF_6_switch4 = 1379;
+OFF_6_switch5 = 1407;
+OFF_6_switch6 = 1435;
+</pre>
+- The CPLEX directory should generate the `output_CPLEX_solution_WCA.txt` file containing all the relevant decision variables required to be created for GCL generation. 
+- Move the `output_CPLEX_solution_WCA.txt` file to the MATLAB directory where TAS-Forge is being executed.
+
+### 🚶Step 3B: Create the GCLs
+- To generate GCLs for the WCA scheduling method, run the following script to generate GCLs:
+<pre>
+generate_GCL_output  
+</pre>
+
+- Note that will over-write the previously generated GCLs for the NCA scheduling method. 
+- Select the scheduler type when prompted. In this case, *WCA* needs to be entered.
+- The script will:
+    - Create corresponding GCLs in the `output_GCL_matrix.txt`.
+    - The **schedulability cost** metric is also displayed in the MATLAB command window.
+<pre>
+>> generate_GCL_output
+What scheduler did you select (WCA/WCD/NCA/NCD)?:  WCA
+File "output_GCL_matrix.txt" has been created.
+
+The schedulability cost is 0.136533
+</pre>
+
+### 🏃 Step 2C: Generate Simulation Configuration
+- To generate the `.ned` and `.ini` files, run the following script:
+<pre>
+generate_omnetpp_files  
+</pre>
+- The script will create `OMNETpp_Code_Output` directory for storing the generated files.
+- The `.ned` will be generated, along with a figure denoting all network devices and the traffic flow directions based on the topology (similar to the one shown below).
+- If the `output_GCL_matrix.txt` file is read sucessfully, the script will also generate the corresponding `.ini` file containing the simulation configuration.
+- Both files are necessary to run the TAS-Forge simulation inside OMNeT++.
+
+![Network Topology NED](images/showcase_2_ned.png)
+
+MATLAB command window output is shown below, displaying successful `.ned` and `.ini` file generation:
+<pre>
+generate_omnetpp_files
+OMNETpp_Code_Output directory has been created.
+NED file generated_topology.ned generated successfully in directory OMNETpp_Code_Output.
+File "output_GCL_matrix.txt" read successfully
+INI file simulation_config_NCA.ini generated successfully in directory OMNETpp_Code_Output.
+</pre>
+
+### 🤸 Step 2D: Analyzing Simulation Results
+- Import the `.ned` and `.ini` generated from Step 2C and load into OMNeT++.
+- Run the simulation for a default period of 1 second. 
+- After the simulation completes, navigate to generated `.vec` result file.
+- Filter the results based on selecting entries labeled `meanBitLifeTimePerPacket:vector`, representing the end-to-end latency.
+- Export the results as a `.csv` file and name it `results.csv`.
+- Transfer the `.csv` file to your MATLAB workspace with TAS-Forge.
+- Run the following command in your MATLAB command window:
+<pre>
+ analyze_omnet_results 
+</pre> 
+- This should create a `stream_data_output.csv` file and the following prompt will be displayed:
+<pre>
+Results saved to stream_data_output.csv
+Results updated to stream_data_output.csv  
+</pre>
+- The output `.csv` file summaries the stream metrics including the analytical and meaured end-to-end latencies, jitter, routes, etc.
+- The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
+- Since the schedule gurantees no queuing delays along the route, the minimum and maximum end-to-end latencies will be equal, resulting in zero jitter.
+- Rename the `stream_data_output.csv` to `stream_data_output_NCA.csv` for clarity. 
