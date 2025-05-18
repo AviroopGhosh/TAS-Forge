@@ -173,6 +173,5 @@ Results updated to stream_data_output.csv
 - The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
 - Since the schedule gurantees no queuing delays along the route, the minimum and maximum end-to-end latencies will be equal, resulting in zero jitter.
 - Rename the `stream_data_output.csv` to `stream_data_output_NCA.csv` for clarity. 
-- For further details on interpreting the results refer to the [Technical Overview](../../documentation/Technical_Overview.md) page. 
 
 ## 🦹
