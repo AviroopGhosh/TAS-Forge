@@ -110,6 +110,7 @@ OFF_6_switch4 = 1244;
 OFF_6_switch5 = 1274;
 OFF_6_switch6 = 1306;
 </pre>
-- The CPLEX directory should generate the `output_CPLEX_solution_NCA.txt` file containing all the relevant decision variables. 
-
+- The CPLEX directory should generate the `output_CPLEX_solution_NCA.txt` file containing all the relevant decision variables required to be created for GCL generation. 
+- Move the `output_CPLEX_solution_NCA.txt` file to the MATLAB directory where TAS-Forge is being executed.
+  
 ## 🦹
