@@ -111,8 +111,9 @@ generate_GCL_output
 </pre>
 
 - Select the scheduler type when prompted. For this example, *WCD* need to be entered.
-- Note: If you entered another scheduler type, it is ok, re-run the script. 
-- The script will:
+- Note: If you entered another scheduler type by mistake, it is ok, simply re-run the script.
+- The script will read the offsets from `output_CPLEX_solution_WCD.txt`.
+- It will then:
     - Create corresponding GCLs in the `output_GCL_matrix.txt`.
     - The **schedulability cost** metric is also displayed in the MATLAB command window.
 <pre>
