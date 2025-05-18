@@ -114,6 +114,22 @@ OFF_6_switch6 = 1306;
 - Move the `output_CPLEX_solution_NCA.txt` file to the MATLAB directory where TAS-Forge is being executed.
 
 ### 🚶Step 2B: Create the GCLs
+- To generate GCLs, run the following script to generate GCLs:
+<pre>
+generate_GCL_output  
+</pre>
 
+- Select the scheduler type when prompted. In this case, *NCA* needs to be entered.
+- Note: If you entered another scheduler type, re-run the script. 
+- The script will:
+    - Create corresponding GCLs in the `output_GCL_matrix.txt`.
+    - The **schedulability cost** metric is also displayed in the MATLAB command window.
+<pre>
+generate_GCL_output
+What scheduler did you select (WCA/WCD/NCA/NCD)?:  NCA
+File "output_GCL_matrix.txt" has been created.
+
+The schedulability cost is 0.0679333
+</pre>
   
 ## 🦹
