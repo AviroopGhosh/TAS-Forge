@@ -14,6 +14,8 @@ The showcase highlights each major phase including:
 
 This guide demonstrates how to replicate the showcased example using TAS-Forge. 
 
+🚨 **Do not** close MATLAB until all steps are completed. If you need to pause midway, use the save workspace command to preserve your progress, and resume later.
+
 # 🪜Step-by-Step Guide: Generating Schedules with NCA and WCA Methods Using TAS-Forge
 This showcase follows the step-by-step walkthrough as detailed in the [User Guide](../../documentation/User_Guide.md).
 
