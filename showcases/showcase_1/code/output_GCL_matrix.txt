@@ -1,8 +1,0 @@
-[5.5us,1.4us,3.8us,1.4us,3.8us,1.4us,88.2us,1.4us,9us,1.4us,3.8us,1.4us,38.2us,1.4us,43.4us,1.4us,9us,1.4us,82.7us,0us]
-[5.5us,1.4us,4.1us,1.4us,3.8us,1.4us,3.8us,1.4us,88.2us,1.4us,9us,1.4us,3.8us,1.4us,27.5us,1.4us,9.3us,1.4us,43.4us,1.4us,9us,1.4us,77.2us,0us]
-[16.5us,1.4us,9us,1.4us,88.2us,1.4us,9us,1.4us,3.8us,1.4us,83us,1.4us,9us,1.4us,71.7us,0us]
-[11us,1.4us,148.6us,1.4us,137.6us,0us]
-[21.7us,1.4us,148.6us,1.4us,126.9us,0us]
-[22us,1.4us,98.6us,1.4us,14.2us,1.4us,83us,1.4us,76.6us,0us]
-[32.4us,1.4us,98.6us,1.4us,98.6us,1.4us,66.2us,0us]
-[27.5us,1.4us,98.6us,1.4us,14.2us,1.4us,83us,1.4us,71.1us,0us]
