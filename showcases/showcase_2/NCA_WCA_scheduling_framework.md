@@ -16,6 +16,7 @@ This guide demonstrates how to replicate the showcased example using TAS-Forge.
 
 # 🪜Step-by-Step Guide: Generating Schedules with NCA and WCA Methods Using TAS-Forge
 This showcase follows the step-by-step walkthrough as detailed in the [User Guide](../../documentation/User_Guide.md). 
+For an understanding of the different scheduling frameworks, read the [Technical Overview](../../documentation/Technical_Overview.md). 
 
 ## 🚧 Step 1: Configure the Network Topology 
 - Open MATLAB and navigate to the TAS-Forge project folder.
@@ -60,5 +61,6 @@ Output file "output_CPLEX_code_generator_NCA.mod" has been generated in the CPLE
 </pre>
 
 ## 🦸 Step 2: Workflow for NCA Scheduling Framework 
+Following the network generation step it is important to separate the workflows for the different scheduling frameworks. 
 
 ## 🦹
