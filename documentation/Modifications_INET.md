@@ -23,7 +23,7 @@ delayer: &lt;default("PacketDelayer")&gt; like IPacketDelayer {
     lowerLayerIn --> { @display("m=s"); } --> fcsChecker.in;
  </code></pre>
 
-🍎 **With the updated connections:**
+👍 **With the updated connections:**
 
  <pre><code class="language-ned">
    lowerLayerIn --> { @display("m=s"); } --> delayer.in;
