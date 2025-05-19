@@ -101,6 +101,10 @@ This section provides a step-by-step guide for using TAS-Forge. Before beginning
 
 **Note:** Many files (e.g., CSV exports, CPLEX input, OMNeT simulation files) are generated during execution. These files will not appear until their corresponding scripts have been run. This will be highlighted in the respective steps. 
 
+**🚨 Important:** Before proceeding, please note that preserving the MATLAB workspace is critical. If the workspace is lost at any point, you will need to restart the entire process.
+
+To avoid this, consider using the `save workspace` command during TAS-Forge execution to save your session. You can later use `load workspace` to restore the workspace and continue where you left off.
+
 ### 💻 Step 1: Generate Network Topology and Stream Parameters
 To being using TAS-Forge, run the following script in MATLAB:
 
