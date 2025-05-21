@@ -25,7 +25,10 @@ For implementing TAS-Forge, it is vital that the following software tools are in
 - Note:
     - You may need to create an IBM account to access the download.
     - CPLEX must be run via the IBM GUI, as MATLAB integration is not supported in newer versions (22.x and beyond).
-
+- Quick links & Tutorials:
+    - [Quick start to CPLEX](https://www.ibm.com/docs/en/icos/22.1.2?topic=center-quick-start-cplex-studio)
+    - [Video Tutorial](https://www.youtube.com/watch?v=70HH-GNR9uM&list=PLyY17uOd5sPNgeqy2CguqyW0IENeEW4kS)
+      
 ### 3. OMNeT++ 
 - Required for: Simulating the generated network topology and validate the TAS schedule execution.
 - Recommended Version: OMNeT++ 6.0.1 or newer.
