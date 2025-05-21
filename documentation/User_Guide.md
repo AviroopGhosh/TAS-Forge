@@ -97,7 +97,7 @@ pwd                             % Check current directory
 cd 'your/path/to/TAS-Forge'     % Navigate to the TAS-Forge directory    
 </pre>   
 
-**🚨 Important:**
+**🚨 Workspace Requirements:**
 
 Preserving the MATLAB workspace is critical. If the workspace is cleared or lost, you will need to restart the entire process from the beginning.
 
