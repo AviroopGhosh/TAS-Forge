@@ -92,3 +92,5 @@ The following documentation covers key aspects of TAS-Forge, including how to us
 
 Furthermore, a set of showcases (examples) can be found in the following folder:
 - [Showcases](showcases)
+
+# Disclaimer
