@@ -96,6 +96,6 @@ Furthermore, a set of showcases (examples) can be found in the following folder:
 # ⚠️ Disclaimer
 If you would like to use TAS-Forge as a part of your work then please cite our work: 
 
-Aviroop Ghosh, Saleh Yousefi, and Thomas Kunz. 2025. Multi-Stream TSN Gate Control Scheduling in the Presence of Clock Synchronization. In Proceedings of the 26th International Conference on Distributed Computing and Networking (ICDCN '25). Association for Computing Machinery, New York, NY, USA, 11–20. 
-https://doi-org.proxy.library.carleton.ca/10.1145/3700838.3700847
+`Aviroop Ghosh, Saleh Yousefi, and Thomas Kunz. 2025. Multi-Stream TSN Gate Control Scheduling in the Presence of Clock Synchronization. In Proceedings of the 26th International Conference on Distributed Computing and Networking (ICDCN '25). Association for Computing Machinery, New York, NY, USA, 11–20. 
+https://doi-org.proxy.library.carleton.ca/10.1145/3700838.3700847`
 
