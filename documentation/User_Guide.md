@@ -81,9 +81,9 @@ Or you can download it as a ZIP file and extract it.
 </pre>
 
 ## 🌐 Recommendations
-Befoure you begin please read the set of recommendations. 
+Before you begin, please review the following recommendations to ensure a smooth experience with TAS-Forge.
 
-To ensure smooth implementation of TAS-Forge, it is **strongly recommended** that you start MATLAB in the **TAS-Forge root directory** (or the directory where all input and output files are expected to be located). 
+To avoid path-related issues, it is **strongly recommended** that you start MATLAB in the **TAS-Forge root directory** (or the directory where all input and output files are expected to be located). 
 
 TAS-Forge relies on the file paths for reading and writing, including (but not limited to):
 - Reading the `.csv` and `.txt` files used to generate CPLEX and OMNeT++ scripts.
@@ -97,7 +97,8 @@ pwd                             % Check current directory
 cd 'your/path/to/TAS-Forge'     % Navigate to the TAS-Forge directory    
 </pre>   
 
-**🚨 Important:** 
+**🚨 Important:**
+
 Preserving the MATLAB workspace is critical. If the workspace is cleared or lost, you will need to restart the entire process from the beginning.
 
 To safeguard your progress:
