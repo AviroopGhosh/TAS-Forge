@@ -73,7 +73,6 @@ nedFolderFile  = strcat(dirName,'/',outputFileName); % Total output
 fileID = fopen(nedFolderFile, 'w');
 
 % Write the header part of the .ned file
-fprintf(fileID, 'package TSN_Multi_Stream;\n\n');
 fprintf(fileID, 'import inet.networks.base.WiredNetworkBase;\n');
 fprintf(fileID, 'import inet.node.ethernet.Eth1G;\n');
 fprintf(fileID, 'import inet.node.ethernet.EthernetSwitch;\n');
