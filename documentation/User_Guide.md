@@ -80,7 +80,7 @@ Or you can download it as a ZIP file and extract it.
         ├── simulation_config_[sched].ini  % Ini file generated based on scheduler type  
 </pre>
 
-## 🧭 Working Directory Recommendations
+## 🌐 Recommendations
 To ensure smooth implementation of TAS-Forge, it is **strongly recommended** that you start MATLAB in the **TAS-Forge root directory** (or the directory where all input and output files are expected to be located). 
 
 TAS-Forge relies on the file paths for reading and writing, including but not limited to:
@@ -96,14 +96,16 @@ pwd                             % Check current directory
 cd 'your/path/to/TAS-Forge'     % Navigate to the TAS-Forge directory    
 </pre>   
 
+**🚨 Important:** Before proceeding, please note that preserving the MATLAB workspace is critical. If the workspace is lost at any point, you will need to restart the entire process.
+
+To avoid this, consider using the `save workspace` command during TAS-Forge execution to save your session. You can later use `load workspace` to restore the workspace and continue where you left off.
+
+
+
 ## 🪜 Step-by-Step Guide: Using TAS-Forge
 This section provides a step-by-step guide for using TAS-Forge. Before beginning, ensure that all the required files are present in your MATLAB working directory. To understand how the files are organized, refer to the [Folder Structure](#folder_structure) section. 
 
 **Note:** Many files (e.g., CSV exports, CPLEX input, OMNeT simulation files) are generated during execution. These files will not appear until their corresponding scripts have been run. This will be highlighted in the respective steps. 
-
-**🚨 Important:** Before proceeding, please note that preserving the MATLAB workspace is critical. If the workspace is lost at any point, you will need to restart the entire process.
-
-To avoid this, consider using the `save workspace` command during TAS-Forge execution to save your session. You can later use `load workspace` to restore the workspace and continue where you left off.
 
 ### 💻 Step 1: Generate Network Topology and Stream Parameters
 To being using TAS-Forge, run the following script in MATLAB:
