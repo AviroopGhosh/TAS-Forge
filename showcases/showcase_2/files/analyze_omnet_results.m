@@ -28,9 +28,9 @@ end
 
 %% Scheduler Input Validation (if required)
 % Collect and validate scheduler name from user input
-if ~strcmp(scheduler_input, 'WCA') && ~strcmp(scheduler_input, 'WCD') ...
+if ~exist('scheduler_input', 'var') || ~strcmp(scheduler_input, 'WCA') && ~strcmp(scheduler_input, 'WCD') ...
         && ~strcmp(scheduler_input, 'NCA') && ~strcmp(scheduler_input, 'NCD')
-    error('!!! Invalid scheduler selected. !!!');
+    error('!!! Scheduler type not selected, regenerate GCLs. !!!');
 end
 
 %% Sorting phase: Sort based on sink app and stream_data.csv
