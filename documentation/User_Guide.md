@@ -80,7 +80,7 @@ Or you can download it as a ZIP file and extract it.
         ├── simulation_config_[sched].ini  % Ini file generated based on scheduler type  
 </pre>
 
-## 🌐 Recommendations
+## 🌐 Recommendations & Requirements
 Before you begin, please review the following recommendations to ensure a smooth experience with TAS-Forge.
 
 To avoid path-related issues, it is **strongly recommended** that you start MATLAB in the **TAS-Forge root directory** (or the directory where all input and output files are expected to be located). 
@@ -108,8 +108,14 @@ Use the `load` command to restore the workspace when you return to continue
 Example:
 <pre>
 save my_tas_forge_workspace.mat       % Save workspace
-load my_tas_forge_workspace.mat       % Load workspace later
-</pre>   
+load my_tas_forge_workspace.mat       % Load workspace
+</pre>
+
+**🔒OMNeT++ Requirements:** 
+
+Make sure your OMNeT++ project is **correctly linked** to the **INET framework**, as TAS-Forge simulations rely on its modules.
+
+While it is not necessary to create custom packages, if you choose to do so, ensure they are placed in the correct directory structure recognized by OMNeT++.
 
 ## 🪜 Step-by-Step Guide: Using TAS-Forge
 This section provides a step-by-step guide for using TAS-Forge. Before beginning, ensure that all the required files are present in your MATLAB working directory. To understand how the files are organized, refer to the [Folder Structure](#folder_structure) section. 
