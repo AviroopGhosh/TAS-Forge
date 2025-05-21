@@ -81,26 +81,34 @@ Or you can download it as a ZIP file and extract it.
 </pre>
 
 ## 🌐 Recommendations
+Befoure you begin please read the set of recommendations. 
+
 To ensure smooth implementation of TAS-Forge, it is **strongly recommended** that you start MATLAB in the **TAS-Forge root directory** (or the directory where all input and output files are expected to be located). 
 
-TAS-Forge relies on the file paths for reading and writing, including but not limited to:
+TAS-Forge relies on the file paths for reading and writing, including (but not limited to):
 - Reading the `.csv` and `.txt` files used to generate CPLEX and OMNeT++ scripts.
 - Reading outputs from the CPLEX and OMNeTpp files (such as, the `input_CPLEX_solution_[sched].txt` and `results.csv`) for further analysis. 
 
 Keeping **all TAS-Forge scripts and related files in a single working directory** helps avoid file-not-found errors and ensures proper linking between generation, scheduling, simulation and analysis steps.
 
 To verify or change your current working directory in MATLAB, use the following commands:
-
 <pre>
 pwd                             % Check current directory
 cd 'your/path/to/TAS-Forge'     % Navigate to the TAS-Forge directory    
 </pre>   
 
-**🚨 Important:** Before proceeding, please note that preserving the MATLAB workspace is critical. If the workspace is lost at any point, you will need to restart the entire process.
+**🚨 Important:** 
+Preserving the MATLAB workspace is critical. If the workspace is cleared or lost, you will need to restart the entire process from the beginning.
 
-To avoid this, consider using the `save workspace` command during TAS-Forge execution to save your session. You can later use `load workspace` to restore the workspace and continue where you left off.
+To safeguard your progress:
+Use the `save` command to save your workspace at any point during execution
+Use the `load` command to restore the workspace when you return to continue
 
-
+Example:
+<pre>
+save my_tas_forge_workspace.mat       % Save workspace
+load my_tas_forge_workspace.mat       % Load workspace later
+</pre>   
 
 ## 🪜 Step-by-Step Guide: Using TAS-Forge
 This section provides a step-by-step guide for using TAS-Forge. Before beginning, ensure that all the required files are present in your MATLAB working directory. To understand how the files are organized, refer to the [Folder Structure](#folder_structure) section. 
