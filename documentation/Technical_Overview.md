@@ -170,7 +170,10 @@ OFF_4_switch1 = 21908;
 OFF_4_switch2 = 22191;
 OFF_4_switch3 = 22474;
 </pre>
-  
+
+These decision variables are saved in a `.txt` file named `output_CPLEX_solution_[sched].txt`, where `[sched]` corresponds to the selected scheduler type (e.g., WCA, WCD, etc.).
+This file needs to be transfered to the MATLAB workspace from CPLEX. 
+
 Each entry in the GCL describes:
 - Once these durations are derived by the **transmission offsets**, the **scheduling durations** are calculated.  
 - A scheduling duration (expressed in µs) indicates which the **transmission gate** remains in a specified state (open/closed) for a particular traffic class.
