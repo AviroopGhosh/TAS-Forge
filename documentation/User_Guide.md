@@ -28,6 +28,7 @@ For implementing TAS-Forge, it is vital that the following software tools are in
 - Helpful Resources:
     - [Quick start to CPLEX](https://www.ibm.com/docs/en/icos/22.1.2?topic=center-quick-start-cplex-studio)
     - [CPLEX Video Tutorial Series](https://www.youtube.com/watch?v=70HH-GNR9uM&list=PLyY17uOd5sPNgeqy2CguqyW0IENeEW4kS)
+    - CPLEX is free for academics and students to use, click this [link](https://community.ibm.com/community/user/blogs/xavier-nodet1/2020/07/09/cplex-free-for-students?CommunityKey=ab7de0fd-6f43-47a9-8261-33578a231bb7&tab=) for further infromation. 
       
 ### 3. OMNeT++ 
 - Required for: Simulating the generated network topology and validate the TAS schedule execution.
