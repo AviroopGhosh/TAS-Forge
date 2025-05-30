@@ -35,7 +35,7 @@ end
 
 %% Sorting phase: Sort based on sink app and stream_data.csv
 
-% Check if the 
+% Check if the OMNeT++ files have been executed
 if ~exist("appIndex_sink","var")
     error('!!! The OMNeT++ files have not been executed. !!!')
 end
@@ -93,8 +93,9 @@ for stream_idx = 1:numStreams
         n_SW = n_hops - 1;
         delta = network_data.("Delta");
         mt = network_data.('Macrotick');
+        adj = n_SW * mt / unit; % Adjustment factor for macrotick
         analytical_min_e2e_latency = min_e2e_latency + (n_SW - 1) * delta * mt / unit;
-        analytical_max_e2e_latency = min_e2e_latency + (n_SW + 1) * delta * mt / unit;
+        analytical_max_e2e_latency = min_e2e_latency + (n_SW + 1) * delta * mt / unit + adj;
     else
         analytical_min_e2e_latency = min_e2e_latency;
         analytical_max_e2e_latency = min_e2e_latency;
