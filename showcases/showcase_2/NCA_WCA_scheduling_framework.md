@@ -175,6 +175,7 @@ for the table. The original column headers are saved in the VariableDescriptions
 Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names. 
 Results updated to stream_data_output_NCA.csv 
 </pre>
+- The warnings of MATLAB can be ignored.
 - The output `.csv` file summaries the stream metrics including the analytical and meaured end-to-end latencies, jitter, routes, etc.
 - The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
 - Since the schedule gurantees no queuing delays along the route, the minimum and maximum end-to-end latencies will be equal, resulting in zero jitter.
