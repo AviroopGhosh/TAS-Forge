@@ -35,12 +35,12 @@ For an understanding of the different scheduling frameworks, read the [Technical
 - The script also generates a set of **source-to-sink** for 6 routes:
 <pre>
 Source to Sink Pairs:
-source2 ---> sink1
-source1 ---> sink2
+source5 ---> sink1
+source2 ---> sink2
 source1 ---> sink3
-source5 ---> sink4
-source3 ---> sink5
-source4 ---> sink3
+source2 ---> sink4
+source4 ---> sink5
+source3 ---> sink3
 </pre>
 
 - The `generate_network_system.m` script also generates `.csv` files containing information relevant to:
@@ -71,46 +71,45 @@ After generating the network topology, the workflows for each scheduling framewo
 - Launch CPLEX Optimization Study, and after creating an OLP project, run the `.mod` file.
 - Once executed, the **decison variables** (as shown) outputs are generated in the **Solutions** tab in CPLEX studio.
 <pre>
-lambda_1 = 96.57;
-lambda_2 = 124.57;
-lambda_3 = 152.07;
-lambda_4 = 151.32;
-lambda_5 = 152.32;
-lambda_6 = 180.32;
-OFF_1_source5 = 66;
-OFF_1_switch2 = 88;
-OFF_1_switch3 = 112;
-OFF_1_switch4 = 141;
-OFF_2_source2 = 74;
+lambda_1 = 97.07;
+lambda_2 = 124.32;
+lambda_3 = 125.07;
+lambda_4 = 152.57;
+lambda_5 = 153.32;
+lambda_6 = 181.32;
+OFF_1_source5 = 112;
+OFF_1_switch2 = 139;
+OFF_1_switch3 = 163;
+OFF_1_switch4 = 195;
+OFF_2_source2 = 61;
 OFF_2_switch1 = 81;
-OFF_2_switch2 = 114;
-OFF_2_switch3 = 138;
-OFF_2_switch4 = 167;
-OFF_3_source1 = 0;
-OFF_3_switch1 = 17;
-OFF_3_switch2 = 50;
-OFF_3_switch3 = 74;
-OFF_3_switch4 = 103;
-OFF_3_switch5 = 133;
-OFF_4_source3 = 114;
-OFF_4_switch1 = 119;
-OFF_4_switch2 = 152;
-OFF_4_switch3 = 176;
-OFF_4_switch4 = 205;
-OFF_4_switch5 = 235;
-OFF_5_source4 = 0;
-OFF_5_switch2 = 22;
-OFF_5_switch3 = 46;
-OFF_5_switch4 = 75;
-OFF_5_switch5 = 105;
-OFF_5_switch6 = 137;
-OFF_6_source1 = 1141;
-OFF_6_switch1 = 1158;
-OFF_6_switch2 = 1191;
-OFF_6_switch3 = 1215;
-OFF_6_switch4 = 1244;
-OFF_6_switch5 = 1274;
-OFF_6_switch6 = 1306;
+OFF_2_switch2 = 109;
+OFF_2_switch3 = 133;
+OFF_2_switch4 = 165;
+OFF_3_source4 = 169;
+OFF_3_switch2 = 197;
+OFF_3_switch3 = 221;
+OFF_3_switch4 = 253;
+OFF_3_switch5 = 270;
+OFF_4_source2 = 31;
+OFF_4_switch1 = 51;
+OFF_4_switch2 = 79;
+OFF_4_switch3 = 103;
+OFF_4_switch4 = 135;
+OFF_4_switch5 = 152;
+OFF_5_source3 = 146;
+OFF_5_switch2 = 163;
+OFF_5_switch3 = 187;
+OFF_5_switch4 = 219;
+OFF_5_switch5 = 236;
+OFF_5_switch6 = 264;
+OFF_6_source1 = 0;
+OFF_6_switch1 = 27;
+OFF_6_switch2 = 55;
+OFF_6_switch3 = 79;
+OFF_6_switch4 = 111;
+OFF_6_switch5 = 128;
+OFF_6_switch6 = 156;
 </pre>
 - The CPLEX directory should generate the `output_CPLEX_solution_NCA.txt` file containing all the relevant decision variables required to be created for GCL generation. 
 - Move the `output_CPLEX_solution_NCA.txt` file to the MATLAB directory where TAS-Forge is being executed.
@@ -131,7 +130,7 @@ generate_GCL_output
 What scheduler did you select (WCA/WCD/NCA/NCD)?:  NCA
 File "output_GCL_matrix.txt" has been created.
 
-The schedulability cost is 0.0679333
+The schedulability cost is 0.0636333
 </pre>
 
 ### 🏃 Step 2C: Generate Simulation Configuration
@@ -166,15 +165,19 @@ INI file simulation_config_NCA.ini generated successfully in directory OMNETpp_C
 <pre>
  analyze_omnet_results 
 </pre> 
-- This should create a `stream_data_output.csv` file and the following prompt will be displayed:
+- This should create a `stream_data_output_NCA.csv` file and the following prompt will be displayed:
 <pre>
-Results saved to stream_data_output.csv
-Results updated to stream_data_output.csv  
+Warning: Table variable names were truncated to the length namelengthmax. The original names are saved in the
+VariableDescriptions property. 
+Results saved to stream_data_output_NCA.csv
+Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names
+for the table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names. 
+Results updated to stream_data_output_NCA.csv 
 </pre>
 - The output `.csv` file summaries the stream metrics including the analytical and meaured end-to-end latencies, jitter, routes, etc.
 - The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
 - Since the schedule gurantees no queuing delays along the route, the minimum and maximum end-to-end latencies will be equal, resulting in zero jitter.
-- Rename the `stream_data_output.csv` to `stream_data_output_NCA.csv` for clarity. 
 
 ## 🙇‍♀️Step 3: Workflow for WCA Scheduling Framework
 This step outlines the complete workflow for the WCA scheduling framework—from schedule generation and GCL creation to OMNeT++ simulation and result analysis.
