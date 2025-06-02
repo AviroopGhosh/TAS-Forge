@@ -115,7 +115,7 @@ end
 
 %% Clock parameter values (--- User-configurable synchronization parameters ---)
 
-p_range = -100:100;   %Clock drift range in ppm
+p_range = -10:10;   %Clock drift range in ppm
 T_sync = 0.125; %Synchronization periodicity
 
 p = zeros;
