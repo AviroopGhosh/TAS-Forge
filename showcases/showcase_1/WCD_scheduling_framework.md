@@ -158,11 +158,17 @@ INI file simulation_config_WCD.ini generated successfully in directory OMNETpp_C
 <pre>
  analyze_omnet_results 
 </pre> 
-- This should create a `stream_data_output.csv` file and the following prompt will be displayed:
+- This should create a `stream_data_output_WCD.csv` file and the following prompt will be displayed:
 <pre>
-Results saved to stream_data_output.csv
-Results updated to stream_data_output.csv  
+Warning: Table variable names were truncated to the length namelengthmax. The original names are saved in the
+VariableDescriptions property. 
+Results saved to stream_data_output_WCD.csv
+Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names
+for the table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names. 
+Results updated to stream_data_output_WCD.csv
 </pre>
+- The warnings from MATLAB can be ignored. 
 - The output `.csv` file should provide a summary of the streams including the analytical and meaured end-to-end latencies, jitter, routes, etc.
 - The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
 - For further details on interpreting the results refer to the [Technical Overview](../../documentation/Technical_Overview.md) page. 
