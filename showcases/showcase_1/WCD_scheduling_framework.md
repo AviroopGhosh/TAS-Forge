@@ -101,7 +101,8 @@ OFF_5_switch5 = 275;
 
 - CPLEX will output a text file `output_CPLEX_solution_WCD.txt`.
 - This file will carry all the relevant decision variables, specifically the **offset** variables in the format `OFF_<streamID>_<deviceName>`.
-- 🔥 **Important**: The `lambda` decision variables (e.g., `lambda_1`, `lambda_2`, etc.) will not appear in the text output file as it is not required by TAS-Forge.
+- ⚠️ **Note:** CPLEX may issue a warning indicating that the variable `trans_delay_var` is unused. This warning can be safely ignored as it does not affect the execution or correctness of the model.
+- 🔥 **Important:** The `lambda` decision variables (e.g., `lambda_1`, `lambda_2`, etc.) will not appear in the text output file as it is not required by TAS-Forge.
 - Move the `output_CPLEX_solution_WCD.txt`file to the MATLAB directory where TAS-Forge is being executed.
   
 ## 🗒️ Step 3: Create Gate Control Lists (GCLs)
