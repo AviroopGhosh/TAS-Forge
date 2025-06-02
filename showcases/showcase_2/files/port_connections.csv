@@ -1,0 +1,17 @@
+Source,SourcePort,Destination,DestinationPort,RoutesIncluded
+switch1,0,switch2,0,"2, 4, 6"
+switch2,1,switch3,0,"1, 2, 3, 4, 5, 6"
+switch3,1,switch4,0,"1, 2, 3, 4, 5, 6"
+switch4,1,switch5,0,"3, 4, 5, 6"
+switch4,2,sink1,0,1
+switch4,3,sink4,0,2
+switch5,1,switch6,0,"5, 6"
+switch5,2,sink2,0,4
+switch5,3,sink5,0,3
+switch6,1,sink3,0,"5, 6"
+source1,0,switch1,1,6
+source2,0,switch1,2,"2, 4"
+source3,0,switch2,2,5
+source4,0,switch2,3,3
+source5,0,switch2,4,1
+GM1,0,switch2,5,0

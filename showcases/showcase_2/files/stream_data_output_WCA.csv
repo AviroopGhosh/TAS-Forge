@@ -1,0 +1,7 @@
+StreamID,Route,Periodicity_us_,Payload_Bytes_,MinE2ELatency_us_,AnalyticalMinE2ELatency_us_,AnalyticalMaxE2ELatency_us_,MeasuredMinE2ELatency_us_,MeasuredMaxE2ELatency_us_,Jitter_us_,DeviceCount
+1,"source5,switch2,switch3,switch4,sink1",100,100,9.78,9.78,9.78,9.78,9.78,0,4
+2,"source2,switch1,switch2,switch3,switch4,sink4",150,100,12.61,12.61,12.61,12.61,12.61,0,5
+3,"source4,switch2,switch3,switch4,switch5,sink5",100,100,12.61,12.61,12.61,12.61,12.61,0,5
+4,"source2,switch1,switch2,switch3,switch4,switch5,sink2",150,100,15.44,15.44,15.44,15.44,15.44,0,6
+5,"source3,switch2,switch3,switch4,switch5,switch6,sink3",100,100,15.44,15.44,15.44,15.44,15.44,0,6
+6,"source1,switch1,switch2,switch3,switch4,switch5,switch6,sink3",150,100,18.27,18.27,18.27,18.27,18.27,0,7
