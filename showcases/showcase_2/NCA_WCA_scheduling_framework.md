@@ -175,7 +175,7 @@ for the table. The original column headers are saved in the VariableDescriptions
 Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names. 
 Results updated to stream_data_output_NCA.csv 
 </pre>
-- The warnings of MATLAB can be ignored.
+- The warnings from MATLAB can be ignored.
 - The output `.csv` file summaries the stream metrics including the analytical and meaured end-to-end latencies, jitter, routes, etc.
 - The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
 - Since the schedule gurantees no queuing delays along the route, the minimum and maximum end-to-end latencies will be equal, resulting in zero jitter.
@@ -190,44 +190,43 @@ This step outlines the complete workflow for the WCA scheduling framework—from
 <pre>
 lambda_1 = 96.82;
 lambda_2 = 124.82;
-lambda_3 = 152.82;
+lambda_3 = 124.82;
 lambda_4 = 152.82;
 lambda_5 = 152.82;
 lambda_6 = 180.82;
-OFF_1_source5 = 0;
-OFF_1_switch2 = 3;
-OFF_1_switch3 = 31;
-OFF_1_switch4 = 59;
-OFF_2_source2 = 228;
-OFF_2_switch1 = 231;
-OFF_2_switch2 = 259;
-OFF_2_switch3 = 287;
-OFF_2_switch4 = 315;
-OFF_3_source1 = 100;
-OFF_3_switch1 = 103;
-OFF_3_switch2 = 131;
-OFF_3_switch3 = 159;
-OFF_3_switch4 = 187;
-OFF_3_switch5 = 215;
-OFF_4_source3 = 164;
-OFF_4_switch1 = 167;
-OFF_4_switch2 = 195;
-OFF_4_switch3 = 223;
-OFF_4_switch4 = 251;
-OFF_4_switch5 = 279;
-OFF_5_source4 = 64;
-OFF_5_switch2 = 67;
-OFF_5_switch3 = 95;
-OFF_5_switch4 = 123;
-OFF_5_switch5 = 151;
-OFF_5_switch6 = 179;
-OFF_6_source1 = 1292;
-OFF_6_switch1 = 1295;
-OFF_6_switch2 = 1323;
-OFF_6_switch3 = 1351;
-OFF_6_switch4 = 1379;
-OFF_6_switch5 = 1407;
-OFF_6_switch6 = 1435;
+OFF_1_source5 = 284;
+OFF_1_switch2 = 287;
+OFF_1_switch3 = 315;
+OFF_1_switch4 = 343;
+OFF_2_source2 = 320;
+OFF_2_switch1 = 323;
+OFF_2_switch2 = 351;
+OFF_2_switch3 = 379;
+OFF_2_switch4 = 407;
+OFF_3_source4 = 156;
+OFF_3_switch2 = 159;
+OFF_3_switch3 = 187;
+OFF_3_switch4 = 215;
+OFF_3_switch5 = 243;
+OFF_4_source2 = 0;
+OFF_4_switch1 = 3;
+OFF_4_switch2 = 31;
+OFF_4_switch3 = 59;
+OFF_4_switch4 = 87;
+OFF_4_switch5 = 115;
+OFF_5_source3 = 220;
+OFF_5_switch2 = 223;
+OFF_5_switch3 = 251;
+OFF_5_switch4 = 279;
+OFF_5_switch5 = 307;
+OFF_5_switch6 = 335;
+OFF_6_source1 = 64;
+OFF_6_switch1 = 67;
+OFF_6_switch2 = 95;
+OFF_6_switch3 = 123;
+OFF_6_switch4 = 151;
+OFF_6_switch5 = 179;
+OFF_6_switch6 = 207;
 </pre>
 - The CPLEX directory should generate the `output_CPLEX_solution_WCA.txt` file containing all the relevant decision variables required to be created for GCL generation. 
 - Move the `output_CPLEX_solution_WCA.txt` file to the MATLAB directory where TAS-Forge is being executed.
@@ -248,7 +247,7 @@ generate_GCL_output
 What scheduler did you select (WCA/WCD/NCA/NCD)?:  WCA
 File "output_GCL_matrix.txt" has been created.
 
-The schedulability cost is 0.136533
+The schedulability cost is 0.1408
 </pre>
 
 ### 🏃‍♀️Step 3C: Generate Simulation Configuration
@@ -282,25 +281,29 @@ INI file simulation_config_WCA.ini generated successfully in directory OMNETpp_C
 <pre>
  analyze_omnet_results 
 </pre> 
-- This should create a `stream_data_output.csv` file (overwriting any existing one), and you will see following prompt will be displayed:
+- This should create a `stream_data_outputWCA.csv` file, and you will see following prompt will be displayed:
 <pre>
-Results saved to stream_data_output.csv
-Results updated to stream_data_output.csv  
+Warning: Table variable names were truncated to the length namelengthmax. The original names are saved in the
+VariableDescriptions property. 
+Results saved to stream_data_output_WCA.csv
+Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names
+for the table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names. 
+Results updated to stream_data_output_WCA.csv
 </pre>
-- This will overwrite the `stream_data_output.csv` 
+- The MATLAB warnings can be ignored safely. 
 - The output `.csv` file summaries the stream metrics including the analytical and meaured end-to-end latencies, jitter, routes, etc.
 - The measured end-to-end latencies fall within the boundaries of the analytical end-to-end latencies.
 - Because the WCA schedule eliminates queuing delays, the minimum and maximum end-to-end latencies will be identical, resulting in zero jitter.
-- Rename the `stream_data_output.csv` to `stream_data_output_WCA.csv` for clarity. 
 
 ## 🏁 Step 4: Comparative Analysis
 - To perform a comparative analysis between the NCA and WCA methods, examine the 'stream_data_output_NCA.csv' and 'stream_data_output_WCA.csv' files.
 - Given the deterministic nature of both scheduling frameworks, the end-to-end latency and jitter values across all streams should be identical.
 - However, a meaningful comparison can be made by analyzing the **schedulability cost**. This metric reflects the overall bandwidth efficiency of GCLs for each scheduling method.
 - According to the MATLAB output, the schedulability cost is:
-  - **0.0679333** for the NCA framework.
-  - **0.136533** for the WCA framework.
-- These values indicate that the NCA method is approximately **50% more bandwidth efficient** than the WCA method.
+  - **0.063633** for the NCA framework.
+  - **0.1408** for the WCA framework.
+- These values indicate that the NCA method is approximately **54% more bandwidth efficient** than the WCA method.
 
 ## ✔️ Summary
 This showcase demonstrated the complete TAS-Forge workflow for both the NCA and WCA scheduling methods using a common network topology. The process included:
