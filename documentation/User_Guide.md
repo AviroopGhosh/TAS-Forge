@@ -262,7 +262,7 @@ Following the steps above, run the `analyze_omnet_results.m` script.
 
 **Note:** If you would like to renamed the `results.csv` differently, then please ensure that it is aligned with the `inputfilename` specification in `analyze_omnet_results.m`.
 
-The script execution will generate the `stream_data_output_[sched].csv` file. `[sched]` is based on the scheduler type such as `NCA`,`WCA`,etc.
+The script execution will generate the `stream_data_output_[sched].csv` file. `[sched]` is based on the scheduler type such as `NCA`,`WCA`,`NCD`,or`WCD`.
 
 This file provides a detailed summary of the simulated results and performance of generated GCLs including:
 - The stream identifiers with the corresponding routes and intermediate devices.
