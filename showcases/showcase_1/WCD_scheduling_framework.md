@@ -68,35 +68,35 @@ Output file "output_CPLEX_code_generator_NCA.mod" has been generated in the CPLE
 - Launch CPLEX Optimization Study, and after creating an OLP project, run the `.mod` file.
 - Once executed, the **decison variables** (similar as shown) outputs are generated in the **Solutions** tab in CPLEX studio.
 <pre>
-lambda_1 = 122.82;
-lambda_2 = 177.82;
-lambda_3 = 232.82;
-lambda_4 = 287.82;
-lambda_5 = 287.82;
+lambda_1 = 120.82;
+lambda_2 = 174.82;
+lambda_3 = 228.82;
+lambda_4 = 282.82;
+lambda_5 = 282.82;
 OFF_1_source5 = 0;
-OFF_1_switch2 = 55;
-OFF_1_switch3 = 110;
-OFF_2_source2 = 52;
-OFF_2_switch1 = 107;
-OFF_2_switch2 = 162;
-OFF_2_switch3 = 217;
-OFF_3_source4 = 104;
-OFF_3_switch1 = 159;
-OFF_3_switch2 = 214;
-OFF_3_switch3 = 269;
-OFF_3_switch4 = 324;
-OFF_4_source1 = 1156;
-OFF_4_switch1 = 1211;
-OFF_4_switch2 = 1266;
-OFF_4_switch3 = 1321;
-OFF_4_switch4 = 1376;
-OFF_4_switch5 = 1431;
+OFF_1_switch2 = 54;
+OFF_1_switch3 = 108;
+OFF_2_source2 = 51;
+OFF_2_switch1 = 105;
+OFF_2_switch2 = 159;
+OFF_2_switch3 = 213;
+OFF_3_source4 = 102;
+OFF_3_switch1 = 156;
+OFF_3_switch2 = 210;
+OFF_3_switch3 = 264;
+OFF_3_switch4 = 318;
+OFF_4_source1 = 1153;
+OFF_4_switch1 = 1207;
+OFF_4_switch2 = 1261;
+OFF_4_switch3 = 1315;
+OFF_4_switch4 = 1369;
+OFF_4_switch5 = 1423;
 OFF_5_source3 = 0;
-OFF_5_switch1 = 55;
-OFF_5_switch2 = 110;
-OFF_5_switch3 = 165;
-OFF_5_switch4 = 220;
-OFF_5_switch5 = 275;
+OFF_5_switch1 = 54;
+OFF_5_switch2 = 108;
+OFF_5_switch3 = 162;
+OFF_5_switch4 = 216;
+OFF_5_switch5 = 270;
 </pre>
 
 - CPLEX will output a text file `output_CPLEX_solution_WCD.txt`.
