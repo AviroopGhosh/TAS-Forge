@@ -284,38 +284,38 @@ abs((OFF_5_switch6 + (alpha - 1)*T_period[5]) - (OFF_6_switch6 + (beta - 1)*T_pe
 // Flow transmission constraint: The difference between consecutive offsets
 
 // Stream 1
-OFF_1_switch2 >= OFF_1_source5 + ceil(L[1] + delta + 1);
-OFF_1_switch3 >= OFF_1_switch2 + ceil(L[1] + delta + 1);
-OFF_1_switch4 >= OFF_1_switch3 + ceil(L[1] + delta + 1);
+OFF_1_switch2 >= OFF_1_source5 + ceil(L[1] + delta);
+OFF_1_switch3 >= OFF_1_switch2 + ceil(L[1] + delta);
+OFF_1_switch4 >= OFF_1_switch3 + ceil(L[1] + delta);
 // Stream 2
-OFF_2_switch1 >= OFF_2_source2 + ceil(L[2] + delta + 1);
-OFF_2_switch2 >= OFF_2_switch1 + ceil(L[2] + delta + 1);
-OFF_2_switch3 >= OFF_2_switch2 + ceil(L[2] + delta + 1);
-OFF_2_switch4 >= OFF_2_switch3 + ceil(L[2] + delta + 1);
+OFF_2_switch1 >= OFF_2_source2 + ceil(L[2] + delta);
+OFF_2_switch2 >= OFF_2_switch1 + ceil(L[2] + delta);
+OFF_2_switch3 >= OFF_2_switch2 + ceil(L[2] + delta);
+OFF_2_switch4 >= OFF_2_switch3 + ceil(L[2] + delta);
 // Stream 3
-OFF_3_switch2 >= OFF_3_source4 + ceil(L[3] + delta + 1);
-OFF_3_switch3 >= OFF_3_switch2 + ceil(L[3] + delta + 1);
-OFF_3_switch4 >= OFF_3_switch3 + ceil(L[3] + delta + 1);
-OFF_3_switch5 >= OFF_3_switch4 + ceil(L[3] + delta + 1);
+OFF_3_switch2 >= OFF_3_source4 + ceil(L[3] + delta);
+OFF_3_switch3 >= OFF_3_switch2 + ceil(L[3] + delta);
+OFF_3_switch4 >= OFF_3_switch3 + ceil(L[3] + delta);
+OFF_3_switch5 >= OFF_3_switch4 + ceil(L[3] + delta);
 // Stream 4
-OFF_4_switch1 >= OFF_4_source2 + ceil(L[4] + delta + 1);
-OFF_4_switch2 >= OFF_4_switch1 + ceil(L[4] + delta + 1);
-OFF_4_switch3 >= OFF_4_switch2 + ceil(L[4] + delta + 1);
-OFF_4_switch4 >= OFF_4_switch3 + ceil(L[4] + delta + 1);
-OFF_4_switch5 >= OFF_4_switch4 + ceil(L[4] + delta + 1);
+OFF_4_switch1 >= OFF_4_source2 + ceil(L[4] + delta);
+OFF_4_switch2 >= OFF_4_switch1 + ceil(L[4] + delta);
+OFF_4_switch3 >= OFF_4_switch2 + ceil(L[4] + delta);
+OFF_4_switch4 >= OFF_4_switch3 + ceil(L[4] + delta);
+OFF_4_switch5 >= OFF_4_switch4 + ceil(L[4] + delta);
 // Stream 5
-OFF_5_switch2 >= OFF_5_source3 + ceil(L[5] + delta + 1);
-OFF_5_switch3 >= OFF_5_switch2 + ceil(L[5] + delta + 1);
-OFF_5_switch4 >= OFF_5_switch3 + ceil(L[5] + delta + 1);
-OFF_5_switch5 >= OFF_5_switch4 + ceil(L[5] + delta + 1);
-OFF_5_switch6 >= OFF_5_switch5 + ceil(L[5] + delta + 1);
+OFF_5_switch2 >= OFF_5_source3 + ceil(L[5] + delta);
+OFF_5_switch3 >= OFF_5_switch2 + ceil(L[5] + delta);
+OFF_5_switch4 >= OFF_5_switch3 + ceil(L[5] + delta);
+OFF_5_switch5 >= OFF_5_switch4 + ceil(L[5] + delta);
+OFF_5_switch6 >= OFF_5_switch5 + ceil(L[5] + delta);
 // Stream 6
-OFF_6_switch1 >= OFF_6_source1 + ceil(L[6] + delta + 1);
-OFF_6_switch2 >= OFF_6_switch1 + ceil(L[6] + delta + 1);
-OFF_6_switch3 >= OFF_6_switch2 + ceil(L[6] + delta + 1);
-OFF_6_switch4 >= OFF_6_switch3 + ceil(L[6] + delta + 1);
-OFF_6_switch5 >= OFF_6_switch4 + ceil(L[6] + delta + 1);
-OFF_6_switch6 >= OFF_6_switch5 + ceil(L[6] + delta + 1);
+OFF_6_switch1 >= OFF_6_source1 + ceil(L[6] + delta);
+OFF_6_switch2 >= OFF_6_switch1 + ceil(L[6] + delta);
+OFF_6_switch3 >= OFF_6_switch2 + ceil(L[6] + delta);
+OFF_6_switch4 >= OFF_6_switch3 + ceil(L[6] + delta);
+OFF_6_switch5 >= OFF_6_switch4 + ceil(L[6] + delta);
+OFF_6_switch6 >= OFF_6_switch5 + ceil(L[6] + delta);
 
 // The scheduling duration constraint: Switch schedules should not overlap
 // Port of switch1 towards switch2
