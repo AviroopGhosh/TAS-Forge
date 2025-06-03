@@ -174,9 +174,9 @@ fprintf(outputFile, '\nint trans_delay_var[N_streams] = [');
 for i = 1:NumStreams
     % Write the periodicity value
     if i < NumStreams
-        fprintf(outputFile, '%g, ', ceil(trans_delay(i) + 1));
+        fprintf(outputFile, '%g, ', ceil(trans_delay(i)));
     else
-        fprintf(outputFile, '%g];', ceil(trans_delay(i) + 1)); % No comma but ';' after the last element
+        fprintf(outputFile, '%g];', ceil(trans_delay(i))); % No comma but ';' after the last element
     end
 end
 
