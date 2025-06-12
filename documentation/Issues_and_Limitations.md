@@ -31,3 +31,4 @@ While this value can technically be modified, it is not recommended, as multiple
 ### 🔬 Macrotick Granularity:
 The default macrotick granularity in TAS-Forge is 0.1 µs with other recomended values of 0.01 µs or 1 µs, representing the time resolution used for Gate Control Lists (GCLs). While this value can be adjusted to increase or decrease resolution, setting it to a finer granularity (i.e., below 0.1 µs) may lead to alignment issues, as the GCL entries may no longer match correctly with computed scheduling offsets. This can result in timing mismatches and unintended behavior during simulation.
 
+## 👹 List of Errors:
