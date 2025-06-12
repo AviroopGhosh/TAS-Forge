@@ -38,6 +38,6 @@ During the TAS-Forge workflow, certain errors may arise that prevent successful 
 This error occurs when a single source is connected to multiple switches, violating the assumption of a linear topology. It indicates that the current configuration does not allow for a valid linear path based on the number of switches and the arrangement of sources and sinks. To resolve this, adjust the topology parameters to ensure that each source and sink pair can be uniquely connected in a linear fashion.sting the topology to rectify this issue. 
 
 <pre>
-!!! Not enough switches to make unique connections to each sink !!!'  
+!!! Not enough switches to make unique connections to each sink !!!  
 </pre>
 
