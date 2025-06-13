@@ -135,6 +135,6 @@ Analyzing OMNeT++ simulation results is the final step in the TAS-Forge workflow
 </pre>
 
 **Troubleshooting:**
-- Ensure that all required workspaces are correctly loaded into MATLAB.
+- Ensure that all required workspaces and files are correctly loaded into MATLAB.
 - Re-run the OMNeT++ simulation and confirm that all output files (e.g., `.sca`, `.vec`, `results.csv`) are generated as expected. 
 - Verify that a valid scheduler type has been selected before proceeding with analysis.
