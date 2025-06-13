@@ -144,4 +144,10 @@ During OMNeT++ simulation, users may encounter the following INET error. This in
 
 ![OMNeT++ Simulation Error](images/clock_event.png)
 
+To rectify this issue, the clock settings in the INET framework needs to be modified. 
 
+Navigate to the `SettableClock.ned` file located in the following directory 📁:
+
+<pre>
+inet/clock/model  
+</pre>
