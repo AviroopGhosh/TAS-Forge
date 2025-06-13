@@ -59,7 +59,7 @@ If the decision variable output from CPLEX is not correctly loaded during the wo
 !!! The decision variable OFF_1_switch2 has not been loaded !!!  
 </pre>
 
-This indicates that the decision variable for Stream 1 in Switch 2 has not been loaded correctly. 
+This indicates that the decision variable for Stream 1 in Switch 2 (denoted by `OFF_1_switch2`) has not been loaded correctly. 
 
 **Troubleshooting:**
 - Ensure that the CPLEX optimization has completed successfully and the decision variable output file has been loaded in MATLAB.
