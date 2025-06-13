@@ -27,7 +27,7 @@ x_disp_scale = 9000;
 y_disp_scale = 9000;
 
 if lt(x_disp_scale, max(x_scale)) || lt(y_disp_scale, max(y_scale))
-    error('!!! Display area must be greater than  !!!');
+    error('!!! Display area values must be greater than scalar values !!!');
 end
 
 % Extract node positions
