@@ -149,5 +149,19 @@ To rectify this issue, the clock settings in the INET framework needs to be modi
 Navigate to the `SettableClock.ned` file located in the following directory 📁:
 
 <pre>
-inet/clock/model  
+inet/clock/model/SettableClock.ned  
 </pre>
+
+Make the following changes in the `parameters` section of the `SettableClock` module, locate the following line and change from:
+
+<pre>
+        string defaultOverdueClockEventHandlingMode @enum("execute","skip","error") = default("error");  
+</pre>
+
+Modify it to: 
+
+<pre>
+        string defaultOverdueClockEventHandlingMode @enum("execute","skip","error") = default("execute");  
+</pre>
+
+This change ensures that overdue clock events are executed rather than causing an error during synchronization.
