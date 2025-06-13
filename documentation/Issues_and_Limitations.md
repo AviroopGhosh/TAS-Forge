@@ -140,3 +140,8 @@ Analyzing OMNeT++ simulation results is the final step in the TAS-Forge workflow
 - Verify that a valid scheduler type has been selected before proceeding with analysis.
 
 ##  👺 Errors in Simulation (OMNeT++)
+During OMNeT++ simulation, users may encounter the following INET error. This indicates that synchronization clock forwarding events were not executed as expected:
+
+![OMNeT++ Simulation Error](images/clock_event.png)
+
+
