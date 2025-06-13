@@ -91,8 +91,14 @@ When generating the `.ned` file, if the execution of `generate_omnetpp_files` gi
 - If the graph has not been generated, restart the TAS-Forge workflow from the beginning.
 - If the graph was previously generated and saved, ensure that the corresponding workspace is loaded before executing `generate_omnetpp_files`.
 
+Users can manually adjust the x-y display area for the generated `.ned` file. If the specified display dimensions are too small to accommodate the full network topology, the following error will be triggered:
 
+<pre>
+!!! Display area values must be greater than scalar values !!!
+</pre>
 
+**Troubleshooting:**
+- Ensure that the specified x and y display values are larger than the maximum x-y coordinates used in the network topology layout. This ensures all devices fit within the visible simulation area.
 
 
 
