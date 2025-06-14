@@ -170,4 +170,4 @@ This change ensures that overdue clock events are executed rather than causing a
 If you run into trouble while implementing TAS-Forge, then here are some general troubleshooting tips and suggestions. 
 
 - ✅ **Versions:** Ensure you have the correct versions of MATLAB, CPLEX, OMNeT++ and INET installed.
-- 🪜**Workflow:** Ensure that you execute the scripts in the recommended sequence as discussed in the ![User Guide](User_Guide.md). 
+- 🪜**Workflow:** Ensure that you execute the scripts in the recommended sequence as discussed in the [User Guide](User_Guide.md). 
