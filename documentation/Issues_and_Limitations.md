@@ -12,7 +12,7 @@ By default, TAS-Forge uses a synchronization periodicity of 125 ms, as recommend
 - 2⁻⁴ = 62.5 ms
 - 2⁻¹ = 0.5 s
 
-To adjust this, modify the following line in `generate_network_system.m`:
+To adjust this, modify the following line in `generate_network_system`:
 <pre>
 T_sync = 0.125; % Synchronization periodicity in seconds  
 </pre>
