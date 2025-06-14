@@ -17,10 +17,10 @@ To adjust this, modify the following line in `generate_network_system`:
 T_sync = 0.125; % Synchronization periodicity in seconds  
 </pre>
 
-Note: Reducing the synchronization periodicity (e.g., below 125 ms) may cause synchronization messages to interfere with time-sensitive traffic, potentially leading to frame collisions or scheduling violations. Therefore, care should be taken when modifying this parameter.
+**Note:** Reducing the synchronization periodicity (e.g., below 125 ms) may cause synchronization messages to interfere with time-sensitive traffic, potentially leading to frame collisions or scheduling violations. Therefore, care should be taken when modifying this parameter.
 
 ### 🐌 Link Speed:
-In TAS-Forge, all network links are configured by default to operate at 1 Gigabit Ethernet (1 GE). This is defined in the generate_network_system.m file using the parameter:
+In TAS-Forge, all network links are configured by default to operate at 1 Gigabit Ethernet (1 GE). This is defined in the `generate_network_system` file using the parameter:
 
 <pre>
 data_rate = 1e9; % Bitrate in bits per second  
