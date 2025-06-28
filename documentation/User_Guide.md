@@ -210,7 +210,7 @@ For successful GCL creation the following steps need to be followed:
 5. The script will generate an output file `Output_GCL_matrix.txt`, which contains the computed GCLs.
 6. A schedulability cost metric will also be output as part of the result, providing insight into the efficiency of the generated schedule.
 
-**Important:** If the script generates an error citing 'overlapping conditions' then refer to [Known Issues and Limitations](documentation/Issues_and_Limitations.md) page for guidance. 
+**Important:** If the script generates an error citing 'overlapping conditions' then refer to [Known Issues and Limitations](Issues_and_Limitations.md) page for guidance. 
 
 **Note:** The `Output_GCL_matrix.txt` file contains a list of generated GCLs. Each line corresponds to the GCL for a specifc switch egress port and is aligned with the respective row in the `port_connections.csv` file. In this context:
 - **Source** refers to the switch device.
