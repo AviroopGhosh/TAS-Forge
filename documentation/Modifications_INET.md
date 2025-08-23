@@ -6,6 +6,12 @@ The 📁 file can be located at:
 inet/linklayer/ethernet/modular/EthernetLayer.ned
 </pre>
 
+In the import section, import the following:
+
+<pre>
+import inet.queueing.contract.IPacketDelayer;
+</pre>
+
 Then make the following 🛠️ changes in the **source** file:
 
 1. In the `submodules:` section add of the `.ned` file, insert the following commands:
