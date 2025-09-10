@@ -32,7 +32,7 @@ For implementing TAS-Forge, it is vital that the following software tools are in
       
 ### 3. OMNeT++ 
 - Required for: Simulating the generated network topology and validate the TAS schedule execution.
-- Recommended Version: OMNeT++ 6.0.1 or newer.
+- Recommended Version: OMNeT++ 6.0.3 or newer.
 - Dependencies: Requires INET version 4.4.
 - Installation Steps:
     - Download OMNeT++ from the [OMNeT++ Download Page](https://omnetpp.org/download/).
