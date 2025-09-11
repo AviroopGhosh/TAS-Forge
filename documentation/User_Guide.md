@@ -56,7 +56,7 @@ Or you can download it as a ZIP file and extract it.
 
 <pre>
     TAS-Forge/codes/
-        ├── analyze_omnet_results.m            % Script to analyze the results generated from OMNeT++
+    ├── analyze_omnet_results.m                % Script to analyze the results generated from OMNeT++
     ├── function_generate_routes.m             % Function to generate pair of sources and sinks to form routes
     ├── function_generate_topology_map.m       % Function used to generate the topology map incl. source and destination ports
     ├── function_import_topology_data.m        % This funcition is used to import the topology-related data  
